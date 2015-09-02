@@ -1,0 +1,24 @@
+﻿using UnityEngine;
+using System.Collections;
+
+[RequireComponent(typeof(Rigidbody))]
+public abstract class AbstractMover : MonoBehaviour {
+
+	public float speed;
+	protected Rigidbody rigidbody; // Rigidbody of the mover.
+
+	protected virtual void Awake()
+	{
+		getRigidbody();
+	}
+
+	private void getRigidbody()
+	{
+		rigidbody = GetComponent<Rigidbody>();
+	}
+
+	public virtual void move(Vector3 direction, float speed)
+	{
+		rigidbody.MovePosition (transform.position + direction * speed * Time.deltaTime);
+	}
+}
