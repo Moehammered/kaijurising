@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CollisionChecker : MonoBehaviour {
+public class BounceCollisionChecker : MonoBehaviour {
 
 	/*
 	 * Because of the way pickups have been setup, this script must be used.

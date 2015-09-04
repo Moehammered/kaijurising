@@ -56,14 +56,14 @@ public class Bounce : TimedPickup {
 	{
 		base.activatePickup (target);
 		playerRigidbody = target.GetComponent<Rigidbody>();
-		playerRigidbody.gameObject.AddComponent<CollisionChecker>().assignPickupReference (gameObject);
+		playerRigidbody.gameObject.AddComponent<BounceCollisionChecker>().assignPickupReference (gameObject);
 		lastPositions = new List<Vector3>();
 	}
 
 	protected override void finishEffect ()
 	{
 		base.finishEffect ();
-		Destroy (playerRigidbody.gameObject.GetComponent<CollisionChecker>());
+		Destroy (playerRigidbody.gameObject.GetComponent<BounceCollisionChecker>());
 		Destroy (gameObject);
 	}
 }
