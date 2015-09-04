@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public abstract class AbstractMover : NetworkBehaviour{
 
 	public float speed;
-	protected Rigidbody rigidbody; // Rigidbody of the mover.
+	protected new Rigidbody rigidbody; // Rigidbody of the mover.
 
 	protected virtual void Awake()
 	{

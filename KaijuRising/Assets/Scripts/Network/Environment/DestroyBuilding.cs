@@ -28,18 +28,6 @@ public class DestroyBuilding : NetworkBehaviour {
 				NetworkServer.Spawn (go);
 				go.GetComponent<Rigidbody>().AddForce (other.contacts[0].normal * 5, ForceMode.Impulse); // Adds force in the direction the player was moving.
 			}
-
-			Pickup playerPickupReference = other.gameObject.GetComponent<Pickup>(); // Get pickup script from player
-
-			if(playerPickupReference.questEnabled == true) // Make sure a quest is active.
-			{
-				if(playerPickupReference.addDestroyedAmount() == true) // Increments destroyed amount and checks if quest completed, if completed, spawn random pickup.
-				{
-					Transform spawnPoint = playerPickupReference.spawnPoint;
-					GameObject instance = (GameObject)Instantiate(playerPickupReference.powerUps[Random.Range (0,playerPickupReference.powerUps.Length)], spawnPoint.position, Quaternion.identity);
-					NetworkServer.Spawn (instance); // After instantiating on the server, the clients must also get the object too.
-				}
-			}
 		}
 	}
 }
