@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-
+ 
 [RequireComponent(typeof(Rigidbody))]
 public abstract class AbstractMover : NetworkBehaviour{
 
