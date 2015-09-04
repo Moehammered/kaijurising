@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimedPickup : AbstractPickup {
+public class TimedPickup : CollectablePickup {
 
 	public float duration = 1f;
 	protected GameObject targetObject; // Store a reference to the object that uses this pickup.

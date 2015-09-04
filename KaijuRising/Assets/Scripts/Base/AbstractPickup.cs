@@ -15,7 +15,7 @@ public abstract class AbstractPickup : NetworkBehaviour {
 	
 	}
 
-    protected void OnTriggerEnter(Collider col)
+    protected virtual void OnTriggerEnter(Collider col)
     {
 //		if(!isServer)
 //			return;
