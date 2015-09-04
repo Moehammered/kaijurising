@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(Rigidbody))]
-public abstract class AbstractMover : MonoBehaviour {
+public abstract class AbstractMover : NetworkBehaviour{
 
 	public float speed;
 	protected Rigidbody rigidbody; // Rigidbody of the mover.
