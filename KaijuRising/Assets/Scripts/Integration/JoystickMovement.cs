@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(Rigidbody))]
 public class JoystickMovement : AbstractMover {
@@ -8,7 +9,7 @@ public class JoystickMovement : AbstractMover {
 	 * This script goes onto the player, it checks the virtual joystick input & moves accordingly.
 	 */ 
 
-	public Animator animator;
+	public NetworkAnimator animator;
 //	private Rigidbody rb;
 	public bool isInputReceived;
 	public Vector3 joystickDirection; // The direction from the joystick origin to the joystick.
@@ -26,7 +27,22 @@ public class JoystickMovement : AbstractMover {
 
 	private void FixedUpdate()
 	{
+		if(!isLocalPlayer)
+			return;
+
 		joystickInput();
+	}
+
+	public override void OnStartLocalPlayer ()
+	{
+		base.OnStartLocalPlayer ();
+		animator.SetParameterAutoSend (0,true);
+	}
+
+	public override void PreStartClient ()
+	{
+		base.PreStartClient ();
+		animator.SetParameterAutoSend (0,true);
 	}
 
 	private void joystickInput()
@@ -42,12 +58,32 @@ public class JoystickMovement : AbstractMover {
 			joystickDirection = untiltedPlayerCamera.TransformDirection(joystickDirection); // This is where we convert the direction by considering the direction the camera is facing.
 			move (joystickDirection, speed);
 			transform.LookAt (joystickDirection + transform.position);
-			animator.SetBool ("isWalking", true);
+
+			animator.animator.SetBool ("isWalking", true);
+
+//			if(isServer)
+//				return;
+
+			//CmdAnimate("isWalking", true);
 		}
 		else
 		{
-			animator.SetBool ("isWalking", false);
+			animator.animator.SetBool ("isWalking", false);
+			//CmdAnimate("isWalking", false);
 		}
+	}
+
+	[Command]
+	private void CmdAnimate(string boolName, bool enabled)
+	{
+		animator.animator.SetBool (boolName, enabled);
+		RpcAnimate (boolName, enabled);
+	}
+
+	[ClientRpc]
+	private void RpcAnimate(string boolName, bool enabled)
+	{
+		animator.animator.SetBool (boolName, enabled);
 	}
 
 	public void movement(Vector3 newJoyStickDirection)
