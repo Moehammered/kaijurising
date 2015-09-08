@@ -10,8 +10,7 @@ public class DestroyBuilding : NetworkBehaviour {
 
 	public GameObject[] fragments; // The seperate fragments that make up the building.
 	public Vector3 spawnOffset; // Default 0,0,0. Use if spawned fragments do not fully line up with unbroken building.
-
-
+	
 	private void OnCollisionEnter(Collision other)
 	{
 		if(!isServer) // If not server, do not continue.

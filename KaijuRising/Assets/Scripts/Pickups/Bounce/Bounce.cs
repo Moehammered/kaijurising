@@ -22,13 +22,13 @@ public class Bounce : TimedPickup {
 	private void calculateVelocity()
 	{
 		/*
-		 * For some reason, because the player is moved around with rigidbody.MovePosition, when a collision occurs,
-		 * the velocity of the rigidbody component returns 0,0,0. Because of this, I must calculate velocity manually.
+		 * For some reason because the player's position is changed with rigidbody.MovePosition, when a collision occurs
+		 * the velocity of the rigidbody component returns 0,0,0. Because of this, I have to calculate velocity manually.
 		 * I also make sure to not just keep track of the last position, but of the last two.
 		 * The reason for this is that the last position may be saved at the moment of collision, which will then
-		 * return a velociy of zero or near zero, affecting the bounce.
+		 * cause issues in calculating a proper velocity, thus affecting the bounce.
 		 * So I use the 2nd last saved position to calculate velocity.
-		 * I also make sure to delete teh list if it goes beyond a size of 2, as I do not need more positions.
+		 * I also make sure to delete the list if it goes beyond a size of 2, as I do not need more positions.
 		 */ 
 
 		lastPositions.Insert(0, playerRigidbody.transform.position);

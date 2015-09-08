@@ -4,38 +4,47 @@ using UnityEngine.Networking;
 
 public class PlayerAttack : NetworkBehaviour 
 {
+	/*
+	 * Goes onto player prefab, functions are called by UI Attack Buttons.
+	 */ 
 
 	public NetworkAnimator anim;
-
-	public void tailSwing()
+	
+	public void standardAttack()
 	{
-
-		if(anim.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+		if(!anim.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
 		{
-
-		}
-		else
-		{
-			if(Random.Range(0, 2) == 0)
+			if(gameObject.name.Contains("Rex"))
 			{
-				anim.SetTrigger ("attackLeft");
+				tailSwing();
 			}
 			else
 			{
-				anim.SetTrigger ("attackRight");
+				anim.SetTrigger("standardAttack");
 			}
 		}
 	}
 
 	public void specialAttack()
 	{
-		if(anim.animator.GetCurrentAnimatorStateInfo(0).IsTag ("Attack"))
+		if(!anim.animator.GetCurrentAnimatorStateInfo(0).IsTag ("Attack"))
 		{
+			anim.SetTrigger ("specialAttack");
+		}
+	}
 
+	/*
+	 * This function has been created specifically for the Rex kaiju.
+	 */ 
+	private void tailSwing()
+	{
+		if(Random.Range(0, 2) == 0)
+		{
+			anim.SetTrigger ("attackLeft");
 		}
 		else
 		{
-			anim.SetTrigger ("specialAttack");
+			anim.SetTrigger ("attackRight");
 		}
 	}
 }

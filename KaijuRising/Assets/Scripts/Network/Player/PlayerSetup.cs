@@ -4,6 +4,12 @@ using UnityEngine.Networking;
 
 public class PlayerSetup : NetworkBehaviour {
 
+	/*
+	 * Goes onto player prefab, does some essential things on start such as
+	 * enabling the camera client-side ONLY, stopping potential conflicts with other clients.
+	 * Setting up the camera, canvas & joystick controls.
+	 */ 
+	
 	public GameObject canvas;
 	public GameObject playerCameraParent;
 	public GameObject untiltedCameraRepresentation;
