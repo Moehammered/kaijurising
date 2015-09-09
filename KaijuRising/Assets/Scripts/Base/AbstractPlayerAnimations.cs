@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class AbstractPlayerAnimations : BaseAnimation {
 
 	public string walking;
-	public string attack;
+	public string[] attacks;
 	public string specialAttack;
 	
 	public abstract void playerAttack();

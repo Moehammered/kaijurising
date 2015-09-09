@@ -6,22 +6,17 @@ public class standardAnimations : AbstractPlayerAnimations
 {
 	public override void playerAttack ()
 	{
-		if(!networkAnimator.animator.GetCurrentAnimatorStateInfo(0).IsTag(attack))
+		if(!networkAnimator.animator.GetCurrentAnimatorStateInfo(0).IsTag("attack"))
 		{
-			if(Random.Range(0, 2) == 0)
-			{
-				networkAnimator.SetTrigger ("attackLeft");
-			}
-			else
-			{
-				networkAnimator.SetTrigger ("attackRight");
-			}
+
+			int attackNo = Random.Range(0, attacks.Length);
+			networkAnimator.SetTrigger (attacks[attackNo]);
 		}
 	}
 	
 	public override void playerSpecialAttack ()
 	{
-		if(!networkAnimator.animator.GetCurrentAnimatorStateInfo(0).IsTag (attack))
+		if(!networkAnimator.animator.GetCurrentAnimatorStateInfo(0).IsTag ("attack"))
 		{
 			networkAnimator.SetTrigger (specialAttack);
 		}	
