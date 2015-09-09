@@ -18,7 +18,7 @@ public class PlayerSetup : NetworkBehaviour {
 	{
 		canvas.SetActive (true);
 		GameObject joystickButton = GameObject.FindGameObjectWithTag("Joystick Origin");
-		print (joystickButton.name);
+		//print (joystickButton.name);
 		//joystickButton.GetComponent<VirtualJoystick>().getPlayer(gameObject);
 		canvas.transform.SetParent (null, true);
 		playerCameraParent.transform.SetParent (null, true);

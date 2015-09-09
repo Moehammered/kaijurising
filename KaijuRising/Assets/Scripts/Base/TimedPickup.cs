@@ -49,11 +49,11 @@ public class TimedPickup : CollectablePickup {
 
 	protected virtual void runActiveEffect()
 	{
-		print ("Timed pickup is active");
+		//print ("Timed pickup is active");
 	}
 
 	protected virtual void finishEffect()
 	{
-		print ("TimedPickup is no longer active, returning target back to normal.");
+		//print ("TimedPickup is no longer active, returning target back to normal.");
 	}
 }

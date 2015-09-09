@@ -8,37 +8,24 @@ public class BlankPlayerSetup : NetworkBehaviour {
 	 * The default player that spawns on connection.
 	 * It then automatically checks what kaiju the player chose to spawn and replaces itself with that kaiju.
 	 */ 
-
-	public KaijuList kaijuList;
+	public PlayerSelection playerSelection;
 	public GameObject[] spawnablePrefabs;
 
 	public override void OnStartLocalPlayer ()
 	{
 		base.OnStartLocalPlayer ();
-		print (GameObject.Find ("Player Spawner").GetComponent<PlayerSpawner>().kaiju.name);
-		Cmd_spawnKaiju (GameObject.Find ("Player Spawner").GetComponent<PlayerSpawner>().kaiju.name);
+		spawnKaiju();
 	}
-
-	// For some reason, the Command function does not transfer a GameObject parameter, so I can only send a string.
-	[Command]
-	private void Cmd_spawnKaiju(string chosenKaijuName)
+	
+	private void spawnKaiju()
 	{
-		GameObject[] kaijus = kaijuList.getKaijuObjects();
 		GameObject chosenKaijuObject = null;
-		print (chosenKaijuName);
-
-		for(int i = 0; i < kaijus.Length; i++)
-		{
-			if(kaijus[i].name.Equals (chosenKaijuName))
-			{
-				chosenKaijuObject = kaijus[i];
-				break;
-			}
-		}
-
+		chosenKaijuObject = GameObject.Find("Canvas").GetComponent<PlayerSelection>().kaiju;
 		GameObject instantiatedKaiju = (GameObject)Instantiate (chosenKaijuObject, Vector3.zero, Quaternion.identity);
+		Destroy (GameObject.Find("Canvas"));
 		NetworkServer.Spawn (instantiatedKaiju);
 		NetworkServer.ReplacePlayerForConnection (connectionToClient, instantiatedKaiju, 0);
 		NetworkServer.Destroy (gameObject);
+		
 	}
 }
