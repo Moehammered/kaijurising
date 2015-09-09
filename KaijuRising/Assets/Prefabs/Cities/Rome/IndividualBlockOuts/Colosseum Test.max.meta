@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 7d1c49dd082841a4183b4c407155e2d4
+timeCreated: 1440718043
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 100
+    100002: 150
+    100004: 50
+    100006: ad01
+    100008: ad02
+    100010: ad03
+    100012: ad04
+    100014: Buildings 4 Scale
+    100016: Colosseum
+    100018: Colosseum Buildings
+    100020: Colosseum Buildings 1
+    100022: Colosseum Buildings01
+    100024: Colosseum Buildings02
+    100026: Colosseum Buildings03
+    100028: Colosseum Buildings04
+    100030: Colosseum Buildings05
+    100032: Colosseum Buildings06
+    100034: Colosseum Buildings07
+    100036: Colosseum Buildings08
+    100038: //RootNode
+    100040: Hill
+    100042: Kemono
+    400000: 100
+    400002: 150
+    400004: 50
+    400006: ad01
+    400008: ad02
+    400010: ad03
+    400012: ad04
+    400014: Buildings 4 Scale
+    400016: Colosseum
+    400018: Colosseum Buildings
+    400020: Colosseum Buildings 1
+    400022: Colosseum Buildings01
+    400024: Colosseum Buildings02
+    400026: Colosseum Buildings03
+    400028: Colosseum Buildings04
+    400030: Colosseum Buildings05
+    400032: Colosseum Buildings06
+    400034: Colosseum Buildings07
+    400036: Colosseum Buildings08
+    400038: //RootNode
+    400040: Hill
+    400042: Kemono
+    2300000: 100
+    2300002: 150
+    2300004: 50
+    2300006: ad01
+    2300008: ad02
+    2300010: ad03
+    2300012: ad04
+    2300014: Colosseum
+    2300016: Colosseum Buildings 1
+    2300018: Colosseum Buildings01
+    2300020: Colosseum Buildings02
+    2300022: Colosseum Buildings03
+    2300024: Colosseum Buildings04
+    2300026: Colosseum Buildings05
+    2300028: Colosseum Buildings06
+    2300030: Colosseum Buildings07
+    2300032: Colosseum Buildings08
+    2300034: Hill
+    2300036: Kemono
+    3300000: 100
+    3300002: 150
+    3300004: 50
+    3300006: ad01
+    3300008: ad02
+    3300010: ad03
+    3300012: ad04
+    3300014: Colosseum
+    3300016: Colosseum Buildings 1
+    3300018: Colosseum Buildings01
+    3300020: Colosseum Buildings02
+    3300022: Colosseum Buildings03
+    3300024: Colosseum Buildings04
+    3300026: Colosseum Buildings05
+    3300028: Colosseum Buildings06
+    3300030: Colosseum Buildings07
+    3300032: Colosseum Buildings08
+    3300034: Hill
+    3300036: Kemono
+    4300000: Hill
+    4300002: Colosseum
+    4300004: Colosseum Buildings
+    4300006: Colosseum Buildings01
+    4300008: Colosseum Buildings02
+    4300010: Colosseum Buildings03
+    4300012: Colosseum Buildings04
+    4300014: Colosseum Buildings05
+    4300016: Colosseum Buildings06
+    4300018: Colosseum Buildings07
+    4300020: Colosseum Buildings08
+    4300022: 150
+    4300024: 100
+    4300026: 50
+    4300028: Kemono
+    4300030: ad01
+    4300032: ad02
+    4300034: ad03
+    4300036: ad04
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
