@@ -9,7 +9,7 @@ public class JoystickMovement : AbstractMover {
 	 * This script goes onto the player, it checks the virtual joystick input & moves accordingly.
 	 */ 
 
-	public NetworkAnimator animator;
+	public AbstractPlayerAnimations playerAnimations;
 //	private Rigidbody rb;
 	public bool isInputReceived;
 	public Vector3 joystickDirection; // The direction from the joystick origin to the joystick.
@@ -33,18 +33,6 @@ public class JoystickMovement : AbstractMover {
 		joystickInput();
 	}
 
-	public override void OnStartLocalPlayer ()
-	{
-		base.OnStartLocalPlayer ();
-		animator.SetParameterAutoSend (0,true);
-	}
-
-	public override void PreStartClient ()
-	{
-		base.PreStartClient ();
-		animator.SetParameterAutoSend (0,true);
-	}
-
 	private void joystickInput()
 	{
 		if(isInputReceived == true)
@@ -59,7 +47,7 @@ public class JoystickMovement : AbstractMover {
 			move (joystickDirection, speed);
 			transform.LookAt (joystickDirection + transform.position);
 
-			animator.animator.SetBool ("isWalking", true);
+			playerAnimations.playerWalking(true);
 
 //			if(isServer)
 //				return;
@@ -68,23 +56,23 @@ public class JoystickMovement : AbstractMover {
 		}
 		else
 		{
-			animator.animator.SetBool ("isWalking", false);
+			playerAnimations.playerWalking(false);
 			//CmdAnimate("isWalking", false);
 		}
 	}
 
-	[Command]
-	private void CmdAnimate(string boolName, bool enabled)
-	{
-		animator.animator.SetBool (boolName, enabled);
-		RpcAnimate (boolName, enabled);
-	}
-
-	[ClientRpc]
-	private void RpcAnimate(string boolName, bool enabled)
-	{
-		animator.animator.SetBool (boolName, enabled);
-	}
+//	[Command]
+//	private void CmdAnimate(string boolName, bool enabled)
+//	{
+//		animator.animator.SetBool (boolName, enabled);
+//		RpcAnimate (boolName, enabled);
+//	}
+//
+//	[ClientRpc]
+//	private void RpcAnimate(string boolName, bool enabled)
+//	{
+//		animator.animator.SetBool (boolName, enabled);
+//	}
 
 	public void movement(Vector3 newJoyStickDirection)
 	{
