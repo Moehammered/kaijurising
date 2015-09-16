@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 73bfcf7d0c27a4846931ee6de0e5e20e
-timeCreated: 1442379860
+guid: afe23fc7ad82fcf459827a298f5ae9d7
+timeCreated: 1442381749
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: elements
+    4300000: Triangle roof in set
     9500000: //RootNode
   materials:
     importMaterials: 1
