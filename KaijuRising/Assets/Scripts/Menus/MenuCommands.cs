@@ -7,7 +7,14 @@ public class MenuCommands : MonoBehaviour {
 	public GameObject menuMain;
 	public GameObject menuStart;
 	public GameObject menuOptions;
-//	public GameObject menuMultiplayer;
+	public GameObject menuServer;
+
+
+	void Awake()
+	{
+//		DontDestroyOnLoad(menuMain);
+		DontDestroyOnLoad(menuServer);
+	}
 
 	void Start () 
 	{
@@ -20,7 +27,7 @@ public class MenuCommands : MonoBehaviour {
 		menuMain.SetActive(false);
 		menuStart.SetActive(false);
 		menuOptions.SetActive(false);
-//		menuMultiplayer.SetActive(false);
+		menuServer.SetActive(false);
 	}
 
 	public void showStart()
@@ -47,16 +54,27 @@ public class MenuCommands : MonoBehaviour {
 		menuMain.SetActive(true);
 	}
 
-	public void showMultiplayer()
+//	public void showMultiplayer()
+//	{
+//		hideAllMenus();
+//		menuMultiplayer.SetActive(true);
+//	}
+
+//	public void hideMultiplayer()
+//	{
+//		hideAllMenus();
+//		menuStart.SetActive(true);
+//	}
+
+	public void showServer()
 	{
 		hideAllMenus();
-//		menuMultiplayer.SetActive(true);
+		menuServer.SetActive(true);
 	}
 
-	public void hideMultiplayer()
+	public void hideServer()
 	{
 		hideAllMenus();
-		menuStart.SetActive(true);
 	}
 
 	public void quit()

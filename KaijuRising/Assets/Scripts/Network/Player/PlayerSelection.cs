@@ -17,6 +17,7 @@ public class PlayerSelection : MonoBehaviour {
 	private void Awake()
 	{
 		DontDestroyOnLoad (gameObject);
+		kaiju = rexKaiju;
 	}
 	
 	public void yumKaax()
