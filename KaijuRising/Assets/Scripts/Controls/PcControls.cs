@@ -12,9 +12,11 @@ public struct KeyBindings
 
 public class PcControls : AbstractMover
 {
+	public AbstractPlayerAnimations playerAnimations;
+
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
-	public Camera mainCamera;
+	//public Camera mainCamera;
 
 	void Update()
 	{
@@ -25,24 +27,24 @@ public class PcControls : AbstractMover
 	public void keyboardInput()
 	{
 		direction = Vector3.zero;
-	
-		if(Input.GetKey(keyBindings.forward))
-		{
+
+		if (Input.GetKey (keyBindings.forward)) {
+			playerAnimations.playerWalking (true);
 			direction = transform.forward;
-		}
-		else if (Input.GetKey(keyBindings.back))
-		{
+		} else if (Input.GetKey (keyBindings.back)) {
+			playerAnimations.playerWalking (true);
 			direction = -transform.forward;
-		}
-		if(Input.GetKey(keyBindings.right))
-		{
+		} else if (Input.GetKey (keyBindings.right)) {
+			playerAnimations.playerWalking (true);
 			direction = transform.right;
-		}
-		else if (Input.GetKey(keyBindings.left))
-		{
+		} else if (Input.GetKey (keyBindings.left)) {
+			playerAnimations.playerWalking (true);
 			direction = -transform.right;
 		}
-		
+		else 
+		{
+			playerAnimations.playerWalking(false);
+		}
 		move(direction,speed);
 	}
 	
@@ -50,7 +52,7 @@ public class PcControls : AbstractMover
 	{
 		float mouseX = Input.GetAxis("Mouse X");
 		
-		mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
+		//mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
 		transform.Rotate(new Vector3(0,mouseX,0));
 	}
 	

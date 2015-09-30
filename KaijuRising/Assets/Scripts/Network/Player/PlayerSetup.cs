@@ -21,7 +21,7 @@ public class PlayerSetup : NetworkBehaviour {
 		//print (joystickButton.name);
 		//joystickButton.GetComponent<VirtualJoystick>().getPlayer(gameObject);
 		canvas.transform.SetParent (null, true);
-		playerCameraParent.transform.SetParent (null, true);
+		//playerCameraParent.transform.SetParent (null, true);
 		playerCameraParent.SetActive (true);
 		untiltedCameraRepresentation.SetActive (true);
 		untiltedCameraRepresentation.transform.SetParent (null, true);
