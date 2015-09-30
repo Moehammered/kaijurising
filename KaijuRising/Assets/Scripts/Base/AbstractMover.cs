@@ -7,6 +7,7 @@ public abstract class AbstractMover : NetworkBehaviour{
 
 	public float speed;
 	protected new Rigidbody rigidbody; // Rigidbody of the mover.
+	protected Vector3 direction;
 
 	protected virtual void Awake()
 	{
