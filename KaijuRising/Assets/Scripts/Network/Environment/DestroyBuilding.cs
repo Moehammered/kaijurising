@@ -9,7 +9,7 @@ public class DestroyBuilding : NetworkBehaviour {
 
 	[Header ("Conditions that will Destroy")]
 	public	bool		explodeIndividually;
-	public	KeyCode		redButton = KeyCode.Space;
+	public	KeyCode		redButton = KeyCode.X;
 	public	string		kaijuTag = "Player";
 	private Collision	kaijuCollision; // saved collision info to push fragments away from whatever touched it
 
