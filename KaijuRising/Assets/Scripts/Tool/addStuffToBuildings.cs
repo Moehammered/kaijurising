@@ -19,6 +19,7 @@ public class addStuffToBuildings : MonoBehaviour {
 		{
 			print ("i am currently a building");
 			//checkingIfBuilding[i].gameObject.AddComponent<Entity>();// allows you to add any componet to each and every destructable building
+			//
 		}
 	}
 	
