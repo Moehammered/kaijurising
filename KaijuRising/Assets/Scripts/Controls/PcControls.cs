@@ -8,6 +8,7 @@ public struct KeyBindings
 	public KeyCode back;
 	public KeyCode left;
 	public KeyCode right;
+	public KeyCode attack;
 }
 
 public class PcControls : AbstractMover
@@ -18,10 +19,21 @@ public class PcControls : AbstractMover
 	public float mouseSpeed;
 	//public Camera mainCamera;
 
+	public DestroyableSound desSound;
+
 	void Update()
 	{
 		keyboardInput();
 		mouseInput();
+		attackInput ();
+	}
+
+	public void attackInput() 
+	{
+		if (Input.GetKey (keyBindings.attack)) 
+		{
+			desSound.playClip(0);
+		}
 	}
 
 	public void keyboardInput()
