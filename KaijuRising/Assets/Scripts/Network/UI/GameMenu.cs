@@ -9,7 +9,16 @@ public class GameMenu : MonoBehaviour {
 
 	void Update()
 	{
+		escPressed();
 		showMenu();
+	}
+
+	void escPressed()
+	{
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			menuTriggered();
+		}
 	}
 
 	public void menuTriggered()
