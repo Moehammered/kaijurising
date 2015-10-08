@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-[RequireComponent(typeof(Entity))]
 public class DestroyBuilding : NetworkBehaviour {
 	/*
 	 * Goes onto a normal undestroyed building.
