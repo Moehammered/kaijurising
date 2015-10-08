@@ -13,6 +13,7 @@ public class PlayerSetup : NetworkBehaviour {
 	public GameObject canvas;
 	public GameObject playerCameraParent;
 	public GameObject untiltedCameraRepresentation;
+	public GameObject audioListener;
 
 	public override void OnStartLocalPlayer()
 	{
@@ -26,5 +27,6 @@ public class PlayerSetup : NetworkBehaviour {
 		untiltedCameraRepresentation.SetActive (true);
 		untiltedCameraRepresentation.transform.SetParent (null, true);
 		GameObject.FindGameObjectWithTag("MainMenuCam").SetActive (false);
+		audioListener.SetActive (true);
 	}
 }

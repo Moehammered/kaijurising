@@ -11,7 +11,6 @@ public class EnvironmentFX : MonoBehaviour {
 		if (other.gameObject.tag == "Player") 
 		{
 			print ("Collider");
-			soundSync.playClip(0);
 		}
 	}
 

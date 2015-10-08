@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 [System.Serializable]
 public struct KeyBindings
@@ -18,21 +19,13 @@ public class PcControls : AbstractMover
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
 	//public Camera mainCamera;
-
-	public DestroyableSound desSound;
-
+	
 	void Update()
 	{
-		keyboardInput();
-		mouseInput();
-		attackInput ();
-	}
-
-	public void attackInput() 
-	{
-		if (Input.GetKey (keyBindings.attack)) 
+		if (isLocalPlayer) 
 		{
-			desSound.playClip(0);
+			keyboardInput();
+			mouseInput();
 		}
 	}
 

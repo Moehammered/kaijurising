@@ -6,25 +6,28 @@ public class DestroyableSound : NetworkBehaviour {
 
 	public AudioSource audioSource;
 	public AudioClip[] audioClips;
+	private float time;
 
+	public float seconds;
 
-	public void playClip(int clipIndex) 
+	void Start() 
 	{
-		print ("sound");
-		CmdPlaySoundClip(clipIndex);
+		time = audioClips[0].length;
+		StartCoroutine (destroyClip ());
+	} 
+
+	private IEnumerator destroyClip() 
+	{
+		while (time + 1f > 0)
+		{
+			time -= Time.deltaTime;
+			yield return null; //wait for a frame
+		}
+		CmdEndEvent();
 	}
 
-	[Command]
-	private void CmdPlaySoundClip(int clipIndex)
+	private void CmdEndEvent() 
 	{
-		print ("Command");
-		RpcPlaySoundOnClients(clipIndex);
-	} 
-	
-	[ClientRpc]
-	private void RpcPlaySoundOnClients(int clipIndex)
-	{
-		print ("Client");
-		audioSource.PlayOneShot(audioClips[clipIndex]);
+		Destroy (gameObject, 0);
 	}
 }
