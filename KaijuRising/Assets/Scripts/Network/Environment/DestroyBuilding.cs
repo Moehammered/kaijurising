@@ -28,8 +28,9 @@ public class DestroyBuilding : NetworkBehaviour
 	//Explosion uses the gameobejcts transform position. If this position is not in the centre of the object
 	//Then explosion needs to be offset into the centre
 	public Vector3		explosionOffset;
-	
-	public void explodeObject ()
+
+	//[Command]
+	public void Cmd_explodeObject ()
 	{
 		//if(!isServer) // If not server, do not continue.
 		//return;
@@ -89,7 +90,7 @@ public class DestroyBuilding : NetworkBehaviour
 	
 	private void onDeath()
 	{
-		buildingStatus.onModifyDeath += explodeObject;
+		buildingStatus.onModifyDeath += Cmd_explodeObject;
 	}
 	
 	// Conditions that cause explosion. Can make your own
@@ -105,7 +106,7 @@ public class DestroyBuilding : NetworkBehaviour
 		if (other.gameObject.tag == kaijuTag)
 		{
 			kaijuCollision = other;
-			explodeObject ();
+			Cmd_explodeObject ();
 		}
 	}
 

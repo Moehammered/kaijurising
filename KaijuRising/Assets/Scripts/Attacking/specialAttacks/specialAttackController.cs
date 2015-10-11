@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 public enum KAIJU_SPECIAL_ATTACK
 {
 	MANTRA,		//Francesco
@@ -12,20 +13,30 @@ public enum KAIJU_SPECIAL_ATTACK
 	FALSOL,		//Yuki
 	NO_KAIJU
 };
-public class specialAttackController : MonoBehaviour {
+public class specialAttackController : NetworkBehaviour {
 
 	public Rigidbody aoeAttack;
 	public KAIJU_SPECIAL_ATTACK specialState;
 	public GameObject aoe;
-
-
+	
 	private void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.W))
+		if(Input.GetKeyDown(KeyCode.Space))
 		{
-			Instantiate(aoe,transform.position, Quaternion.identity);
+			if(isLocalPlayer)
+			{
+				//Instantiate(aoe,transform.position, Quaternion.identity);
+				Cmd_spawnAttack();
+			}
 		}
 		//determinState();
+	}
+
+	[Command]
+	private void Cmd_spawnAttack()
+	{
+		GameObject go = Instantiate(aoe,transform.position, Quaternion.identity) as GameObject;
+		NetworkServer.Spawn(go);
 	}
 
 

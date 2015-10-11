@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class AreaOfEffect : MonoBehaviour {
+public class AreaOfEffect : NetworkBehaviour {
 
 	public float damageValue, radius;
 	public string[] tags;
-
+	
 	private void Update()
 	{
-		activateAttack();
+		if(!isLocalPlayer)
+		{
+			Cmd_activateAttack();
+		}
 	}
 
 	private void Start()
@@ -16,10 +20,11 @@ public class AreaOfEffect : MonoBehaviour {
 		transform.localScale = new Vector3(radius,1f,radius);
 	}
 
-	private void activateAttack()
+	[Command]
+	private void Cmd_activateAttack()
 	{
 		storePlayers(transform.position, radius);
-		Destroy(gameObject);
+		NetworkServer.Destroy(gameObject);
 	}
 
 	private void storePlayers(Vector3 center, float radius) 
