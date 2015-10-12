@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class DamageableEntity : MonoBehaviour {
-
-    public float health = 200f;
+using UnityEngine.Networking;
+public class DamageableEntity : NetworkBehaviour {
+	
+    public float health;
     public bool isDead;
+	private string checkingTag;
 
 	public ModifyHealthDelegate onModifyHealth;
 	//public ModifyHealthDelegate onModifyDeath;
@@ -15,11 +16,15 @@ public class DamageableEntity : MonoBehaviour {
 
     protected virtual void Start()
     {
-        if(health <= 0)
-        {
-            isDead = true;
-			onModifyDeath();
-        }
+		if(isServer)
+		{
+			nameChecker(gameObject.tag);
+			if(health <= 0)
+			{
+				isDead = true;
+				onModifyDeath();
+			}
+		}
     }
 
 	public void modifyHealth(float amount)
@@ -42,6 +47,27 @@ public class DamageableEntity : MonoBehaviour {
 			}
         }
     }
+
+	private string nameChecker(string checkingEntity)
+	{
+		switch(checkingEntity)
+		{
+			case"Player":
+				break;
+			case"50m":
+				health = 50f;
+				break;
+			case"100m":
+				health = 75f;
+				break;
+			case"150m":
+				health = 100f;
+				break;
+			case"Building":
+				break;
+		}
+		return checkingEntity;
+	}
 
     public void kill()
     {

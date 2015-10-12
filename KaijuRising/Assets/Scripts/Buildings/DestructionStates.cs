@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 public enum BUILDING_STATE
 {
 	STATE_ZERO,
@@ -7,16 +8,49 @@ public enum BUILDING_STATE
 	STATE_TWO,
 	STATE_THREE
 };
-public class DestructionStates : MonoBehaviour {
-
-	private BUILDING_STATE currentState;
+public class DestructionStates : BuildingChange {
+	
+	[SyncVar]
 	public int changeState;
-	public float health,highest,average,lowest;
+	[SyncVar]
+	public bool toggle = false;
+	private BUILDING_STATE currentState;
+
+	private void Start()
+	{
+		if(isServer)
+		{
+			grabingBuildingInfo.onModifyHealth += server;
+		}
+		if(isClient && !isServer)
+		{
+			print ("i am player");
+			grabingBuildingInfo.onModifyHealth += client;
+		}
+	}
 
 	private void Update()
 	{
-		//checkBuildingHealth();
-		intergerState(setHealthState(health));
+		if(toggle)
+		{
+			if(isClient && !isServer)
+			{
+				print("i only run when a client");
+				grabingBuildingInfo.onModifyHealth();
+			}
+			toggle =! toggle;
+		}
+	}
+
+	private void server()
+	{
+		intergerState(setHealthState(grabingBuildingInfo.health));
+		toggle = true;
+	}
+
+	private void client()
+	{
+		intergerState(changeState);
 	}
 
 	private BUILDING_STATE intergerState(int stateChanger)
@@ -24,28 +58,24 @@ public class DestructionStates : MonoBehaviour {
 		switch (stateChanger)
 		{
 			case 0: //This represents the State_Zero
-				print ("nothing");
 				currentState = BUILDING_STATE.STATE_ZERO;
+				changeTexture(stateChanger);
 				break;
-				//return BUILDING_STATE .STATE_ZERO;
 
 			case 1:	//This represents the State_One
-				print ("has taken some damage");
 				currentState = BUILDING_STATE.STATE_ONE;
+				changeTexture(stateChanger);
 				break;
-				//return BUILDING_STATE.STATE_ONE;
 
 			case 2:	//This represents the State_Two
-				print ("is pretty beaten up");
-				currentState = BUILDING_STATE.STATE_TWO;
+			currentState = BUILDING_STATE.STATE_TWO;
+				changeTexture(stateChanger);
 				break;
-				//return BUILDING_STATE.STATE_TWO;
 
 			case 3:	//This represents the State_Three
-				print ("is close to death atm");
 				currentState = BUILDING_STATE.STATE_THREE;
+				changeTexture(stateChanger);
 				break;
-				//return BUILDING_STATE.STATE_THREE;
 		}
 		return currentState;
 	}
@@ -56,18 +86,23 @@ public class DestructionStates : MonoBehaviour {
 		{
 			changeState = 0;
 		}
-		if(health < highest)
+		if(health <= highest)
 		{
 			changeState = 1;
 		}
-		if(health < average)
+		if(health <= average)
 		{
 			changeState = 2;
 		}
-		if(health < lowest)
+		if(health <= lowest)
 		{
 			changeState = 3;
 		}
 		return changeState;
+	}
+
+	public void changeTexture (int state)
+	{
+		updatedTexture(materialSelected[state]);
 	}
 }

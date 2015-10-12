@@ -50,9 +50,9 @@ public class Entity : DamageableEntity {
 
     public void takeDamage(float amount)
     {
-        amount = Mathf.Abs(amount) * -1; //Make it positive and then flip it
-        //We know we are damaged, so we should assign an 'onTakeDamage' function to 'onModifyHealth'
-        onModifyHealth = onTakeDamage;
-        modifyHealth(amount);
+		amount = Mathf.Abs(amount) * -1; //Make it positive and then flip it
+		//We know we are damaged, so we should assign an 'onTakeDamage' function to 'onModifyHealth'
+		onModifyHealth += onTakeDamage;
+		modifyHealth(amount);
     }
 }
