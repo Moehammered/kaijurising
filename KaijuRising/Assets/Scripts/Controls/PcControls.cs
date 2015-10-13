@@ -19,6 +19,8 @@ public class PcControls : AbstractMover
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
 	//public Camera mainCamera;
+
+	public InstanciateSound sound;
 	
 	void Update()
 	{
@@ -36,6 +38,7 @@ public class PcControls : AbstractMover
 		if (Input.GetKey (keyBindings.forward)) {
 			playerAnimations.playerWalking (true);
 			direction = transform.forward;
+			sound.CmdInstantiateOnServer(sound.sounds.walk);
 		} else if (Input.GetKey (keyBindings.back)) {
 			playerAnimations.playerWalking (true);
 			direction = -transform.forward;

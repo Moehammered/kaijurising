@@ -5,14 +5,13 @@ using UnityEngine.Networking;
 public class DestroyableSound : NetworkBehaviour {
 
 	public AudioSource audioSource;
-	public AudioClip[] audioClips;
 	private float time;
 
 	public float seconds;
 
 	void Start() 
 	{
-		time = audioClips[0].length;
+		time = 2f;
 		StartCoroutine (destroyClip ());
 	} 
 
