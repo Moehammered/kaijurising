@@ -28,5 +28,6 @@ public class PlayerSetup : NetworkBehaviour {
 		untiltedCameraRepresentation.transform.SetParent (null, true);
 		GameObject.FindGameObjectWithTag("MainMenuCam").SetActive (false);
 		audioListener.SetActive (true);
+		Destroy (GameObject.Find("SelectionCanvas"));
 	}
 }
