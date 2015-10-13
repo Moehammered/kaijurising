@@ -18,10 +18,10 @@ public class PcControls : AbstractMover
 
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
-	//public Camera mainCamera;
 
-	public InstanciateSound sound;
-	
+	// need InstantiateSound reference to play sounds
+	public KaijuSounds sound;
+
 	void Update()
 	{
 		if (isLocalPlayer) 
@@ -37,21 +37,35 @@ public class PcControls : AbstractMover
 
 		if (Input.GetKey (keyBindings.forward)) {
 			playerAnimations.playerWalking (true);
-			direction = transform.forward;
-			sound.CmdInstantiateOnServer(sound.sounds.walk);
-		} else if (Input.GetKey (keyBindings.back)) {
+			direction = transform.forward;	
+		}
+		else if (Input.GetKey (keyBindings.back)) 
+		{
 			playerAnimations.playerWalking (true);
 			direction = -transform.forward;
-		} else if (Input.GetKey (keyBindings.right)) {
+		} 
+		else if (Input.GetKey (keyBindings.right))
+		{
 			playerAnimations.playerWalking (true);
 			direction = transform.right;
-		} else if (Input.GetKey (keyBindings.left)) {
+		} 
+		else if (Input.GetKey (keyBindings.left)) 
+		{
 			playerAnimations.playerWalking (true);
 			direction = -transform.right;
 		}
 		else 
 		{
 			playerAnimations.playerWalking(false);
+		}
+
+		if (Input.GetKeyDown (keyBindings.forward)) 
+		{
+			sound.CmdPlayOnServer();
+		}
+		if (Input.GetKeyUp (keyBindings.forward)) 
+		{
+			sound.CmdStopOnServer();
 		}
 		move(direction,speed);
 	}
