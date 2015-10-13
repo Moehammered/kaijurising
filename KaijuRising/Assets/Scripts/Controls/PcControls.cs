@@ -67,6 +67,14 @@ public class PcControls : AbstractMover
 		{
 			sound.CmdStopOnServer();
 		}
+		if (Input.GetKeyDown (keyBindings.back)) 
+		{
+			sound.CmdPlayOnServer();
+		}
+		if (Input.GetKeyUp (keyBindings.back)) 
+		{
+			sound.CmdStopOnServer();
+		}
 		move(direction,speed);
 	}
 	
