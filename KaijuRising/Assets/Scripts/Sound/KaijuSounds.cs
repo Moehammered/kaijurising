@@ -22,13 +22,27 @@ public class KaijuSounds : NetworkBehaviour {
 	[ClientRpc]
 	private void RpcStopOnClients() 
 	{
-		source.Stop();
 		source.loop = false;
+		StartCoroutine(volumeFader());
+
 	} 
 	
 	[Command]
 	public void CmdStopOnServer() 
 	{
 		RpcStopOnClients ();
+	}
+
+	private IEnumerator volumeFader() 
+	{
+		float originalVolume = source.volume;
+
+		while (source.volume > 0) 
+		{
+			source.volume -= 0.5f + Time.deltaTime;
+			yield return null;
+		}
+		source.Stop ();
+		source.volume = originalVolume;
 	}
 }
