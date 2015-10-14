@@ -19,6 +19,7 @@ public class CustomNetworkManager : NetworkManager {
 	[Header("Kaijus")]
 	public GameObject rexKaiju = null;
 	public GameObject yumKaax = null;
+	public GameObject gozuKaiju = null;
 
 	// Accessed by the selectCanvas UI buttons. Sets the chosen kaiju into PlayerPrefs.
 	public void chooseKaiju(string kaijuName)
@@ -76,6 +77,10 @@ public class CustomNetworkManager : NetworkManager {
 			break;
 		case "YUMKAAX":
 			player = (GameObject)Instantiate (yumKaax, Vector3.zero, Quaternion.identity);
+			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			break;
+		case "GOZU":
+			player = (GameObject)Instantiate (gozuKaiju, Vector3.zero, Quaternion.identity);
 			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 			break;
 		}
