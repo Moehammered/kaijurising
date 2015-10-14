@@ -29,6 +29,9 @@ public class DestroyBuilding : NetworkBehaviour
 	//Then explosion needs to be offset into the centre
 	public Vector3		explosionOffset;
 
+	// sound
+	public InstanciateSound instSound;
+
 	//[Command]
 	public void Cmd_explodeObject ()
 	{
@@ -97,6 +100,7 @@ public class DestroyBuilding : NetworkBehaviour
 	
 	private void Start()
 	{
+		instSound = GetComponent<InstanciateSound>();
 		buildingStatus = GetComponent<Entity>();
 		onDeath();
 	}
@@ -105,6 +109,8 @@ public class DestroyBuilding : NetworkBehaviour
 	{
 		if (other.gameObject.tag == kaijuTag)
 		{
+			// Instantiate Sound Object on collision
+			instSound.instantiateOnServer(instSound.sounds.buildingDestroy);
 			kaijuCollision = other;
 			Cmd_explodeObject ();
 		}
