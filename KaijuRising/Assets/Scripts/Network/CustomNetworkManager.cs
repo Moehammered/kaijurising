@@ -84,22 +84,39 @@ public class CustomNetworkManager : NetworkManager {
 		switch(chosenKaiju)
 		{
 		case "REX":
-			player = (GameObject)Instantiate (rexKaiju, Vector3.zero, Quaternion.identity);
-			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			makeKaijuPlayer (rexKaiju, player, networkMessage);
 			break;
 		case "YUMKAAX":
-			player = (GameObject)Instantiate (yumKaaxKaiju, Vector3.zero, Quaternion.identity);
-			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			makeKaijuPlayer (yumKaaxKaiju, player, networkMessage);
 			break;
 		case "GOZU":
-			player = (GameObject)Instantiate (gozuKaiju, Vector3.zero, Quaternion.identity);
-			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			makeKaijuPlayer (gozuKaiju, player, networkMessage);
 			break;
 		case "TRIKARENOS":
-			player = (GameObject)Instantiate (trikarenosKaiju, Vector3.zero, Quaternion.identity);
-			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			makeKaijuPlayer (trikarenosKaiju, player, networkMessage);
 			break;
-			//add others
+		case "FALSOL":
+			makeKaijuPlayer (fasolKaiju, player, networkMessage);
+			break;
+		case "MACEDON":
+			makeKaijuPlayer (macedonKaiju, player, networkMessage);
+			break;
+		case "VORKO":
+			makeKaijuPlayer (vorkoKaiju, player, networkMessage);
+			break;
+		case "KREMONO":
+			makeKaijuPlayer (kremonoKaiju, player, networkMessage);
+			break;
+		case "MANTRA":
+			makeKaijuPlayer (mantraKaiju, player, networkMessage);
+			break;
 		}
 	}
+
+	private void makeKaijuPlayer (GameObject gmo, GameObject player, NetworkMessage networkMessage)
+	{
+		player = (GameObject)Instantiate (gmo, Vector3.zero, Quaternion.identity);
+		NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+	}
+
 }
