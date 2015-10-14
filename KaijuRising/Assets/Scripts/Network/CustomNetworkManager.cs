@@ -18,9 +18,14 @@ public class CustomNetworkManager : NetworkManager {
 	private const string key = "ChosenKaiju"; // The PlayerPreference key which holds the chosen kaiju.
 	[Header("Kaijus")]
 	public GameObject rexKaiju = null;
-	public GameObject yumKaax = null;
+	public GameObject yumKaaxKaiju = null;
 	public GameObject gozuKaiju = null;
-
+	public GameObject fasolKaiju = null;
+	public GameObject macedonKaiju = null;
+	public GameObject mantraKaiju = null;
+	public GameObject vorkoKaiju = null;
+	public GameObject kremonoKaiju = null;
+	public GameObject trikarenosKaiju = null;
 	// Accessed by the selectCanvas UI buttons. Sets the chosen kaiju into PlayerPrefs.
 	public void chooseKaiju(string kaijuName)
 	{
@@ -76,13 +81,18 @@ public class CustomNetworkManager : NetworkManager {
 			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 			break;
 		case "YUMKAAX":
-			player = (GameObject)Instantiate (yumKaax, Vector3.zero, Quaternion.identity);
+			player = (GameObject)Instantiate (yumKaaxKaiju, Vector3.zero, Quaternion.identity);
 			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 			break;
 		case "GOZU":
 			player = (GameObject)Instantiate (gozuKaiju, Vector3.zero, Quaternion.identity);
 			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 			break;
+		case "TRIKARENOS":
+			player = (GameObject)Instantiate (trikarenosKaiju, Vector3.zero, Quaternion.identity);
+			NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+			break;
+			//add others
 		}
 	}
 }
