@@ -61,10 +61,9 @@ public class addStuffToBuildings : MonoBehaviour {
 		findAllBuildings = GameObject.FindObjectsOfType<DestroyBuilding>() as DestroyBuilding[];
 		for(int z=0; z<findAllBuildings.Length; z++)
 		{
-			findAllBuildings[z].tag = "Building";
-			//findAllBuildings[z].gameObject.AddComponent<DestructionStates>();
+			findAllBuildings[z].gameObject.AddComponent<InstanciateSound>();
 		}
-
+/**
 		checkForFakeBuildings = GameObject.FindGameObjectsWithTag(buildingTag);
 		for(int i=0; i< checkForFakeBuildings.Length; i++)
 		{
@@ -75,7 +74,7 @@ public class addStuffToBuildings : MonoBehaviour {
 				checkForFakeBuildings[i].tag = "Untagged";
 			}
 		}
-	
+	**/
 	}
 
 	private void changeBuildingInfo()

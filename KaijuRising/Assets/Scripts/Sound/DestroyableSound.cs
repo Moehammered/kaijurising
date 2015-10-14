@@ -6,30 +6,15 @@ public class DestroyableSound : NetworkBehaviour {
 
 	public AudioSource audioSource;
 	private float time;
-
+	
 	public float seconds;
 
 	void Start() 
 	{
 		time = 2f;
-	//	StartCoroutine (destroyClip ());
+		StartCoroutine (destroyClip ());
 	} 
 
-	void Update() 
-	{
-		if (isServer) 
-		{
-			print ("key up");
-
-			if(Input.GetKey(KeyCode.W)) 
-			{
-				print ("key up");
-				CmdEndEvent();
-			}
-		}
-	}
-
-	/**
 	private IEnumerator destroyClip() 
 	{
 		while (time + 1f > 0)
@@ -39,7 +24,6 @@ public class DestroyableSound : NetworkBehaviour {
 		}
 		CmdEndEvent();
 	}
-	**/
 
 	private void CmdEndEvent() 
 	{
