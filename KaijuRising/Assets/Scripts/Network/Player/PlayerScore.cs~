@@ -40,18 +40,19 @@ public class PlayerScore : NetworkBehaviour {
 		score += scoreIncrease;
 	}
 	
-/*	[ClientRpc]
+	[ClientRpc]
 	public void Rpc_endGame()
 	{
 		if(score > endScoreAmount)
 		{
 			Cmd_endGame();
 		}
-	}*/
+	}
 	
 	[Command]
 	public void Cmd_endGame()
 	{
-		NetworkServer.Shutdown();
+		GameObject.FindObjectOfType<CustomNetworkManager>().StopServer();
+		NetworkServer.Reset();
 	}
 }
