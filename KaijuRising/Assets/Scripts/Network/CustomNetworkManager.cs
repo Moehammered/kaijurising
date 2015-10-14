@@ -56,16 +56,23 @@ public class CustomNetworkManager : NetworkManager {
 	{
 		//base.OnClientSceneChanged (conn);
 
-		ClientScene.Ready(conn);
-		
-		for(int i = 0; i < spawnablePrefabs.Length; i++)
+		if(Application.loadedLevelName != "OfflineScene")
 		{
-			ClientScene.RegisterPrefab(spawnablePrefabs[i]);
+			ClientScene.Ready(conn);
+			
+			for(int i = 0; i < spawnablePrefabs.Length; i++)
+			{
+				ClientScene.RegisterPrefab(spawnablePrefabs[i]);
+			}
+			
+			CustomAddPlayerMessage message = new CustomAddPlayerMessage();
+			message.chosenKaiju = PlayerPrefs.GetString(key);
+			ClientScene.readyConnection.Send(9001, message);
 		}
-		
-		CustomAddPlayerMessage message = new CustomAddPlayerMessage();
-		message.chosenKaiju = PlayerPrefs.GetString(key);
-		ClientScene.readyConnection.Send(9001, message);
+		else
+		{
+			conn.Disconnect();
+		}
 	}
 
 	// Registered function that is called by the client on connection.
