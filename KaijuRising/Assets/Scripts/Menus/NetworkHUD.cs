@@ -16,7 +16,7 @@ public class NetworkHUD : NetworkBehaviour {
 	
 	void Awake()
 	{
-		DontDestroyOnLoad(transform.gameObject);
+//		DontDestroyOnLoad(transform.gameObject);
 		portInput.text = "7777";
 		ipAddressInput.text = "localhost";
 
