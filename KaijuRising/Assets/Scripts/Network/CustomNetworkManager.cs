@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using System.Collections.Generic;
 
 public class CustomNetworkManager : NetworkManager {
 
@@ -13,6 +14,10 @@ public class CustomNetworkManager : NetworkManager {
 	 * To sum it up... This class has an array that extends the functionality of Network Manager's registered spawnable prefab section
 	 * by allowing a developer to drag multiple prefabs in at a time.
 	 */ 
+
+	public List<Vector3> spawnPool = new List<Vector3> ();
+
+	public Vector3 spawnPosition;
 
 	public GameObject[] spawnablePrefabs;
 	private const string key = "ChosenKaiju"; // The PlayerPreference key which holds the chosen kaiju.
@@ -75,6 +80,8 @@ public class CustomNetworkManager : NetworkManager {
 		}
 	}
 
+
+
 	// Registered function that is called by the client on connection.
 	private void customAddPlayer(NetworkMessage networkMessage)
 	{
@@ -113,9 +120,17 @@ public class CustomNetworkManager : NetworkManager {
 		}
 	}
 
+	public void getRandomPosition() 
+	{
+		int randomIndex = Random.Range (0, spawnPool.Count);
+		spawnPosition = spawnPool[randomIndex];
+		spawnPool.RemoveAt (randomIndex);
+	}
+	
 	private void makeKaijuPlayer (GameObject gmo, GameObject player, NetworkMessage networkMessage)
 	{
-		player = (GameObject)Instantiate (gmo, Vector3.zero, Quaternion.identity);
+		getRandomPosition ();
+		player = (GameObject)Instantiate (gmo, spawnPosition, Quaternion.identity);
 		NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 	}
 
