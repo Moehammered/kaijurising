@@ -23,12 +23,12 @@ public class PlayerSetup : NetworkBehaviour {
 	public override void OnStartLocalPlayer()
 	{
 		//Cmd_assignName();
-		scoreBoard.transform.parent = null;
+		scoreBoard.transform.SetParent (null, false);
 		canvas.SetActive (true);
 		GameObject joystickButton = GameObject.FindGameObjectWithTag("Joystick Origin");
 		//print (joystickButton.name);
 		//joystickButton.GetComponent<VirtualJoystick>().getPlayer(gameObject);
-		canvas.transform.SetParent (null, true);
+		canvas.transform.SetParent (null, false);
 		//playerCameraParent.transform.SetParent (null, true);
 		playerCameraParent.SetActive (true);
 		untiltedCameraRepresentation.SetActive (true);
