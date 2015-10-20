@@ -40,6 +40,7 @@ public class CustomNetworkManager : NetworkManager {
 	private void Awake()
 	{
 		DontDestroyOnLoad(gameObject);
+		addSpawnPositions ();
 	}
 
 	public override void OnStartServer ()
@@ -118,6 +119,12 @@ public class CustomNetworkManager : NetworkManager {
 			makeKaijuPlayer (mantraKaiju, player, networkMessage);
 			break;
 		}
+	}
+
+	public void addSpawnPositions() 
+	{
+		spawnPool.Add (new Vector3 (-941, 0, -925));
+		spawnPool.Add (new Vector3 (-727, 0, -1005));
 	}
 
 	public void getRandomPosition() 
