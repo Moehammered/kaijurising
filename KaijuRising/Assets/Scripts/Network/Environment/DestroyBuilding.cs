@@ -86,6 +86,8 @@ public class DestroyBuilding : NetworkBehaviour
 	{
 		if (explosionParticle != null)
 		{
+			// Instantiate Sound Object on building destroy
+			instSound.instantiateOnServer(instSound.sounds.buildingDestroy);
 			GameObject explosionObj = Instantiate (explosionParticle, transform.position + explosionOffset, explosionParticle.transform.rotation) as GameObject;
 			NetworkServer.Spawn (explosionObj);
 		}
@@ -109,8 +111,6 @@ public class DestroyBuilding : NetworkBehaviour
 	{
 		if (other.gameObject.tag == kaijuTag)
 		{
-			// Instantiate Sound Object on collision
-			instSound.instantiateOnServer(instSound.sounds.buildingDestroy);
 			kaijuCollision = other;
 			Cmd_explodeObject ();
 		}

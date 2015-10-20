@@ -9,8 +9,8 @@ public class KaijuSounds : NetworkBehaviour {
 	[ClientRpc]
 	private void RpcPlayOnClients() 
 	{
-		source.Play ();
 		source.loop = true;
+		source.Play ();
 	} 
 
 	[Command]
@@ -22,9 +22,8 @@ public class KaijuSounds : NetworkBehaviour {
 	[ClientRpc]
 	private void RpcStopOnClients() 
 	{
-		source.loop = false;
 		StartCoroutine(volumeFader());
-
+		source.loop = false;
 	} 
 	
 	[Command]

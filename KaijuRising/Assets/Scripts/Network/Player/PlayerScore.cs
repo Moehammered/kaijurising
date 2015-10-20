@@ -18,7 +18,6 @@ public class PlayerScore : NetworkBehaviour {
 			if(Input.GetKeyDown (KeyCode.W))
 			{
 				Cmd_increaseScore();
-
 			}
 			if(score > endScoreAmount)
 			{
@@ -52,7 +51,8 @@ public class PlayerScore : NetworkBehaviour {
 	[Command]
 	public void Cmd_endGame()
 	{
-		GameObject.FindObjectOfType<CustomNetworkManager>().StopServer();
-		NetworkServer.Reset();
+		print ("won game");
+		//GameObject.FindObjectOfType<CustomNetworkManager>().StopServer();
+		//NetworkServer.Reset();
 	}
 }
