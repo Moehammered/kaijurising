@@ -15,13 +15,15 @@ public class NetworkHUD : NetworkBehaviour {
 	
 	protected FileInfo theSourceFile = null;
 	protected StreamReader reader = null;
-	protected string text = " "; // assigned to allow first line to be read below
+	protected string text = ""; // assigned to allow first line to be read below
 
 	// Runtime variable
 //	bool showServer = false;
 	
 	void Awake()
 	{
+		//DontDestroyOnLoad(transform.gameObject);
+		portInput.text = "7777";
 		theSourceFile = new FileInfo ("IPConfig.txt");
 		reader = theSourceFile.OpenText();
 		if (text != null) {
@@ -30,8 +32,7 @@ public class NetworkHUD : NetworkBehaviour {
 			ipAddressInput.text = text;
 			clientJoin();
 		}
-		//		DontDestroyOnLoad(transform.gameObject);
-		portInput.text = "7777";
+		
 	//	ipAddressInput.text = "localhost";
 
 	}

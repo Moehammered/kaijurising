@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class PlayerScore : NetworkBehaviour {
@@ -9,26 +10,13 @@ public class PlayerScore : NetworkBehaviour {
 	
 	public int endScoreAmount = 100;
 	public int endKillAmount = 5;
-	
-	// This function was to test if the variable synced. Once ready, remove this as Cmd_increaseScore is called from other classes.
-	private void Update()
-	{
-		if(isLocalPlayer)
-		{
-			if(Input.GetKeyDown (KeyCode.W))
-			{
-				Cmd_increaseScore();
-			}
-			if(score > endScoreAmount)
-			{
-				Cmd_endGame();
-			}
-		}
-	}
+
+	public Text playerScore;
 	
 	[Command]
 	public void Cmd_increaseScore()
 	{
+		playerScore.text = score.ToString();
 		score += scoreIncrease;
 		Rpc_increaseScore();
 	}
