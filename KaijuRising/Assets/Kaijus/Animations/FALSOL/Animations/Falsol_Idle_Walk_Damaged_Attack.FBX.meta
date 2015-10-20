@@ -1,0 +1,1343 @@
+fileFormatVersion: 2
+guid: 907c0102c439c594582dd2cec95dfb64
+timeCreated: 1445312330
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Arm L01
+    100002: Arm L02
+    100004: Arm R01
+    100006: Arm R02
+    100008: Big Feather01
+    100010: Big Feather02
+    100012: Big Feather03
+    100014: Big Feather04
+    100016: Big Feather05
+    100018: Black feather
+    100020: Body
+    100022: Bone002
+    100024: Bone004
+    100026: Bone008
+    100028: Bone010
+    100030: Bone012
+    100032: //RootNode
+    100034: Feather bone01
+    100036: Feather bone02
+    100038: Feather bone03
+    100040: Feather bone04
+    100042: Feather bone05
+    100044: Feather bone06
+    100046: Feather bone07
+    100048: Feather bone08
+    100050: Feather bone09
+    100052: Feather bone10
+    100054: Feather bone11
+    100056: Feather bone12
+    100058: Feather bone13
+    100060: Feather bone14
+    100062: Feather bone15
+    100064: Feather bone16
+    100066: Feather bone17
+    100068: Feather bone18
+    100070: Feather bone19
+    100072: Feather bone20
+    100074: Finger L01
+    100076: Finger L02
+    100078: Finger R01
+    100080: Finger R02
+    100082: Foot L01
+    100084: Foot L02
+    100086: Foot R01
+    100088: Foot R02
+    100090: Hair 01
+    100092: Hair 02
+    100094: Hand L
+    100096: Hand R
+    100098: Handle
+    100100: Head
+    100102: Hip L
+    100104: Hip R
+    100106: IK Chain001
+    100108: IK Chain002
+    100110: IK Chain003
+    100112: IK Chain004
+    100114: IK Chain005
+    100116: IK Chain006
+    100118: IK Chain007
+    100120: Jaw
+    100122: Leg L01
+    100124: Leg L02
+    100126: Leg L03
+    100128: Leg R01
+    100130: Leg R02
+    100132: Leg R03
+    100134: Line001
+    100136: Line002
+    100138: Line003
+    100140: Line004
+    100142: Line005
+    100144: Point001
+    100146: Point002
+    100148: Point003
+    100150: Point004
+    100152: Point005
+    100154: Point006
+    100156: Point007
+    100158: Point008
+    100160: Point009
+    100162: Point010
+    100164: Point011
+    100166: Point012
+    100168: Point013
+    100170: Point014
+    100172: Point015
+    100174: Point016
+    100176: Point017
+    100178: Point018
+    100180: Point019
+    100182: Point020
+    100184: Point021
+    100186: Sholder L
+    100188: Sholder R01
+    100190: Small Feather01
+    100192: Small Feather02
+    100194: Small Feather03
+    100196: Small Feather04
+    100198: Spine 01
+    100200: Spine 02
+    100202: Spine 03
+    100204: Spine 04
+    100206: Spine 05
+    100208: Spine 06
+    100210: Spline control
+    100212: Tail
+    400000: Arm L01
+    400002: Arm L02
+    400004: Arm R01
+    400006: Arm R02
+    400008: Big Feather01
+    400010: Big Feather02
+    400012: Big Feather03
+    400014: Big Feather04
+    400016: Big Feather05
+    400018: Black feather
+    400020: Body
+    400022: Bone002
+    400024: Bone004
+    400026: Bone008
+    400028: Bone010
+    400030: Bone012
+    400032: //RootNode
+    400034: Feather bone01
+    400036: Feather bone02
+    400038: Feather bone03
+    400040: Feather bone04
+    400042: Feather bone05
+    400044: Feather bone06
+    400046: Feather bone07
+    400048: Feather bone08
+    400050: Feather bone09
+    400052: Feather bone10
+    400054: Feather bone11
+    400056: Feather bone12
+    400058: Feather bone13
+    400060: Feather bone14
+    400062: Feather bone15
+    400064: Feather bone16
+    400066: Feather bone17
+    400068: Feather bone18
+    400070: Feather bone19
+    400072: Feather bone20
+    400074: Finger L01
+    400076: Finger L02
+    400078: Finger R01
+    400080: Finger R02
+    400082: Foot L01
+    400084: Foot L02
+    400086: Foot R01
+    400088: Foot R02
+    400090: Hair 01
+    400092: Hair 02
+    400094: Hand L
+    400096: Hand R
+    400098: Handle
+    400100: Head
+    400102: Hip L
+    400104: Hip R
+    400106: IK Chain001
+    400108: IK Chain002
+    400110: IK Chain003
+    400112: IK Chain004
+    400114: IK Chain005
+    400116: IK Chain006
+    400118: IK Chain007
+    400120: Jaw
+    400122: Leg L01
+    400124: Leg L02
+    400126: Leg L03
+    400128: Leg R01
+    400130: Leg R02
+    400132: Leg R03
+    400134: Line001
+    400136: Line002
+    400138: Line003
+    400140: Line004
+    400142: Line005
+    400144: Point001
+    400146: Point002
+    400148: Point003
+    400150: Point004
+    400152: Point005
+    400154: Point006
+    400156: Point007
+    400158: Point008
+    400160: Point009
+    400162: Point010
+    400164: Point011
+    400166: Point012
+    400168: Point013
+    400170: Point014
+    400172: Point015
+    400174: Point016
+    400176: Point017
+    400178: Point018
+    400180: Point019
+    400182: Point020
+    400184: Point021
+    400186: Sholder L
+    400188: Sholder R01
+    400190: Small Feather01
+    400192: Small Feather02
+    400194: Small Feather03
+    400196: Small Feather04
+    400198: Spine 01
+    400200: Spine 02
+    400202: Spine 03
+    400204: Spine 04
+    400206: Spine 05
+    400208: Spine 06
+    400210: Spline control
+    400212: Tail
+    2300000: Black feather
+    3300000: Black feather
+    4300000: Body
+    4300002: Black feather
+    4300004: Big Feather03
+    4300006: Big Feather04
+    4300008: Big Feather05
+    4300010: Big Feather02
+    4300012: Big Feather01
+    4300014: Small Feather02
+    4300016: Small Feather03
+    4300018: Small Feather04
+    4300020: Small Feather01
+    7400000: Falsol_Walk
+    7400002: Falsol_Idle
+    7400004: Falsol_Damaged
+    7400006: Falsol_Attack
+    9500000: //RootNode
+    13700000: Big Feather01
+    13700002: Big Feather02
+    13700004: Big Feather03
+    13700006: Big Feather04
+    13700008: Big Feather05
+    13700010: Body
+    13700012: Small Feather01
+    13700014: Small Feather02
+    13700016: Small Feather03
+    13700018: Small Feather04
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Falsol_Idle
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 131
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Big Feather01
+        weight: 1
+      - path: Big Feather02
+        weight: 1
+      - path: Big Feather03
+        weight: 1
+      - path: Big Feather04
+        weight: 1
+      - path: Big Feather05
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Handle
+        weight: 1
+      - path: IK Chain006
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: Line001
+        weight: 1
+      - path: Line002
+        weight: 1
+      - path: Line003
+        weight: 1
+      - path: Line004
+        weight: 1
+      - path: Line005
+        weight: 1
+      - path: Small Feather01
+        weight: 1
+      - path: Small Feather02
+        weight: 1
+      - path: Small Feather03
+        weight: 1
+      - path: Small Feather04
+        weight: 1
+      - path: Spine 01
+        weight: 1
+      - path: Spine 01/Black feather
+        weight: 1
+      - path: Spine 01/Hip L
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01/Foot L02
+        weight: 1
+      - path: Spine 01/Hip R
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01/Foot R02
+        weight: 1
+      - path: Spine 01/Spine 02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01/Finger L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01/Finger R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01/Hair
+          02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Jaw
+        weight: 1
+      - path: Spine 01/Tail
+        weight: 1
+      - path: Spine 01/Tail/Point021
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04/Bone012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/IK Chain001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08/Bone008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/IK Chain002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point006
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point007
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12/Bone002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/IK Chain003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point009
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point011
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16/Bone004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/IK Chain004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point013
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point014
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point015
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point016
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20/Bone010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/IK Chain005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point017
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point018
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point019
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point020
+        weight: 1
+      - path: Spline control
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Falsol_Walk
+      takeName: Take 001
+      firstFrame: 139
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Big Feather01
+        weight: 1
+      - path: Big Feather02
+        weight: 1
+      - path: Big Feather03
+        weight: 1
+      - path: Big Feather04
+        weight: 1
+      - path: Big Feather05
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Handle
+        weight: 1
+      - path: IK Chain006
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: Line001
+        weight: 1
+      - path: Line002
+        weight: 1
+      - path: Line003
+        weight: 1
+      - path: Line004
+        weight: 1
+      - path: Line005
+        weight: 1
+      - path: Small Feather01
+        weight: 1
+      - path: Small Feather02
+        weight: 1
+      - path: Small Feather03
+        weight: 1
+      - path: Small Feather04
+        weight: 1
+      - path: Spine 01
+        weight: 1
+      - path: Spine 01/Black feather
+        weight: 1
+      - path: Spine 01/Hip L
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01/Foot L02
+        weight: 1
+      - path: Spine 01/Hip R
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01/Foot R02
+        weight: 1
+      - path: Spine 01/Spine 02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01/Finger L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01/Finger R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01/Hair
+          02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Jaw
+        weight: 1
+      - path: Spine 01/Tail
+        weight: 1
+      - path: Spine 01/Tail/Point021
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04/Bone012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/IK Chain001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08/Bone008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/IK Chain002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point006
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point007
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12/Bone002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/IK Chain003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point009
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point011
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16/Bone004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/IK Chain004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point013
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point014
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point015
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point016
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20/Bone010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/IK Chain005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point017
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point018
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point019
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point020
+        weight: 1
+      - path: Spline control
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Falsol_Damaged
+      takeName: Take 001
+      firstFrame: 189
+      lastFrame: 238
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Big Feather01
+        weight: 1
+      - path: Big Feather02
+        weight: 1
+      - path: Big Feather03
+        weight: 1
+      - path: Big Feather04
+        weight: 1
+      - path: Big Feather05
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Handle
+        weight: 1
+      - path: IK Chain006
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: Line001
+        weight: 1
+      - path: Line002
+        weight: 1
+      - path: Line003
+        weight: 1
+      - path: Line004
+        weight: 1
+      - path: Line005
+        weight: 1
+      - path: Small Feather01
+        weight: 1
+      - path: Small Feather02
+        weight: 1
+      - path: Small Feather03
+        weight: 1
+      - path: Small Feather04
+        weight: 1
+      - path: Spine 01
+        weight: 1
+      - path: Spine 01/Black feather
+        weight: 1
+      - path: Spine 01/Hip L
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01/Foot L02
+        weight: 1
+      - path: Spine 01/Hip R
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01/Foot R02
+        weight: 1
+      - path: Spine 01/Spine 02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01/Finger L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01/Finger R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01/Hair
+          02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Jaw
+        weight: 1
+      - path: Spine 01/Tail
+        weight: 1
+      - path: Spine 01/Tail/Point021
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04/Bone012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/IK Chain001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08/Bone008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/IK Chain002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point006
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point007
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12/Bone002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/IK Chain003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point009
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point011
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16/Bone004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/IK Chain004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point013
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point014
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point015
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point016
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20/Bone010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/IK Chain005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point017
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point018
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point019
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point020
+        weight: 1
+      - path: Spline control
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Falsol_Attack
+      takeName: Take 001
+      firstFrame: 235
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Big Feather01
+        weight: 1
+      - path: Big Feather02
+        weight: 1
+      - path: Big Feather03
+        weight: 1
+      - path: Big Feather04
+        weight: 1
+      - path: Big Feather05
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Handle
+        weight: 1
+      - path: IK Chain006
+        weight: 1
+      - path: IK Chain007
+        weight: 1
+      - path: Line001
+        weight: 1
+      - path: Line002
+        weight: 1
+      - path: Line003
+        weight: 1
+      - path: Line004
+        weight: 1
+      - path: Line005
+        weight: 1
+      - path: Small Feather01
+        weight: 1
+      - path: Small Feather02
+        weight: 1
+      - path: Small Feather03
+        weight: 1
+      - path: Small Feather04
+        weight: 1
+      - path: Spine 01
+        weight: 1
+      - path: Spine 01/Black feather
+        weight: 1
+      - path: Spine 01/Hip L
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01
+        weight: 1
+      - path: Spine 01/Hip L/Leg L01/Leg L02/Leg L03/Foot L01/Foot L02
+        weight: 1
+      - path: Spine 01/Hip R
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01
+        weight: 1
+      - path: Spine 01/Hip R/Leg R01/Leg R02/Leg R03/Foot R01/Foot R02
+        weight: 1
+      - path: Spine 01/Spine 02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder L/Arm L01/Arm L02/Hand
+          L/Finger L01/Finger L02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Sholder R01/Arm R01/Arm
+          R02/Hand R/Finger R01/Finger R02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Hair 01/Hair
+          02
+        weight: 1
+      - path: Spine 01/Spine 02/Spine 03/Spine 04/Spine 05/Spine 06/Head/Jaw
+        weight: 1
+      - path: Spine 01/Tail
+        weight: 1
+      - path: Spine 01/Tail/Point021
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Feather bone02/Feather bone03/Feather
+          bone04/Bone012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/IK Chain001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point001
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone01/Point004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Feather bone06/Feather bone07/Feather
+          bone08/Bone008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/IK Chain002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point006
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point007
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone05/Point008
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Feather bone10/Feather bone11/Feather
+          bone12/Bone002
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/IK Chain003
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point009
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point011
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone09/Point012
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Feather bone14/Feather bone15/Feather
+          bone16/Bone004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/IK Chain004
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point013
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point014
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point015
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone13/Point016
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Feather bone18/Feather bone19/Feather
+          bone20/Bone010
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/IK Chain005
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point017
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point018
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point019
+        weight: 1
+      - path: Spine 01/Tail/Point021/Feather bone17/Point020
+        weight: 1
+      - path: Spline control
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
