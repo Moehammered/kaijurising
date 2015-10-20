@@ -113,6 +113,7 @@ public class DestroyBuilding : NetworkBehaviour
 		{
 			kaijuCollision = other;
 			Cmd_explodeObject ();
+			other.gameObject.GetComponent<TamPlayerScore>().increaseTheScore(10);
 		}
 	}
 

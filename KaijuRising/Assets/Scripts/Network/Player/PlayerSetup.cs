@@ -13,7 +13,8 @@ public class PlayerSetup : NetworkBehaviour {
 	 * enabling the camera client-side ONLY, stopping potential conflicts with other clients.
 	 * Setting up the camera, canvas & joystick controls.
 	 */ 
-	
+
+	public GameObject scoreBoard;
 	public GameObject canvas;
 	public GameObject playerCameraParent;
 	public GameObject untiltedCameraRepresentation;
@@ -21,7 +22,8 @@ public class PlayerSetup : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer()
 	{
-		Cmd_assignName();
+		//Cmd_assignName();
+		scoreBoard.transform.parent = null;
 		canvas.SetActive (true);
 		GameObject joystickButton = GameObject.FindGameObjectWithTag("Joystick Origin");
 		//print (joystickButton.name);
