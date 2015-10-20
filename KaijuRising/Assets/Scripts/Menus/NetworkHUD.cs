@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System;
+using System.IO;
 
 public class NetworkHUD : NetworkBehaviour {
 
@@ -10,15 +12,27 @@ public class NetworkHUD : NetworkBehaviour {
 	public InputField portInput;
 	public GameObject menuServer;
 	public Text portNo;
+	
+	protected FileInfo theSourceFile = null;
+	protected StreamReader reader = null;
+	protected string text = " "; // assigned to allow first line to be read below
 
 	// Runtime variable
 //	bool showServer = false;
 	
 	void Awake()
 	{
-//		DontDestroyOnLoad(transform.gameObject);
+		theSourceFile = new FileInfo ("IPConfig.txt");
+		reader = theSourceFile.OpenText();
+		if (text != null) {
+			text = reader.ReadLine();
+			//Console.WriteLine(text);
+			ipAddressInput.text = text;
+			clientJoin();
+		}
+		//		DontDestroyOnLoad(transform.gameObject);
 		portInput.text = "7777";
-		ipAddressInput.text = "localhost";
+	//	ipAddressInput.text = "localhost";
 
 	}
 
