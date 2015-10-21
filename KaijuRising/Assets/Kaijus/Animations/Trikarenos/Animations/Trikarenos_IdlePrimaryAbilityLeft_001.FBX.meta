@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 24b24ef7bde69c24ab2368dc71f5159f
+timeCreated: 1444027551
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: IKChainSpine
+    100004: IKChainTail
+    100006: LeftArmLower001
+    100008: LeftFingers001
+    100010: LeftFootLower001
+    100012: LeftFootToes001
+    100014: LeftFootUpper001
+    100016: LeftHead001
+    100018: LeftHeadEnd001
+    100020: LeftLegIKChain001
+    100022: LeftLegLower001
+    100024: LeftLegUpper001
+    100026: LeftNeck001
+    100028: LeftPaw001
+    100030: LeftShoulderBase001
+    100032: LeftSpineEnd001
+    100034: LeftUpperArm001
+    100036: MainController001
+    100038: MiddleHead001
+    100040: MiddleHeadEnd001
+    100042: MiddleNeck001
+    100044: MiddleSpineEnd001
+    100046: RightArmLower001
+    100048: RightFingers001
+    100050: RightFootLower001
+    100052: RightFootToes001
+    100054: RightFootUpper001
+    100056: RightHead001
+    100058: RightHeadEnd001
+    100060: RightLegIKChain001
+    100062: RightLegLower001
+    100064: RightLegUpper001
+    100066: RightNeck001
+    100068: RightPaw001
+    100070: RightShoulderBase001
+    100072: RightSpineEnd001
+    100074: RightUpperArm001
+    100076: RoadKillOut
+    100078: Spine001
+    100080: SpineBase001
+    100082: SpineBaseController
+    100084: SpineController001
+    100086: SpineEndController
+    100088: SpineMiddleController
+    100090: SplineIKNode001
+    100092: SplineIKNode002
+    100094: TailBase001
+    100096: TailBaseController001
+    100098: TailEnd001
+    100100: TailEndController001
+    100102: TailLower001
+    100104: TailLowerController001
+    100106: TailUpper001
+    100108: TailUpperController001
+    400000: //RootNode
+    400002: IKChainSpine
+    400004: IKChainTail
+    400006: LeftArmLower001
+    400008: LeftFingers001
+    400010: LeftFootLower001
+    400012: LeftFootToes001
+    400014: LeftFootUpper001
+    400016: LeftHead001
+    400018: LeftHeadEnd001
+    400020: LeftLegIKChain001
+    400022: LeftLegLower001
+    400024: LeftLegUpper001
+    400026: LeftNeck001
+    400028: LeftPaw001
+    400030: LeftShoulderBase001
+    400032: LeftSpineEnd001
+    400034: LeftUpperArm001
+    400036: MainController001
+    400038: MiddleHead001
+    400040: MiddleHeadEnd001
+    400042: MiddleNeck001
+    400044: MiddleSpineEnd001
+    400046: RightArmLower001
+    400048: RightFingers001
+    400050: RightFootLower001
+    400052: RightFootToes001
+    400054: RightFootUpper001
+    400056: RightHead001
+    400058: RightHeadEnd001
+    400060: RightLegIKChain001
+    400062: RightLegLower001
+    400064: RightLegUpper001
+    400066: RightNeck001
+    400068: RightPaw001
+    400070: RightShoulderBase001
+    400072: RightSpineEnd001
+    400074: RightUpperArm001
+    400076: RoadKillOut
+    400078: Spine001
+    400080: SpineBase001
+    400082: SpineBaseController
+    400084: SpineController001
+    400086: SpineEndController
+    400088: SpineMiddleController
+    400090: SplineIKNode001
+    400092: SplineIKNode002
+    400094: TailBase001
+    400096: TailBaseController001
+    400098: TailEnd001
+    400100: TailEndController001
+    400102: TailLower001
+    400104: TailLowerController001
+    400106: TailUpper001
+    400108: TailUpperController001
+    4300000: RoadKillOut
+    7400000: Trikarenos_Idle_Primary_Ability_Left
+    9500000: //RootNode
+    13700000: RoadKillOut
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Trikarenos_Idle_Primary_Ability_Left
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MainController001
+        weight: 1
+      - path: MainController001/IKChainSpine
+        weight: 1
+      - path: MainController001/IKChainTail
+        weight: 1
+      - path: MainController001/LeftLegIKChain001
+        weight: 1
+      - path: MainController001/RightLegIKChain001
+        weight: 1
+      - path: MainController001/SpineController001
+        weight: 1
+      - path: MainController001/SpineController001/LeftLegUpper001
+        weight: 1
+      - path: MainController001/SpineController001/LeftLegUpper001/LeftLegLower001
+        weight: 1
+      - path: MainController001/SpineController001/LeftLegUpper001/LeftLegLower001/LeftFootUpper001
+        weight: 1
+      - path: MainController001/SpineController001/LeftLegUpper001/LeftLegLower001/LeftFootUpper001/LeftFootLower001
+        weight: 1
+      - path: MainController001/SpineController001/LeftLegUpper001/LeftLegLower001/LeftFootUpper001/LeftFootLower001/LeftFootToes001
+        weight: 1
+      - path: MainController001/SpineController001/RightLegUpper001
+        weight: 1
+      - path: MainController001/SpineController001/RightLegUpper001/RightLegLower001
+        weight: 1
+      - path: MainController001/SpineController001/RightLegUpper001/RightLegLower001/RightFootUpper001
+        weight: 1
+      - path: MainController001/SpineController001/RightLegUpper001/RightLegLower001/RightFootUpper001/RightFootLower001
+        weight: 1
+      - path: MainController001/SpineController001/RightLegUpper001/RightLegLower001/RightFootUpper001/RightFootLower001/RightFootToes001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftShoulderBase001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftShoulderBase001/LeftUpperArm001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftShoulderBase001/LeftUpperArm001/LeftArmLower001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftShoulderBase001/LeftUpperArm001/LeftArmLower001/LeftPaw001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftShoulderBase001/LeftUpperArm001/LeftArmLower001/LeftPaw001/LeftFingers001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftSpineEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftSpineEnd001/LeftNeck001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftSpineEnd001/LeftNeck001/LeftHead001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/LeftSpineEnd001/LeftNeck001/LeftHead001/LeftHeadEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/MiddleSpineEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/MiddleSpineEnd001/MiddleNeck001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/MiddleSpineEnd001/MiddleNeck001/MiddleHead001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/MiddleSpineEnd001/MiddleNeck001/MiddleHead001/MiddleHeadEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightShoulderBase001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightShoulderBase001/RightUpperArm001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightShoulderBase001/RightUpperArm001/RightArmLower001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightShoulderBase001/RightUpperArm001/RightArmLower001/RightPaw001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightShoulderBase001/RightUpperArm001/RightArmLower001/RightPaw001/RightFingers001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightSpineEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightSpineEnd001/RightNeck001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightSpineEnd001/RightNeck001/RightHead001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBase001/Spine001/RightSpineEnd001/RightNeck001/RightHead001/RightHeadEnd001
+        weight: 1
+      - path: MainController001/SpineController001/SpineBaseController
+        weight: 1
+      - path: MainController001/SpineController001/SpineBaseController/SpineEndController
+        weight: 1
+      - path: MainController001/SpineController001/SpineBaseController/SpineMiddleController
+        weight: 1
+      - path: MainController001/SpineController001/TailBase001
+        weight: 1
+      - path: MainController001/SpineController001/TailBase001/TailUpper001
+        weight: 1
+      - path: MainController001/SpineController001/TailBase001/TailUpper001/TailLower001
+        weight: 1
+      - path: MainController001/SpineController001/TailBase001/TailUpper001/TailLower001/TailEnd001
+        weight: 1
+      - path: MainController001/SpineController001/TailBaseController001
+        weight: 1
+      - path: MainController001/SpineController001/TailBaseController001/TailEndController001
+        weight: 1
+      - path: MainController001/SpineController001/TailBaseController001/TailLowerController001
+        weight: 1
+      - path: MainController001/SpineController001/TailBaseController001/TailUpperController001
+        weight: 1
+      - path: MainController001/SplineIKNode001
+        weight: 1
+      - path: MainController001/SplineIKNode002
+        weight: 1
+      - path: RoadKillOut
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
