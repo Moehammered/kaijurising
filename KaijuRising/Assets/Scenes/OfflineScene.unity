@@ -1747,7 +1747,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: YUMKAAX
+          m_StringArgument: MANTRA
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2078,6 +2078,10 @@ MonoBehaviour:
   - {fileID: 130542, guid: 00196fabdb40c494d9529af805d91935, type: 2}
   - {fileID: 199180, guid: a6b2cc84634d3bc49ac6bd8f1d72762c, type: 2}
   - {fileID: 155188, guid: 328cb091d243bd441a6ce83e74e56b51, type: 2}
+  - {fileID: 166534, guid: 4bf1c6ee90cfcbb46a74f003a5f63fdb, type: 2}
+  - {fileID: 188290, guid: ec264abb87f593345ba6f1734a31d231, type: 2}
+  - {fileID: 156598, guid: fa00a27ea4d3bb845830c4c60ebe18f8, type: 2}
+  - {fileID: 160780, guid: 2a9160eedd4d6624c8752866925218ac, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -2115,14 +2119,14 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   spawnablePrefabs: []
   rexKaiju: {fileID: 113574, guid: c6c2e1bd77a0ba14b9fd82525ae7b201, type: 2}
-  yumKaaxKaiju: {fileID: 139760, guid: 3b9ce2775f039f049a853748eacd3659, type: 2}
+  yumKaaxKaiju: {fileID: 166534, guid: 4bf1c6ee90cfcbb46a74f003a5f63fdb, type: 2}
   gozuKaiju: {fileID: 106096, guid: f13b671dacf0c1743af706fdb58ccd6b, type: 2}
   fasolKaiju: {fileID: 186504, guid: c54d46c687411df49b3233ead407116b, type: 2}
   macedonKaiju: {fileID: 0}
-  mantraKaiju: {fileID: 0}
-  vorkoKaiju: {fileID: 0}
+  mantraKaiju: {fileID: 160780, guid: 2a9160eedd4d6624c8752866925218ac, type: 2}
+  vorkoKaiju: {fileID: 188290, guid: ec264abb87f593345ba6f1734a31d231, type: 2}
   kremonoKaiju: {fileID: 0}
-  trikarenosKaiju: {fileID: 130930, guid: 0303c41ab5f91234bb04e653e9a1302d, type: 2}
+  trikarenosKaiju: {fileID: 156598, guid: fa00a27ea4d3bb845830c4c60ebe18f8, type: 2}
 --- !u!1 &526096138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,7 +3536,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1045400665}
   m_OnClick:
     m_PersistentCalls:
@@ -4327,7 +4331,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1402688833}
   m_OnClick:
     m_PersistentCalls:
@@ -4657,7 +4661,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: YUMKAAX
+          m_StringArgument: VORKO
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

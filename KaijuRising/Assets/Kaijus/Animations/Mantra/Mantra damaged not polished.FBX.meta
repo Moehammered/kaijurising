@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 3062b9e239f31594aade8b6ed9c9e8cd
+timeCreated: 1445384589
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Abdomen end
+    100002: Base bone
+    100004: Grid001
+    100006: Grid002
+    100008: Head
+    100010: Head end
+    100012: IK Chain001
+    100014: IK Chain002
+    100016: IK Chain003
+    100018: IK Chain004
+    100020: Left arm
+    100022: Left arm 1
+    100024: Left bicep
+    100026: Left claw
+    100028: Left hip
+    100030: Left lcaw end
+    100032: Left leg
+    100034: Left leg 1
+    100036: Left leg end
+    100038: Left pincer
+    100040: Left pincer upper
+    100042: Left shoulder
+    100044: Left thigh
+    100046: Lower abdomen
+    100048: Lower thorax
+    100050: //RootNode
+    100052: Mantra_Low
+    100054: Neck
+    100056: Pincers
+    100058: Right arm
+    100060: Right arm 1
+    100062: Right bicep
+    100064: Right claw
+    100066: Right claw end
+    100068: Right hip
+    100070: Right leg
+    100072: Right leg 1
+    100074: Right leg end
+    100076: Right pincer
+    100078: Right pincer upper
+    100080: Right shoulder
+    100082: Right thigh
+    100084: Upper abdomen
+    100086: Upper thorax
+    400000: Abdomen end
+    400002: Base bone
+    400004: Grid001
+    400006: Grid002
+    400008: Head
+    400010: Head end
+    400012: IK Chain001
+    400014: IK Chain002
+    400016: IK Chain003
+    400018: IK Chain004
+    400020: Left arm
+    400022: Left arm 1
+    400024: Left bicep
+    400026: Left claw
+    400028: Left hip
+    400030: Left lcaw end
+    400032: Left leg
+    400034: Left leg 1
+    400036: Left leg end
+    400038: Left pincer
+    400040: Left pincer upper
+    400042: Left shoulder
+    400044: Left thigh
+    400046: Lower abdomen
+    400048: Lower thorax
+    400050: //RootNode
+    400052: Mantra_Low
+    400054: Neck
+    400056: Pincers
+    400058: Right arm
+    400060: Right arm 1
+    400062: Right bicep
+    400064: Right claw
+    400066: Right claw end
+    400068: Right hip
+    400070: Right leg
+    400072: Right leg 1
+    400074: Right leg end
+    400076: Right pincer
+    400078: Right pincer upper
+    400080: Right shoulder
+    400082: Right thigh
+    400084: Upper abdomen
+    400086: Upper thorax
+    4300000: Mantra_Low
+    7400000: Mantra_Damaged
+    9500000: //RootNode
+    13700000: Mantra_Low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Mantra_Damaged
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base bone
+        weight: 1
+      - path: Base bone/Left hip
+        weight: 1
+      - path: Base bone/Left hip/Left thigh
+        weight: 1
+      - path: Base bone/Left hip/Left thigh/Left leg 1
+        weight: 1
+      - path: Base bone/Left hip/Left thigh/Left leg 1/Left leg end
+        weight: 1
+      - path: Base bone/Lower abdomen
+        weight: 1
+      - path: Base bone/Lower abdomen/Upper abdomen
+        weight: 1
+      - path: Base bone/Lower abdomen/Upper abdomen/Abdomen end
+        weight: 1
+      - path: Base bone/Lower thorax
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Left shoulder
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Left shoulder/Left bicep
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Left shoulder/Left bicep/Left arm
+          1
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Left shoulder/Left bicep/Left arm
+          1/Left claw
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Left shoulder/Left bicep/Left arm
+          1/Left claw/Left lcaw end
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Head end
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Pincers
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Pincers/Left pincer
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Pincers/Left pincer/Left
+          pincer upper
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Pincers/Left pincer/Left
+          pincer upper/Right pincer
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Neck/Head/Pincers/Left pincer/Left
+          pincer upper/Right pincer/Right pincer upper
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Right shoulder
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Right shoulder/Right bicep
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Right shoulder/Right bicep/Right
+          arm 1
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Right shoulder/Right bicep/Right
+          arm 1/Right claw
+        weight: 1
+      - path: Base bone/Lower thorax/Upper thorax/Right shoulder/Right bicep/Right
+          arm 1/Right claw/Right claw end
+        weight: 1
+      - path: Base bone/Right hip
+        weight: 1
+      - path: Base bone/Right hip/Right thigh
+        weight: 1
+      - path: Base bone/Right hip/Right thigh/Right leg 1
+        weight: 1
+      - path: Base bone/Right hip/Right thigh/Right leg 1/Right leg end
+        weight: 1
+      - path: Grid001
+        weight: 1
+      - path: Grid002
+        weight: 1
+      - path: Left arm
+        weight: 1
+      - path: Left arm/IK Chain002
+        weight: 1
+      - path: Left leg
+        weight: 1
+      - path: Left leg/IK Chain004
+        weight: 1
+      - path: Mantra_Low
+        weight: 1
+      - path: Right arm
+        weight: 1
+      - path: Right arm/IK Chain001
+        weight: 1
+      - path: Right leg
+        weight: 1
+      - path: Right leg/IK Chain003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
