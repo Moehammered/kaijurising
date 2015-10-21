@@ -12,9 +12,11 @@ public class NetworkHUD : NetworkBehaviour {
 	public InputField portInput;
 	public GameObject menuServer;
 	public Text portNo;
+	private GameObject loadingScreen;
 	
 	protected FileInfo theSourceFile = null;
 	protected StreamReader reader = null;
+	protected StreamWriter writer = null;
 	protected string text = ""; // assigned to allow first line to be read below
 
 	// Runtime variable
@@ -22,14 +24,20 @@ public class NetworkHUD : NetworkBehaviour {
 	
 	void Awake()
 	{
+		//loadingScreen = GameObject.Find("LoadingScreen");
+		//print (loadingScreen.name);
 		//DontDestroyOnLoad(transform.gameObject);
 		portInput.text = "7777";
-		theSourceFile = new FileInfo ("IPConfig.txt");
+		theSourceFile = new FileInfo (Application.dataPath + "/IPConfig.txt");
 		reader = theSourceFile.OpenText();
-		if (text != null) {
+		
 			text = reader.ReadLine();
+			reader.Close();
 			//Console.WriteLine(text);
 			ipAddressInput.text = text;
+			print (text);
+		if (text != null) {
+			//	loadingScreen.GetComponent<Image>().enabled = true;
 			clientJoin();
 		}
 		
@@ -39,12 +47,23 @@ public class NetworkHUD : NetworkBehaviour {
 
 	public void host()
 	{
+		//if(text == null)
+		{
+			writer = new StreamWriter(Application.dataPath + "/IPConfig.txt", false);
+			writer.WriteLine(Network.player.ipAddress);
+			//StreamWriter writer = new StreamWriter("IPConfig.txt", false);
+			//writer.WriteLine("Network.player.ipAddress");
+			writer.Close();
+		}
 		manager.StopClient();
 		manager.StartHost();
 	}
 
 	public void clientJoin()
 	{
+		loadingScreen = GameObject.Find("LoadingScreen");
+		print (loadingScreen.name);
+		loadingScreen.GetComponent<Image>().enabled = true;
 		if (ipAddressInput.text != null)
 		{
 			manager.networkPort = int.Parse(portInput.text);

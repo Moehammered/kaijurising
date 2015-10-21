@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: 3e83db3c1c0ffc647a8501c4fe1c3c21
+timeCreated: 1445380930
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ikh_ArmLeft
+    100002: ikh_ArmRight
+    100004: ikh_BackFootLeft_1
+    100006: ikh_BackFootLeft_2
+    100008: ikh_BackFootRight_1
+    100010: ikh_BackFootRight_2
+    100012: ikh_BottomClawLeft
+    100014: ikh_BottomClawRight
+    100016: ikh_FrontFootLeft_1
+    100018: ikh_FrontFootLeft_2
+    100020: ikh_FrontFootRight_1
+    100022: ikh_FrontFootRight_2
+    100024: ikh_Head
+    100026: ikh_LegLeft
+    100028: ikh_LegRight
+    100030: ikh_MandibleLeft
+    100032: ikh_MandibleRight
+    100034: ikh_Mouth
+    100036: ikh_Shell
+    100038: ikh_Spine
+    100040: ikh_TopClawLeft
+    100042: ikh_TopClawRight
+    100044: jnt_ArmLowerLeft
+    100046: jnt_ArmLowerRight
+    100048: jnt_ArmMiddleLeft
+    100050: jnt_ArmMiddleRight
+    100052: jnt_ArmShoulderLeft
+    100054: jnt_ArmShoulderRight
+    100056: jnt_ArmUpperLeft
+    100058: jnt_ArmUpperRight
+    100060: jnt_ArmWristLeft
+    100062: jnt_ArmWristRight
+    100064: jnt_BottomClawLowerLeft
+    100066: jnt_BottomClawLowerRight
+    100068: jnt_BottomClawMiddleLeft
+    100070: jnt_BottomClawMiddleRight
+    100072: jnt_BottomClawUpperLeft
+    100074: jnt_BottomClawUpperRight
+    100076: jnt_HeelLowerLeft
+    100078: jnt_HeelLowerRight
+    100080: jnt_HeelMiddleLeft
+    100082: jnt_HeelMiddleRight
+    100084: jnt_HeelUpperLeft
+    100086: jnt_HeelUpperRight
+    100088: jnt_LegFootLeft
+    100090: jnt_LegFootRight
+    100092: jnt_LegLowerLeft
+    100094: jnt_LegLowerRight
+    100096: jnt_LegMiddleLeft
+    100098: jnt_LegMiddleRight
+    100100: jnt_LegUpperLeft
+    100102: jnt_LegUpperRight
+    100104: jnt_LegWaistLeft
+    100106: jnt_LegWaistRight
+    100108: jnt_MandibleLowerLeft
+    100110: jnt_MandibleLowerRight
+    100112: jnt_MandibleMiddleLeft
+    100114: jnt_MandibleMiddleRight
+    100116: jnt_MandibleUpperRight
+    100118: jnt_MandileUpperLeft
+    100120: jnt_MouthLower
+    100122: jnt_MouthMiddle
+    100124: jnt_MouthUpper
+    100126: jnt_Shell
+    100128: jnt_ShellController
+    100130: jnt_Skull
+    100132: jnt_SpineBottom
+    100134: jnt_SpineMiddle
+    100136: jnt_SpineMiddleBottom
+    100138: jnt_SpineMiddleTop
+    100140: jnt_SpineTop
+    100142: jnt_ToeLowerLeft
+    100144: jnt_ToeLowerRight
+    100146: jnt_ToeMiddleLeft
+    100148: jnt_ToeMiddleRight
+    100150: jnt_ToeUpperLeft
+    100152: jnt_ToeUpperRight
+    100154: jnt_TopClawLowerLeft
+    100156: jnt_TopClawLowerRight
+    100158: jnt_TopClawMiddleLeft
+    100160: jnt_TopClawMiddleRight
+    100162: jnt_TopClawUpperLeft
+    100164: jnt_TopClawUpperRight
+    100166: loc_Head
+    100168: nrb_FootLeft
+    100170: nrb_FootRight
+    100172: nrb_MasterController
+    100174: transform1
+    100176: //RootNode
+    100178: VokrouhModelFinal
+    400000: ikh_ArmLeft
+    400002: ikh_ArmRight
+    400004: ikh_BackFootLeft_1
+    400006: ikh_BackFootLeft_2
+    400008: ikh_BackFootRight_1
+    400010: ikh_BackFootRight_2
+    400012: ikh_BottomClawLeft
+    400014: ikh_BottomClawRight
+    400016: ikh_FrontFootLeft_1
+    400018: ikh_FrontFootLeft_2
+    400020: ikh_FrontFootRight_1
+    400022: ikh_FrontFootRight_2
+    400024: ikh_Head
+    400026: ikh_LegLeft
+    400028: ikh_LegRight
+    400030: ikh_MandibleLeft
+    400032: ikh_MandibleRight
+    400034: ikh_Mouth
+    400036: ikh_Shell
+    400038: ikh_Spine
+    400040: ikh_TopClawLeft
+    400042: ikh_TopClawRight
+    400044: jnt_ArmLowerLeft
+    400046: jnt_ArmLowerRight
+    400048: jnt_ArmMiddleLeft
+    400050: jnt_ArmMiddleRight
+    400052: jnt_ArmShoulderLeft
+    400054: jnt_ArmShoulderRight
+    400056: jnt_ArmUpperLeft
+    400058: jnt_ArmUpperRight
+    400060: jnt_ArmWristLeft
+    400062: jnt_ArmWristRight
+    400064: jnt_BottomClawLowerLeft
+    400066: jnt_BottomClawLowerRight
+    400068: jnt_BottomClawMiddleLeft
+    400070: jnt_BottomClawMiddleRight
+    400072: jnt_BottomClawUpperLeft
+    400074: jnt_BottomClawUpperRight
+    400076: jnt_HeelLowerLeft
+    400078: jnt_HeelLowerRight
+    400080: jnt_HeelMiddleLeft
+    400082: jnt_HeelMiddleRight
+    400084: jnt_HeelUpperLeft
+    400086: jnt_HeelUpperRight
+    400088: jnt_LegFootLeft
+    400090: jnt_LegFootRight
+    400092: jnt_LegLowerLeft
+    400094: jnt_LegLowerRight
+    400096: jnt_LegMiddleLeft
+    400098: jnt_LegMiddleRight
+    400100: jnt_LegUpperLeft
+    400102: jnt_LegUpperRight
+    400104: jnt_LegWaistLeft
+    400106: jnt_LegWaistRight
+    400108: jnt_MandibleLowerLeft
+    400110: jnt_MandibleLowerRight
+    400112: jnt_MandibleMiddleLeft
+    400114: jnt_MandibleMiddleRight
+    400116: jnt_MandibleUpperRight
+    400118: jnt_MandileUpperLeft
+    400120: jnt_MouthLower
+    400122: jnt_MouthMiddle
+    400124: jnt_MouthUpper
+    400126: jnt_Shell
+    400128: jnt_ShellController
+    400130: jnt_Skull
+    400132: jnt_SpineBottom
+    400134: jnt_SpineMiddle
+    400136: jnt_SpineMiddleBottom
+    400138: jnt_SpineMiddleTop
+    400140: jnt_SpineTop
+    400142: jnt_ToeLowerLeft
+    400144: jnt_ToeLowerRight
+    400146: jnt_ToeMiddleLeft
+    400148: jnt_ToeMiddleRight
+    400150: jnt_ToeUpperLeft
+    400152: jnt_ToeUpperRight
+    400154: jnt_TopClawLowerLeft
+    400156: jnt_TopClawLowerRight
+    400158: jnt_TopClawMiddleLeft
+    400160: jnt_TopClawMiddleRight
+    400162: jnt_TopClawUpperLeft
+    400164: jnt_TopClawUpperRight
+    400166: loc_Head
+    400168: nrb_FootLeft
+    400170: nrb_FootRight
+    400172: nrb_MasterController
+    400174: transform1
+    400176: //RootNode
+    400178: VokrouhModelFinal
+    4300000: VokrouhModelFinal
+    7400000: Vokrouh_Attack_Left
+    9500000: //RootNode
+    13700000: VokrouhModelFinal
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Vokrouh_Attack_Left
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ikh_ArmLeft
+        weight: 1
+      - path: ikh_ArmLeft/ikh_BottomClawLeft
+        weight: 1
+      - path: ikh_ArmLeft/ikh_TopClawLeft
+        weight: 1
+      - path: ikh_ArmRight
+        weight: 1
+      - path: ikh_ArmRight/ikh_BottomClawRight
+        weight: 1
+      - path: ikh_ArmRight/ikh_TopClawRight
+        weight: 1
+      - path: ikh_Head
+        weight: 1
+      - path: ikh_MandibleLeft
+        weight: 1
+      - path: ikh_MandibleRight
+        weight: 1
+      - path: ikh_Mouth
+        weight: 1
+      - path: ikh_Shell
+        weight: 1
+      - path: ikh_Spine
+        weight: 1
+      - path: nrb_MasterController
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_HeelUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_HeelUpperLeft/jnt_HeelMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_HeelUpperLeft/jnt_HeelMiddleLeft/jnt_HeelLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_ToeUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_ToeUpperLeft/jnt_ToeMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistLeft/jnt_LegUpperLeft/jnt_LegMiddleLeft/jnt_LegLowerLeft/jnt_LegFootLeft/jnt_ToeUpperLeft/jnt_ToeMiddleLeft/jnt_ToeLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_HeelUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_HeelUpperRight/jnt_HeelMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_HeelUpperRight/jnt_HeelMiddleRight/jnt_HeelLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_ToeUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_ToeUpperRight/jnt_ToeMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_LegWaistRight/jnt_LegUpperRight/jnt_LegMiddleRight/jnt_LegLowerRight/jnt_LegFootRight/jnt_ToeUpperRight/jnt_ToeMiddleRight/jnt_ToeLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_BottomClawUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_BottomClawUpperLeft/jnt_BottomClawMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_BottomClawUpperLeft/jnt_BottomClawMiddleLeft/jnt_BottomClawLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_TopClawUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_TopClawUpperLeft/jnt_TopClawMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderLeft/jnt_ArmUpperLeft/jnt_ArmMiddleLeft/jnt_ArmLowerLeft/jnt_ArmWristLeft/jnt_TopClawUpperLeft/jnt_TopClawMiddleLeft/jnt_TopClawLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_BottomClawUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_BottomClawUpperRight/jnt_BottomClawMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_BottomClawUpperRight/jnt_BottomClawMiddleRight/jnt_BottomClawLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_TopClawUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_TopClawUpperRight/jnt_TopClawMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_ArmShoulderRight/jnt_ArmUpperRight/jnt_ArmMiddleRight/jnt_ArmLowerRight/jnt_ArmWristRight/jnt_TopClawUpperRight/jnt_TopClawMiddleRight/jnt_TopClawLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_Shell
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_Shell/jnt_ShellController
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandibleUpperRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandibleUpperRight/jnt_MandibleMiddleRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandibleUpperRight/jnt_MandibleMiddleRight/jnt_MandibleLowerRight
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandileUpperLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandileUpperLeft/jnt_MandibleMiddleLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MandileUpperLeft/jnt_MandibleMiddleLeft/jnt_MandibleLowerLeft
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MouthUpper
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MouthUpper/jnt_MouthMiddle
+        weight: 1
+      - path: nrb_MasterController/jnt_SpineBottom/jnt_SpineMiddleBottom/jnt_SpineMiddle/jnt_SpineMiddleTop/loc_Head/transform1/jnt_SpineTop/jnt_Skull/jnt_MouthUpper/jnt_MouthMiddle/jnt_MouthLower
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft/ikh_BackFootLeft_1
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft/ikh_BackFootLeft_2
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft/ikh_FrontFootLeft_1
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft/ikh_FrontFootLeft_2
+        weight: 1
+      - path: nrb_MasterController/nrb_FootLeft/ikh_LegLeft
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight/ikh_BackFootRight_1
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight/ikh_BackFootRight_2
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight/ikh_FrontFootRight_1
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight/ikh_FrontFootRight_2
+        weight: 1
+      - path: nrb_MasterController/nrb_FootRight/ikh_LegRight
+        weight: 1
+      - path: VokrouhModelFinal
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 4
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
