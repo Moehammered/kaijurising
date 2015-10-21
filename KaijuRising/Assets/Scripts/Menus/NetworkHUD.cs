@@ -39,6 +39,7 @@ public class NetworkHUD : NetworkBehaviour {
 
 	public void host()
 	{
+		manager.StopClient();
 		manager.StartHost();
 	}
 
@@ -54,6 +55,7 @@ public class NetworkHUD : NetworkBehaviour {
 
 	public void startServer()
 	{
+		manager.StopClient();
 		int portNumber = int.Parse(portInput.text);
 		manager.networkPort = portNumber;
 		portNo.text = "" + portNumber;
