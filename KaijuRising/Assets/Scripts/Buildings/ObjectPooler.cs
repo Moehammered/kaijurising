@@ -11,12 +11,21 @@ public class ObjectPooler : MonoBehaviour {
 
 	void Start() 
 	{
-		objectPool.Add (pooledObject);
+		loadPrefabs ();
+		//addToPool ();
+	}
+
+	public void loadPrefabs() 
+	{
+		for(int i = 0; i < 10; i++) 
+		{
+			GameObject instance = Instantiate(pooledObject, transform.position, transform.rotation) as GameObject;
+		}
 	}
 
 	public void addToPool() 
 	{
-		for(int i = 0; i > sizeOfList; i++) 
+		for(int i = 0; i < sizeOfList; i++) 
 		{
 			objectPool.Add(pooledObject);
 		}
