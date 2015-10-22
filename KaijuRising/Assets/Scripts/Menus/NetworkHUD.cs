@@ -7,6 +7,7 @@ using System.IO;
 
 public class NetworkHUD : NetworkBehaviour {
 
+	public bool isAutoConnecting = false;
 	public NetworkManager manager;
 	public InputField ipAddressInput;
 	public InputField portInput;
@@ -24,25 +25,36 @@ public class NetworkHUD : NetworkBehaviour {
 	
 	void Awake()
 	{
+		// Initialise fields
+		ipAddressInput.text = "localhost";
+		portInput.text = "7777";
+
+		if(isAutoConnecting == true)
+		{
+			autoConnect();
+		}
+	}
+
+	private void autoConnect()
+	{
 		//loadingScreen = GameObject.Find("LoadingScreen");
 		//print (loadingScreen.name);
 		//DontDestroyOnLoad(transform.gameObject);
-		portInput.text = "7777";
+
 		theSourceFile = new FileInfo (Application.dataPath + "/IPConfig.txt");
 		reader = theSourceFile.OpenText();
-		
-			text = reader.ReadLine();
-			reader.Close();
-			//Console.WriteLine(text);
-			ipAddressInput.text = text;
-			print (text);
-		if (text != null) {
+		text = reader.ReadLine();
+		reader.Close();
+		//Console.WriteLine(text);
+		ipAddressInput.text = text;
+		print (text);
+		if (text != null) 
+		{
 			//	loadingScreen.GetComponent<Image>().enabled = true;
 			clientJoin();
 		}
 		
-	//	ipAddressInput.text = "localhost";
-
+		//	ipAddressInput.text = "localhost";
 	}
 
 	public void host()
