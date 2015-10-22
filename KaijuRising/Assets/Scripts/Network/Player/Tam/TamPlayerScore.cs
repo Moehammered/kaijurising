@@ -69,11 +69,24 @@ public class TamPlayerScore : NetworkBehaviour
 			//			}
 		}
 	}
-	
+
+	/// <summary>
+	/// Increases the score for the player the script is attached to.
+	/// </summary>
+	/// <param name="amount">Amount.</param>
 	public void increaseTheScore(int amount)
 	{
 		scoreSystem.updateValue(amount, playerNumber);
-	}	
+	}
+
+	/// <summary>
+	/// Increases the score of the player associated with the provided ID.
+	/// </summary>
+	/// <param name="amount">Amount.</param>
+	public void increaseTheScore(int amount, int targetPlayerNumber)
+	{
+		scoreSystem.updateValue(amount, targetPlayerNumber);
+	}
 	
 	[Command]
 	public void Cmd_increaseScore(int amount)
@@ -85,5 +98,10 @@ public class TamPlayerScore : NetworkBehaviour
 	private void displayCanvas(bool canvasStatus)
 	{
 		scoreCanvas.gameObject.SetActive(canvasStatus);
+	}
+
+	public int getPlayerNumber()
+	{
+		return playerNumber;
 	}
 }
