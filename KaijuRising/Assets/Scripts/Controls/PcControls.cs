@@ -14,7 +14,7 @@ public struct KeyBindings
 
 public class PcControls : AbstractMover
 {
-	public AbstractPlayerAnimations playerAnimations;
+	public KaijuAnimations playerAnimations;
 
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
@@ -34,31 +34,36 @@ public class PcControls : AbstractMover
 	public void keyboardInput()
 	{
 		direction = Vector3.zero;
-
-		if (Input.GetKey (keyBindings.forward)) {
-			playerAnimations.playerWalking (true);
-			direction = transform.forward;	
+		if (!playerAnimations.isAttacking())
+		{
+			if (Input.GetKey (keyBindings.forward)) 
+			{
+				direction += transform.forward;	
+			}
+			else if (Input.GetKey (keyBindings.back)) 
+			{
+				direction += -transform.forward;
+			} 
+			 
+			if (Input.GetKey (keyBindings.right))
+			{
+				direction += transform.right;
+			} 
+			else if (Input.GetKey (keyBindings.left)) 
+			{
+				direction += -transform.right;
+			}
+			
+			if (direction != Vector3.zero)
+			{
+				playerAnimations.playWalk();
+				move(direction,speed);
+			}
+			else
+			{
+				playerAnimations.stopWalk();
+			}
 		}
-		else if (Input.GetKey (keyBindings.back)) 
-		{
-			playerAnimations.playerWalking (true);
-			direction = -transform.forward;
-		} 
-		else if (Input.GetKey (keyBindings.right))
-		{
-			playerAnimations.playerWalking (true);
-			direction = transform.right;
-		} 
-		else if (Input.GetKey (keyBindings.left)) 
-		{
-			playerAnimations.playerWalking (true);
-			direction = -transform.right;
-		}
-		else 
-		{
-			playerAnimations.playerWalking(false);
-		}
-
 		// Start and stop sounds are specific to key down and up.
 		if (Input.GetKeyDown (keyBindings.forward)) 
 		{
@@ -92,7 +97,6 @@ public class PcControls : AbstractMover
 		{
 			sound.CmdStopOnServer();
 		}
-		move(direction,speed);
 	}
 	
 	public void mouseInput()

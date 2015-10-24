@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 
 public class TamPlayerAttack : NetworkBehaviour 
 {
+	public KaijuAnimations playerAnimations;
 	public float attackRadius;
 	public GameObject attackCenter;
 	public KeyCode attackKey;
@@ -30,9 +31,10 @@ public class TamPlayerAttack : NetworkBehaviour
 		if (!isLocalPlayer)
 			return;
 		
-		if (Input.GetKeyDown(attackKey))
+		if (Input.GetKeyDown(attackKey) && !playerAnimations.isAttacking())
 		{
 			//playAnim.playAttack();
+			playerAnimations.playAttack();
 			Cmd_detectObjects(attackCenter.transform.position, gameObject);
 		}
 	}

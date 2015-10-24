@@ -9,6 +9,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	public Slider healthUI;
 	//private PlayerAnimations playAnim;
 	private TamPlayerScore playScore;
+	public KaijuAnimations playerAnimations;
 	
 	private void Start()
 	{
@@ -19,6 +20,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	public void modifyHealth(float healthModifier, int attackingPlayerNumber)
 	{
 		//playAnim.playTakeDamage();
+		playerAnimations.playTakeDamage();
 		health += healthModifier;
 		if (health <= 0)
 		{

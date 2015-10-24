@@ -1662,6 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d8ab9fe52cdcf4b8e10fdf1c2c0158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAutoConnecting: 0
   manager: {fileID: 516031839}
   ipAddressInput: {fileID: 110372569}
   portInput: {fileID: 793376699}
@@ -2120,7 +2121,7 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 119434, guid: facb835d050d542bda716eb57c4b3a44, type: 2}
   - {fileID: 113574, guid: c6c2e1bd77a0ba14b9fd82525ae7b201, type: 2}
-  - {fileID: 139760, guid: 3b9ce2775f039f049a853748eacd3659, type: 2}
+  - {fileID: 135910, guid: 139ad608716010649894dc1a6617d150, type: 2}
   - {fileID: 110710, guid: f4d380239d3acba419ad540a5426a782, type: 2}
   - {fileID: 133336, guid: ab206ed9bcf86b449967bdfbd73a441f, type: 2}
   - {fileID: 135022, guid: ab206ed9bcf86b449967bdfbd73a441f, type: 2}
@@ -2140,6 +2141,9 @@ MonoBehaviour:
   - {fileID: 130542, guid: 00196fabdb40c494d9529af805d91935, type: 2}
   - {fileID: 199180, guid: a6b2cc84634d3bc49ac6bd8f1d72762c, type: 2}
   - {fileID: 155188, guid: 328cb091d243bd441a6ce83e74e56b51, type: 2}
+  - {fileID: 148218, guid: 52fc4cd225ff544478856fa3fc055d3c, type: 2}
+  - {fileID: 100432, guid: 26aca628d5153c844be4f1beaab5d8e0, type: 2}
+  - {fileID: 181086, guid: a70b5c40981fa4c42b0353a382d58e2c, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -2177,14 +2181,14 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   spawnablePrefabs: []
   rexKaiju: {fileID: 113574, guid: c6c2e1bd77a0ba14b9fd82525ae7b201, type: 2}
-  yumKaaxKaiju: {fileID: 139760, guid: 3b9ce2775f039f049a853748eacd3659, type: 2}
+  yumKaaxKaiju: {fileID: 135910, guid: 139ad608716010649894dc1a6617d150, type: 2}
   gozuKaiju: {fileID: 106096, guid: f13b671dacf0c1743af706fdb58ccd6b, type: 2}
-  fasolKaiju: {fileID: 186504, guid: c54d46c687411df49b3233ead407116b, type: 2}
+  fasolKaiju: {fileID: 181086, guid: a70b5c40981fa4c42b0353a382d58e2c, type: 2}
   macedonKaiju: {fileID: 0}
   mantraKaiju: {fileID: 0}
-  vorkoKaiju: {fileID: 0}
+  vorkoKaiju: {fileID: 148218, guid: 52fc4cd225ff544478856fa3fc055d3c, type: 2}
   kremonoKaiju: {fileID: 0}
-  trikarenosKaiju: {fileID: 130930, guid: 0303c41ab5f91234bb04e653e9a1302d, type: 2}
+  trikarenosKaiju: {fileID: 100432, guid: 26aca628d5153c844be4f1beaab5d8e0, type: 2}
 --- !u!1 &526096138
 GameObject:
   m_ObjectHideFlags: 0

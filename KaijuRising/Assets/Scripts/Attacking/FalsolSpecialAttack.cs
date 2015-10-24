@@ -8,7 +8,7 @@ public class FalsolSpecialAttack : MonoBehaviour
 	public bool spAttackActive;
 	public GameObject fireObject;
 	public PcControls pcControlsScript;
-
+	
 	// Use this for initialization
 	void Start () 
 	{	
