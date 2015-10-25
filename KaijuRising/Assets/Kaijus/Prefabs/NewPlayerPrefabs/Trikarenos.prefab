@@ -2447,7 +2447,7 @@ Animator:
   m_GameObject: {fileID: 100432}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e68cf1f7bb4a3bf4d86611744dd1d473, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9d0e3b3458d1db949bf2c16435c22518, type: 2}
+  m_Controller: {fileID: 9100000, guid: db5802fa43bba6041a4a087931957c2f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2526,6 +2526,8 @@ MonoBehaviour:
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
+  attackType: attackType
+  secondAttackDuration: .300000012
 --- !u!114 &11408152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3456,6 +3458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimations: {fileID: 11407504}
+  hasSecondary: 1
   attackRadius: 30
   attackCenter: {fileID: 159870}
   attackKey: 32
@@ -4572,6 +4575,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: takeDamage.duration
       value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: db5802fa43bba6041a4a087931957c2f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: hasSecondary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: secondAttackDuration
+      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

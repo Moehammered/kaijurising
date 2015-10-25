@@ -6,6 +6,8 @@ using UnityEngine.Networking;
 public class TamPlayerAttack : NetworkBehaviour 
 {
 	public KaijuAnimations playerAnimations;
+	//if the kaiju animation has a second primary attack
+	public bool hasSecondary = false;
 	public float attackRadius;
 	public GameObject attackCenter;
 	public KeyCode attackKey;
@@ -34,7 +36,15 @@ public class TamPlayerAttack : NetworkBehaviour
 		if (Input.GetKeyDown(attackKey) && !playerAnimations.isAttacking())
 		{
 			//playAnim.playAttack();
-			playerAnimations.playAttack();
+			if (hasSecondary)
+			{
+				int randomAttack = Random.Range(1, 3);
+				playerAnimations.playAttack(randomAttack);
+			}
+			else
+			{
+				playerAnimations.playAttack();
+			}
 			Cmd_detectObjects(attackCenter.transform.position, gameObject);
 		}
 	}

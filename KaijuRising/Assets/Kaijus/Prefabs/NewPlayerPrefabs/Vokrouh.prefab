@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127368}
-  m_LocalRotation: {x: .29895249, y: .744883418, z: .223380402, w: .553061724}
+  m_LocalRotation: {x: .29895252, y: .744883478, z: .223380417, w: .553061783}
   m_LocalPosition: {x: .553210974, y: -2.1242857, z: -3.33058953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2756,7 +2756,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146220}
-  m_LocalRotation: {x: .37464574, y: .599831998, z: .374735832, w: .599512458}
+  m_LocalRotation: {x: .37464577, y: .599832058, z: .374735862, w: .599512517}
   m_LocalPosition: {x: .425881922, y: 6.56103384e-06, z: 12.0492706}
   m_LocalScale: {x: .817843199, y: .817843199, z: .817843199}
   m_Children: []
@@ -3427,7 +3427,7 @@ Animator:
   m_GameObject: {fileID: 148218}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7c7a3eea0ea555444b14d7c4b7d8c333, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5ba0cffa32553184995f6a2a1ac72630, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d38162df4d0bb24a8fe6110045941fe, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3530,6 +3530,8 @@ MonoBehaviour:
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
+  attackType: attackType
+  secondAttackDuration: .5
 --- !u!114 &11407838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4584,6 +4586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimations: {fileID: 11406960}
+  hasSecondary: 1
   attackRadius: 30
   attackCenter: {fileID: 130966}
   attackKey: 32
@@ -5575,6 +5578,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: primaryAttack.duration
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9d38162df4d0bb24a8fe6110045941fe, type: 2}
+    - target: {fileID: 0}
+      propertyPath: hasSecondary
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
