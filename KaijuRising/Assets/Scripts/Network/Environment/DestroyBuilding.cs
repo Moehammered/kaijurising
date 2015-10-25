@@ -87,7 +87,8 @@ public class DestroyBuilding : NetworkBehaviour
 		if (explosionParticle != null)
 		{
 			// Instantiate Sound Object on building destroy
-			instSound.instantiateOnServer(instSound.sounds.buildingDestroy);
+			//i commented this out cause its fucked. James Horsley
+			//instSound.instantiateOnServer(instSound.sounds.buildingDestroy);
 			GameObject explosionObj = Instantiate (explosionParticle, transform.position + explosionOffset, explosionParticle.transform.rotation) as GameObject;
 			NetworkServer.Spawn (explosionObj);
 		}
