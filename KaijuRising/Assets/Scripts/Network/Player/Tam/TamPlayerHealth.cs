@@ -20,7 +20,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	public void modifyHealth(float healthModifier, int attackingPlayerNumber)
 	{
 		//playAnim.playTakeDamage();
-		playerAnimations.playTakeDamage();
+
 		health += healthModifier;
 		if (health <= 0)
 		{
@@ -40,6 +40,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	private void Rpc_updateClientHealth(float value)
 	{
 		//run function
+		playerAnimations.playTakeDamage();
 		health = value; 
 		//tell clients tell server to run to change values
 		Cmd_syncVariable(health);

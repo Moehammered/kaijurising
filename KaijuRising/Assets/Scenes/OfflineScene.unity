@@ -402,8 +402,8 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 154830, guid: 6398d7c35ef35b6428138c42ee9ba161, type: 2}
   - {fileID: 112708, guid: 2f8ceb53108c25143868aab4115b288f, type: 2}
-  - {fileID: 177256, guid: 19a066b18bb9bf94e97960de0a27e5fb, type: 2}
-  - {fileID: 145176, guid: 470c3757889235d40bf655f7f66ba896, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 110710, guid: f4d380239d3acba419ad540a5426a782, type: 2}
   - {fileID: 186446, guid: 245954b5eb10e46bf95b991a97a4f795, type: 2}
   m_CustomConfig: 1
@@ -4710,7 +4710,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1460081260}
   m_OnClick:
     m_PersistentCalls:
@@ -4723,7 +4723,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: YUMKAAX
+          m_StringArgument: VOKROUH
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

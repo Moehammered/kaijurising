@@ -109,7 +109,7 @@ public class CustomNetworkManager : NetworkManager {
 		case "MACEDON":
 			makeKaijuPlayer (macedonKaiju, player, networkMessage);
 			break;
-		case "VORKO":
+		case "VOKROUH":
 			makeKaijuPlayer (vorkoKaiju, player, networkMessage);
 			break;
 		case "KREMONO":
