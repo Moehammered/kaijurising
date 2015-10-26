@@ -63,9 +63,9 @@ public class ScoreSystem : NetworkBehaviour
 
 	private IEnumerator restartWorld()
 	{
-		yield return new WaitForSeconds(3f);
-		Rpc_disconnect();
 		yield return new WaitForSeconds(5f);
+		Rpc_disconnect();
+		yield return new WaitForSeconds(2f);
 		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().ServerChangeScene("OnlineScene");
 	}
 
