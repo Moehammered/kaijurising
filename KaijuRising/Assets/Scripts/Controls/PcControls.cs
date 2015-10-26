@@ -22,7 +22,7 @@ public class PcControls : AbstractMover
 	// need InstantiateSound reference to play sounds
 	public KaijuSounds sound;
 
-	void Update()
+	private void Update()
 	{
 		if (isLocalPlayer) 
 		{

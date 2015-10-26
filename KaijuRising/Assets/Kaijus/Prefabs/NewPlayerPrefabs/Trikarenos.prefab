@@ -3457,8 +3457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 11407504}
-  hasSecondary: 1
+  tags:
+  - 50m
+  - 100m
+  - 150m
   attackRadius: 30
   attackCenter: {fileID: 159870}
   attackKey: 32
@@ -4565,6 +4567,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: tags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: primaryAttack.duration
       value: .300000012
       objectReference: {fileID: 0}
@@ -4587,6 +4593,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: secondAttackDuration
       value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[0]
+      value: 50m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[1]
+      value: 100m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[2]
+      value: 150m
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

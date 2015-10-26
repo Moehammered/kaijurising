@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127368}
-  m_LocalRotation: {x: .29895252, y: .744883478, z: .223380417, w: .553061783}
+  m_LocalRotation: {x: .29895249, y: .744883418, z: .223380387, w: .553061724}
   m_LocalPosition: {x: .553210974, y: -2.1242857, z: -3.33058953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2756,7 +2756,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146220}
-  m_LocalRotation: {x: .37464577, y: .599832058, z: .374735862, w: .599512517}
+  m_LocalRotation: {x: .37464574, y: .599831998, z: .374735832, w: .599512458}
   m_LocalPosition: {x: .425881922, y: 6.56103384e-06, z: 12.0492706}
   m_LocalScale: {x: .817843199, y: .817843199, z: .817843199}
   m_Children: []
@@ -4585,8 +4585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 11406960}
-  hasSecondary: 1
+  tags:
+  - 50m
+  - 100m
+  - 150m
   attackRadius: 30
   attackCenter: {fileID: 130966}
   attackKey: 32
@@ -5568,6 +5570,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: tags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: takeDamage.duration
       value: .600000024
       objectReference: {fileID: 0}
@@ -5586,6 +5592,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: hasSecondary
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[0]
+      value: 50m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[1]
+      value: 100m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[2]
+      value: 150m
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

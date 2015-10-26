@@ -21,8 +21,11 @@ public class DamageableEntity : NetworkBehaviour {
 			nameChecker(gameObject.tag);
 			if(health <= 0)
 			{
-				isDead = true;
-				onModifyDeath();
+				if(onModifyDeath != null)
+				{
+					isDead = true;
+					onModifyDeath();
+				}
 			}
 		}
     }

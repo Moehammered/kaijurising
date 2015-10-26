@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: a5146506b92214cde8d1ea3dbee41814
+timeCreated: 1445597298
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Box004
+    100008: Box005
+    100010: Lvl1_Arch
+    100012: Lvl2_Misc_Base
+    100014: Lvl2_Misc_Base001
+    100016: Lvl2_Misc_Base002
+    100018: Lvl2_Misc_Base003
+    100020: Lvl2_Misc_Base004
+    100022: Lvl2_Misc_Base005
+    100024: Lvl2_Misc_Base006
+    100026: Lvl2_Misc_Base007
+    100028: Lvl2_Misc_Base008
+    100030: Lvl2_Misc_Base009
+    100032: Lvl2_Misc_Base010
+    100034: Lvl2_Misc_Base011
+    100036: Lvl2_Misc_Base012
+    100038: Lvl2_Misc_Base013
+    100040: Lvl2_Misc_Base014
+    100042: Lvl2_Misc_Base015
+    100044: Pillar
+    100046: Pillar002
+    100048: Pillar004
+    100050: Pillar005
+    100052: Pillar006
+    100054: Pillar007
+    100056: Pillar008
+    100058: Pillar009
+    100060: Pillar010
+    100062: Pillar011
+    100064: Pillar012
+    100066: Pillar013
+    100068: Pillar014
+    100070: Pillar015
+    100072: Triangle roof001
+    100074: Triangle roof002
+    100076: Triangle roof003
+    100078: Wall_Level2_Block003
+    100080: Wall_Level2_Block004
+    100082: Wall_Level2_Block005
+    100084: Wall_Level2_Block006
+    100086: Wall_Level2_Block007
+    100088: Wall_Level2_Block008
+    100090: Wall_Level2_Block009
+    100092: Wall_Level2_Block010
+    100094: Wall_Level2_Block011
+    100096: Wall_Level2_Block012
+    100098: Wall_Level2_Block013
+    100100: Wall_Level2_Block014
+    100102: Wall_Level2_Block015
+    100104: Wall_Level2_Block016
+    100106: Wall_Level2_Block017
+    100108: Wall_Level2_Block018
+    100110: Wall_Level2_Block019
+    100112: Wall_Level2_Block020
+    100114: Wall_Level2_Block021
+    100116: Wall_Level2_Block2
+    100118: //RootNode
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Box004
+    400008: Box005
+    400010: Lvl1_Arch
+    400012: Lvl2_Misc_Base
+    400014: Lvl2_Misc_Base001
+    400016: Lvl2_Misc_Base002
+    400018: Lvl2_Misc_Base003
+    400020: Lvl2_Misc_Base004
+    400022: Lvl2_Misc_Base005
+    400024: Lvl2_Misc_Base006
+    400026: Lvl2_Misc_Base007
+    400028: Lvl2_Misc_Base008
+    400030: Lvl2_Misc_Base009
+    400032: Lvl2_Misc_Base010
+    400034: Lvl2_Misc_Base011
+    400036: Lvl2_Misc_Base012
+    400038: Lvl2_Misc_Base013
+    400040: Lvl2_Misc_Base014
+    400042: Lvl2_Misc_Base015
+    400044: Pillar
+    400046: Pillar002
+    400048: Pillar004
+    400050: Pillar005
+    400052: Pillar006
+    400054: Pillar007
+    400056: Pillar008
+    400058: Pillar009
+    400060: Pillar010
+    400062: Pillar011
+    400064: Pillar012
+    400066: Pillar013
+    400068: Pillar014
+    400070: Pillar015
+    400072: Triangle roof001
+    400074: Triangle roof002
+    400076: Triangle roof003
+    400078: Wall_Level2_Block003
+    400080: Wall_Level2_Block004
+    400082: Wall_Level2_Block005
+    400084: Wall_Level2_Block006
+    400086: Wall_Level2_Block007
+    400088: Wall_Level2_Block008
+    400090: Wall_Level2_Block009
+    400092: Wall_Level2_Block010
+    400094: Wall_Level2_Block011
+    400096: Wall_Level2_Block012
+    400098: Wall_Level2_Block013
+    400100: Wall_Level2_Block014
+    400102: Wall_Level2_Block015
+    400104: Wall_Level2_Block016
+    400106: Wall_Level2_Block017
+    400108: Wall_Level2_Block018
+    400110: Wall_Level2_Block019
+    400112: Wall_Level2_Block020
+    400114: Wall_Level2_Block021
+    400116: Wall_Level2_Block2
+    400118: //RootNode
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: Box005
+    2300010: Lvl1_Arch
+    2300012: Lvl2_Misc_Base
+    2300014: Lvl2_Misc_Base001
+    2300016: Lvl2_Misc_Base002
+    2300018: Lvl2_Misc_Base003
+    2300020: Lvl2_Misc_Base004
+    2300022: Lvl2_Misc_Base005
+    2300024: Lvl2_Misc_Base006
+    2300026: Lvl2_Misc_Base007
+    2300028: Lvl2_Misc_Base008
+    2300030: Lvl2_Misc_Base009
+    2300032: Lvl2_Misc_Base010
+    2300034: Lvl2_Misc_Base011
+    2300036: Lvl2_Misc_Base012
+    2300038: Lvl2_Misc_Base013
+    2300040: Lvl2_Misc_Base014
+    2300042: Lvl2_Misc_Base015
+    2300044: Pillar
+    2300046: Pillar002
+    2300048: Pillar004
+    2300050: Pillar005
+    2300052: Pillar006
+    2300054: Pillar007
+    2300056: Pillar008
+    2300058: Pillar009
+    2300060: Pillar010
+    2300062: Pillar011
+    2300064: Pillar012
+    2300066: Pillar013
+    2300068: Pillar014
+    2300070: Pillar015
+    2300072: Triangle roof001
+    2300074: Triangle roof002
+    2300076: Triangle roof003
+    2300078: Wall_Level2_Block003
+    2300080: Wall_Level2_Block004
+    2300082: Wall_Level2_Block005
+    2300084: Wall_Level2_Block006
+    2300086: Wall_Level2_Block007
+    2300088: Wall_Level2_Block008
+    2300090: Wall_Level2_Block009
+    2300092: Wall_Level2_Block010
+    2300094: Wall_Level2_Block011
+    2300096: Wall_Level2_Block012
+    2300098: Wall_Level2_Block013
+    2300100: Wall_Level2_Block014
+    2300102: Wall_Level2_Block015
+    2300104: Wall_Level2_Block016
+    2300106: Wall_Level2_Block017
+    2300108: Wall_Level2_Block018
+    2300110: Wall_Level2_Block019
+    2300112: Wall_Level2_Block020
+    2300114: Wall_Level2_Block021
+    2300116: Wall_Level2_Block2
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: Box005
+    3300010: Lvl1_Arch
+    3300012: Lvl2_Misc_Base
+    3300014: Lvl2_Misc_Base001
+    3300016: Lvl2_Misc_Base002
+    3300018: Lvl2_Misc_Base003
+    3300020: Lvl2_Misc_Base004
+    3300022: Lvl2_Misc_Base005
+    3300024: Lvl2_Misc_Base006
+    3300026: Lvl2_Misc_Base007
+    3300028: Lvl2_Misc_Base008
+    3300030: Lvl2_Misc_Base009
+    3300032: Lvl2_Misc_Base010
+    3300034: Lvl2_Misc_Base011
+    3300036: Lvl2_Misc_Base012
+    3300038: Lvl2_Misc_Base013
+    3300040: Lvl2_Misc_Base014
+    3300042: Lvl2_Misc_Base015
+    3300044: Pillar
+    3300046: Pillar002
+    3300048: Pillar004
+    3300050: Pillar005
+    3300052: Pillar006
+    3300054: Pillar007
+    3300056: Pillar008
+    3300058: Pillar009
+    3300060: Pillar010
+    3300062: Pillar011
+    3300064: Pillar012
+    3300066: Pillar013
+    3300068: Pillar014
+    3300070: Pillar015
+    3300072: Triangle roof001
+    3300074: Triangle roof002
+    3300076: Triangle roof003
+    3300078: Wall_Level2_Block003
+    3300080: Wall_Level2_Block004
+    3300082: Wall_Level2_Block005
+    3300084: Wall_Level2_Block006
+    3300086: Wall_Level2_Block007
+    3300088: Wall_Level2_Block008
+    3300090: Wall_Level2_Block009
+    3300092: Wall_Level2_Block010
+    3300094: Wall_Level2_Block011
+    3300096: Wall_Level2_Block012
+    3300098: Wall_Level2_Block013
+    3300100: Wall_Level2_Block014
+    3300102: Wall_Level2_Block015
+    3300104: Wall_Level2_Block016
+    3300106: Wall_Level2_Block017
+    3300108: Wall_Level2_Block018
+    3300110: Wall_Level2_Block019
+    3300112: Wall_Level2_Block020
+    3300114: Wall_Level2_Block021
+    3300116: Wall_Level2_Block2
+    4300000: Box001
+    4300002: Wall_Level2_Block009
+    4300004: Wall_Level2_Block011
+    4300006: Pillar002
+    4300008: Wall_Level2_Block007
+    4300010: Wall_Level2_Block003
+    4300012: Wall_Level2_Block004
+    4300014: Wall_Level2_Block010
+    4300016: Wall_Level2_Block005
+    4300018: Wall_Level2_Block006
+    4300020: Wall_Level2_Block2
+    4300022: Pillar
+    4300024: Wall_Level2_Block008
+    4300026: Wall_Level2_Block012
+    4300028: Wall_Level2_Block013
+    4300030: Wall_Level2_Block014
+    4300032: Wall_Level2_Block015
+    4300034: Pillar008
+    4300036: Pillar009
+    4300038: Wall_Level2_Block016
+    4300040: Wall_Level2_Block017
+    4300042: Wall_Level2_Block018
+    4300044: Wall_Level2_Block019
+    4300046: Pillar010
+    4300048: Pillar011
+    4300050: Wall_Level2_Block020
+    4300052: Wall_Level2_Block021
+    4300054: Box002
+    4300056: Lvl2_Misc_Base003
+    4300058: Lvl2_Misc_Base
+    4300060: Lvl2_Misc_Base001
+    4300062: Lvl2_Misc_Base002
+    4300064: Pillar006
+    4300066: Pillar007
+    4300068: Pillar004
+    4300070: Pillar005
+    4300072: Lvl2_Misc_Base012
+    4300074: Lvl2_Misc_Base013
+    4300076: Lvl2_Misc_Base014
+    4300078: Lvl2_Misc_Base015
+    4300080: Triangle roof001
+    4300082: Lvl1_Arch
+    4300084: Triangle roof002
+    4300086: Box003
+    4300088: Box004
+    4300090: Box005
+    4300092: Lvl2_Misc_Base004
+    4300094: Pillar012
+    4300096: Lvl2_Misc_Base005
+    4300098: Pillar013
+    4300100: Lvl2_Misc_Base006
+    4300102: Pillar014
+    4300104: Lvl2_Misc_Base007
+    4300106: Pillar015
+    4300108: Lvl2_Misc_Base008
+    4300110: Lvl2_Misc_Base009
+    4300112: Lvl2_Misc_Base010
+    4300114: Lvl2_Misc_Base011
+    4300116: Triangle roof003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
