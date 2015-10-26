@@ -1,29 +1,42 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
+
+using UnityEngine.UI;
 using System.Collections;
 
-public class GameTime : MonoBehaviour 
+public class GameTimer : NetworkBehaviour 
 {
-	public float timeLimit;
 	public float timeBuffer;
-	private float currentTime;
+	
+	[SyncVar]
+	public float currentTime = 5;
 	private bool startTime;
 	private bool playersConnected = false;
 	private GameObject networkManager;
-
+	
+	public string timeDownText = "Time Left: ";
+	public string timeUpText = "Time Ended";
+	public Text timeLeftText;
+	
 	void Start()
 	{
-		networkManager = GameObject.Find("Custom Network Manager");
+		//networkManager = GameObject.Find("Custom Network Manager");
+		startTime = true;
+		if (isServer == true)
+		{
+			StartCoroutine(beginTime());
+		}
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
+		/*	Custom manager doesnt exist in online scene as of yet
+
 		if(networkManager.GetComponent<CustomNetworkManager>().numPlayers >= 2 && playersConnected == false)
 		{
 			playersConnected = true;
-			StartCoroutine(beginTime());
 		}
-	
+		*/
 		if(startTime == true)
 		{
 			incrementTime();
@@ -39,17 +52,17 @@ public class GameTime : MonoBehaviour
 	
 	private void incrementTime()
 	{	
-		currentTime += Time.fixedDeltaTime;
-		print(currentTime); 
+		currentTime -= Time.fixedDeltaTime;
+		timeLeftText.text = "" + timeDownText +currentTime.ToString ("F0") ;
 	}	
 	
 	private void gameTimeOver()
 	{
-		if (currentTime >= timeLimit)
+		if (currentTime <= 0)
 		{
 			startTime = false;
 			currentTime = 0;
-			print("Time Ended");
+			timeLeftText.text = timeUpText;
 			//End condition
 		}
 	}
