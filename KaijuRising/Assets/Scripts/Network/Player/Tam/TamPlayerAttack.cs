@@ -27,10 +27,10 @@ public class TamPlayerAttack : NetworkBehaviour
 					{
 						dealDamageTowardsBuildings(colliders[i].gameObject);
 					}
-					if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
-					{
-						colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
-					}
+				}
+				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+				{
+					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
 				}
 			}
 		}
