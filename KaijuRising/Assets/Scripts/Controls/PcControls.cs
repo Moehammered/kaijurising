@@ -18,10 +18,11 @@ public class PcControls : AbstractMover
 
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
+	public float rotationSpeed;
 
 	// need InstantiateSound reference to play sounds
 	public KaijuSounds sound;
-
+	private bool isTurning;
 	private void Update()
 	{
 		if (isLocalPlayer) 
@@ -34,7 +35,7 @@ public class PcControls : AbstractMover
 	public void keyboardInput()
 	{
 		direction = Vector3.zero;
-		if (!playerAnimations.isAttacking())
+		if (!playerAnimations.isAttacking() && !playerAnimations.isTakingDamage())
 		{
 			if (Input.GetKey (keyBindings.forward)) 
 			{
@@ -47,11 +48,21 @@ public class PcControls : AbstractMover
 			 
 			if (Input.GetKey (keyBindings.right))
 			{
-				direction += transform.right;
+				playerAnimations.playWalk();
+				transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime,0));
+				isTurning = true;
+				//direction += transform.right;
 			} 
 			else if (Input.GetKey (keyBindings.left)) 
 			{
-				direction += -transform.right;
+				playerAnimations.playWalk();
+				transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime,0));
+				isTurning = true;
+				//direction += -transform.right;
+			}
+			else
+			{
+				isTurning = false;
 			}
 			
 			if (direction != Vector3.zero)
@@ -59,10 +70,11 @@ public class PcControls : AbstractMover
 				playerAnimations.playWalk();
 				move(direction,speed);
 			}
-			else
+			else if (isTurning == false)
 			{
 				playerAnimations.stopWalk();
 			}
+			mouseInput();
 		}
 		// Start and stop sounds are specific to key down and up.
 	}
@@ -72,7 +84,11 @@ public class PcControls : AbstractMover
 		float mouseX = Input.GetAxis("Mouse X");
 		
 		//mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
-		transform.Rotate(new Vector3(0,mouseX,0));
+		if (mouseX >= 0.5 || mouseX <= -0.5)
+		{
+			playerAnimations.playWalk();
+			transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
+		}
 	}
 	
 

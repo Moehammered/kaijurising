@@ -10,7 +10,8 @@ public class TamPlayerAttack : NetworkBehaviour
 	public GameObject attackCenter;
 	public KeyCode attackKey;
 	public float attackDamage;
-	//private PlayerAnimations playAnim;
+	public bool hasSecondAttack;
+	private KaijuAnimations playAnim;
 	private TamPlayerScore playerScore;
 	
 	[Command]
@@ -40,10 +41,17 @@ public class TamPlayerAttack : NetworkBehaviour
 	{
 		if (!isLocalPlayer)
 			return;
-		
-		if (Input.GetKeyDown(attackKey))
+		if (Input.GetKeyDown(attackKey) && !playAnim.isAttacking() && !playAnim.isTakingDamage())
 		{
-			//playAnim.playAttack();
+			if (hasSecondAttack)
+			{
+				int randomAttack = Random.Range(1, 3);
+				playAnim.playAttack(randomAttack);
+			}
+			else
+			{
+				playAnim.playAttack();
+			}
 			Cmd_detectObjects(attackCenter.transform.position, gameObject);
 		}
 	}
@@ -51,7 +59,7 @@ public class TamPlayerAttack : NetworkBehaviour
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();
-		//playAnim = GetComponent<PlayerAnimations>();
+		playAnim = GetComponent<KaijuAnimations>();
 	}
 	
 	private void dealDamageTowardsBuildings(GameObject collidedObject)

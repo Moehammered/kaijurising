@@ -4244,6 +4244,7 @@ MonoBehaviour:
     right: 100
     attack: 113
   mouseSpeed: 10
+  rotationSpeed: 0
   sound: {fileID: 0}
 --- !u!114 &11408800
 MonoBehaviour:
@@ -5303,6 +5304,7 @@ MonoBehaviour:
   attackCenter: {fileID: 169946}
   attackKey: 32
   attackDamage: 10
+  hasSecondAttack: 0
 --- !u!114 &11488910
 MonoBehaviour:
   m_ObjectHideFlags: 1
