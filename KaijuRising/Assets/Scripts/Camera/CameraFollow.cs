@@ -12,8 +12,19 @@ public class CameraFollow : MonoBehaviour {
 	// this would then also affect the camera, which we don't want.
 
 	public Transform target;
-
-	private void Update()
+	
+	private void Start()
+	{
+		StartCoroutine (cameraSetup());
+	}
+	
+	private IEnumerator cameraSetup()
+	{
+		yield return new WaitForSeconds(1f);
+		transform.SetParent (null, true);
+	}
+	
+	private void LateUpdate()
 	{
 		transform.position = target.position;
 	}

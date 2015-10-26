@@ -46,6 +46,10 @@ public class PcControls : AbstractMover
 				attackCount = 0;
 				if (Input.GetKey (keyBindings.forward)) 
 				{
+					Vector3 lookDirection = (transform.position - playerCam.transform.position);
+					lookDirection.y = transform.forward.y;
+					transform.LookAt (transform.position + lookDirection.normalized);
+					direction += lookDirection.normalized;
 					playerAnimations.playWalk();
 					direction += transform.forward;	
 				}
