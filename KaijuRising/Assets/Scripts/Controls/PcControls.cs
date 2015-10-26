@@ -21,6 +21,7 @@ public class PcControls : AbstractMover
 	public float rotationSpeed;
 
 	// need InstantiateSound reference to play sounds
+	public Camera playerCam;
 	public KaijuSounds sound;
 	private bool isTurning;
 	private void Update()
@@ -84,11 +85,8 @@ public class PcControls : AbstractMover
 		float mouseX = Input.GetAxis("Mouse X");
 		
 		//mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
-		if (mouseX >= 0.5 || mouseX <= -0.5)
-		{
-			playerAnimations.playWalk();
-			transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
-		}
+		playerCam.transform.RotateAround(transform.position, Vector3.up, mouseX * mouseSpeed * Time.deltaTime);
+		//transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
 	}
 	
 

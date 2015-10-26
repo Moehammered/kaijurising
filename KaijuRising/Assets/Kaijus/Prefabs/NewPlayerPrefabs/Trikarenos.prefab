@@ -3637,6 +3637,7 @@ MonoBehaviour:
     attack: 113
   mouseSpeed: 10
   rotationSpeed: 50
+  playerCam: {fileID: 2037680}
   sound: {fileID: 11458770}
 --- !u!114 &11493820
 MonoBehaviour:

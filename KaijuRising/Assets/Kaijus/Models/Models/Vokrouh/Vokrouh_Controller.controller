@@ -929,7 +929,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PrimaryAttack
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110132470}
@@ -1110,6 +1110,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
+      first: {fileID: 110778372}
+      second: []
+    data:
       first: {fileID: 110735056}
       second:
       - {fileID: 110934114}
@@ -1117,9 +1120,6 @@ AnimatorStateMachine:
       - {fileID: 110949208}
       - {fileID: 110903314}
       - {fileID: 110907718}
-    data:
-      first: {fileID: 110778372}
-      second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 48, y: 156, z: 0}

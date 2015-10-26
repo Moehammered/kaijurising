@@ -5253,6 +5253,7 @@ MonoBehaviour:
     attack: 113
   mouseSpeed: 10
   rotationSpeed: 50
+  playerCam: {fileID: 2053542}
   sound: {fileID: 11414642}
 --- !u!114 &11498558
 MonoBehaviour:

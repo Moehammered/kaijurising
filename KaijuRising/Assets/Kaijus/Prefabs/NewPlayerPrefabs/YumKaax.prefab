@@ -4244,7 +4244,8 @@ MonoBehaviour:
     right: 100
     attack: 113
   mouseSpeed: 10
-  rotationSpeed: 0
+  rotationSpeed: 50
+  playerCam: {fileID: 2036100}
   sound: {fileID: 0}
 --- !u!114 &11408800
 MonoBehaviour:
@@ -6344,6 +6345,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: tags.Array.data[2]
       value: 150m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rotationSpeed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
