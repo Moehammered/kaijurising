@@ -8,14 +8,13 @@ public class TamPlayerAttack : NetworkBehaviour
 	public string[] tags;
 	public float attackRadius;
 	public GameObject attackCenter;
-	public KeyCode attackKey;
 	public float attackDamage;
-	public bool hasSecondAttack;
-	private KaijuAnimations playAnim;
+	public float specialDamage;
 	private TamPlayerScore playerScore;
+	private int attackCounter;
 	
 	[Command]
-	private void Cmd_detectObjects(Vector3 center, GameObject player)
+	private void Cmd_detectObjects(Vector3 center, GameObject player, float damage)
 	{
 		Collider[] colliders = Physics.OverlapSphere(center, attackRadius);
 		for(int i=0; i<colliders.Length; i++)
@@ -31,35 +30,27 @@ public class TamPlayerAttack : NetworkBehaviour
 				}
 				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
 				{
-					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
+					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
 				}
 			}
-		}
+		}	
 	}
 	
-	void Update()
-	{
-		if (!isLocalPlayer)
-			return;
-		if (Input.GetKeyDown(attackKey) && !playAnim.isAttacking() && !playAnim.isTakingDamage())
-		{
-			if (hasSecondAttack)
-			{
-				int randomAttack = Random.Range(1, 3);
-				playAnim.playAttack(randomAttack);
-			}
-			else
-			{
-				playAnim.playAttack();
-			}
-			Cmd_detectObjects(attackCenter.transform.position, gameObject);
-		}
-	}
+
 	
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();
-		playAnim = GetComponent<KaijuAnimations>();
+	}
+	
+	public void normalAttack()
+	{
+		Cmd_detectObjects(attackCenter.transform.position, gameObject, attackDamage);
+	}
+	
+	public void specialAttack()
+	{
+		Cmd_detectObjects(attackCenter.transform.position, gameObject, specialDamage);
 	}
 	
 	private void dealDamageTowardsBuildings(GameObject collidedObject)

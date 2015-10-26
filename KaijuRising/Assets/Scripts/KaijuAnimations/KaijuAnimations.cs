@@ -8,23 +8,26 @@ public struct TimedAnimations
 	public float duration;
 }
 
+[System.Serializable]
+public struct AttackAnimations
+{
+	public int attackIndex;
+	public float duration;
+};
+
 public class KaijuAnimations : BaseAnimations 
 {
 	//attack, special, death. takedaamge, idle, walk
 	public TimedAnimations primaryAttack, specialAttack, takeDamage;
+	[Header("Parameters for second primary attacks")]
+	public string attackType = "attackType";
+	public AttackAnimations backwardsPrimary, backwardsSecondary, secondAttack;
+	[Header("names of animation parameters")]
 	public string walk = "canWalk";
 	public string death = "canDie";
 	public string takeDamageName = "TakeDamage";
-	
-	[Header("Parameters for second primary attacks")]
-	public string attackType = "attackType";
-	public float secondAttackDuration = 0.5f;
-	// Use this for initialization
-	private void Start () 
-	{
-		
-	}
-	
+	public string walkType = "walkType";
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -49,7 +52,7 @@ public class KaijuAnimations : BaseAnimations
 		
 		if (Input.GetKeyDown(KeyCode.Space) && (!isAttacking() || !isTakingDamage()))
 		{
-			playAttack();
+			playAttack(1);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.A) && (!isAttacking() || !isTakingDamage()))
@@ -68,29 +71,95 @@ public class KaijuAnimations : BaseAnimations
 		}
 	}
 	
-	public void playAttack()
+	public void playPrimaryAttack()
 	{
+		netAnim.animator.SetInteger(attackType, 1);
 		setAnimatorParameters(primaryAttack.animName, false);
-		timedAnimations(primaryAttack.animName, primaryAttack.duration);
+		attackTimedAnimations(primaryAttack.animName, primaryAttack.duration);
 	}
 	
-	public void playAttack(int attackingType)
+	public void playSecondAttack()
 	{
+		netAnim.animator.SetInteger(attackType, 2);
 		setAnimatorParameters(primaryAttack.animName, false);
-		netAnim.animator.SetInteger(attackType, attackingType);
-		switch(attackingType)
+		attackTimedAnimations(primaryAttack.animName, primaryAttack.duration);
+	}
+	
+	public void playPrimaryAttack(bool isSecond)
+	{
+		if (isSecond)
 		{
-		case 2:
-			timedAnimations(primaryAttack.animName, secondAttackDuration);
-			break;
-		default:
-			timedAnimations(primaryAttack.animName, primaryAttack.duration);
-			break;
+			playAttack(1);
 		}
+		else
+		{
+			playPrimaryAttack();
+		}
+	}
+	
+	public void playSecondAttack(bool isSecond)
+	{
+		if (isSecond)
+		{
+			playAttack(2);
+		}
+		else
+		{
+			playSecondAttack();
+		}
+	}
+	
+	public void playBackwardsPrimaryAttack()
+	{
+		playAttack(-1);
+	}
+	
+	public void playBackwardsSecondAttack()
+	{
+		playAttack(-2);
+	}
+	
+	private void playAttack(int attackingType)
+	{
+		StartCoroutine(changeAttackType(attackingType));
+		if (attackingType == backwardsPrimary.attackIndex)
+		{
+			increaseAttackTimer(backwardsPrimary.duration);
+		}
+		else if (attackingType == backwardsSecondary.attackIndex)
+		{
+			increaseAttackTimer(backwardsSecondary.duration);
+		}
+		else if (attackingType == secondAttack.attackIndex)
+		{
+			increaseAttackTimer(secondAttack.duration);
+		}
+		else
+		{
+			increaseAttackTimer(primaryAttack.duration);
+		}
+	}
+	
+	private IEnumerator changeAttackType(int attackIndex)
+	{
+		float timer = attackTime();
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+		netAnim.animator.SetInteger(attackType, attackIndex);
 	}
 	
 	public void playWalk()
 	{
+		netAnim.animator.SetInteger(walkType, 1);
+		setAnimatorParameters(walk, true);
+	}
+	
+	public void playBackwardsWalk()
+	{
+		netAnim.animator.SetInteger(walkType, -1);
 		setAnimatorParameters(walk, true);
 	}
 	

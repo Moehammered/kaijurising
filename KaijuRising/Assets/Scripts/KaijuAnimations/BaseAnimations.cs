@@ -6,6 +6,7 @@ public class BaseAnimations : NetworkBehaviour
 {	
 	public NetworkAnimator netAnim;
 	protected IEnumerator animCorutine;
+	private float attackTimer;
 	
 	public override void PreStartClient ()
 	{
@@ -24,15 +25,33 @@ public class BaseAnimations : NetworkBehaviour
 	
 	}
 	
-	protected virtual void setAnimatorParameters(string name, bool state)
+	protected void setAnimatorParameters(string name, bool state)
 	{
 		netAnim.animator.SetBool(name, state);
 	}
 	
-	protected virtual void timedAnimations(string name, float duration)
+	protected void timedAnimations(string name, float duration)
 	{
 		animCorutine = setTimedAnimation(name, duration);
 		StartCoroutine(animCorutine);
+	}
+	
+	protected void attackTimedAnimations(string name, float duration)
+	{
+		attackTimer = duration;
+		animCorutine = setTimedAnimation(name);
+		StartCoroutine(animCorutine);
+	}
+	
+	public void increaseAttackTimer(float amount)
+	{
+		amount = Mathf.Abs(amount);
+		attackTimer += amount;
+	}
+	
+	public float attackTime()
+	{
+		return attackTimer;
 	}
 	
 	private IEnumerator setTimedAnimation(string name, float duration)
@@ -42,6 +61,17 @@ public class BaseAnimations : NetworkBehaviour
 		while(timer > 0)
 		{
 			timer -= Time.deltaTime;
+			yield return null;
+		}
+		setAnimatorParameters(name, false);
+	}
+	
+	private IEnumerator setTimedAnimation(string name)
+	{
+		setAnimatorParameters(name, true);
+		while(attackTimer > 0)
+		{
+			attackTimer -= Time.deltaTime;
 			yield return null;
 		}
 		setAnimatorParameters(name, false);

@@ -4019,7 +4019,7 @@ Animator:
   m_GameObject: {fileID: 181086}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e76ef718f03a02847beace4aaa883cc5, type: 3}
-  m_Controller: {fileID: 9100000, guid: e7c454eaddcc3314aa81db2386afc563, type: 2}
+  m_Controller: {fileID: 9100000, guid: 764b767066cabc9418a4eeb4331d7f9f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4264,11 +4264,20 @@ MonoBehaviour:
   takeDamage:
     animName: canTakeDamage
     duration: 1.10000002
+  attackType: attackType
+  backwardsPrimary:
+    attackIndex: -1
+    duration: 1
+  backwardsSecondary:
+    attackIndex: -2
+    duration: 1
+  secondAttack:
+    attackIndex: 2
+    duration: 1
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
-  attackType: attackType
-  secondAttackDuration: .5
+  walkType: walkType
 --- !u!114 &11420746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5176,9 +5185,8 @@ MonoBehaviour:
   - 150m
   attackRadius: 30
   attackCenter: {fileID: 198968}
-  attackKey: 32
   attackDamage: 10
-  hasSecondAttack: 0
+  specialDamage: 0
 --- !u!114 &11490062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5245,16 +5253,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 120
   playerAnimations: {fileID: 11419002}
+  playerAttack: {fileID: 11486438}
   keyBindings:
     forward: 119
     back: 115
     left: 97
     right: 100
-    attack: 113
+    attack: 323
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 2053542}
   sound: {fileID: 11414642}
+  hasSecondAttack: 0
 --- !u!114 &11498558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8726,6 +8736,42 @@ Prefab:
       propertyPath: mouseSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 11486438}
+    - target: {fileID: 0}
+      propertyPath: backwardsPrimary.attackIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsPrimary.duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsSecondary.duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsSecondary.attackIndex
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: secondAttack.attackIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: secondAttack.duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.attack
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 764b767066cabc9418a4eeb4331d7f9f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181086}

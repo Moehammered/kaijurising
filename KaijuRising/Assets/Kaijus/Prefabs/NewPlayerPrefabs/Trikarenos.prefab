@@ -2447,7 +2447,7 @@ Animator:
   m_GameObject: {fileID: 100432}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e68cf1f7bb4a3bf4d86611744dd1d473, type: 3}
-  m_Controller: {fileID: 9100000, guid: db5802fa43bba6041a4a087931957c2f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 32d9a38690f999d41aa4eb33591bb75c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2516,18 +2516,27 @@ MonoBehaviour:
   netAnim: {fileID: 11453986}
   primaryAttack:
     animName: canAttack
-    duration: .300000012
+    duration: .600000024
   specialAttack:
     animName: canSpecial
     duration: 1
   takeDamage:
     animName: canTakeDamage
     duration: .600000024
+  attackType: attackType
+  backwardsPrimary:
+    attackIndex: -1
+    duration: .600000024
+  backwardsSecondary:
+    attackIndex: -2
+    duration: .600000024
+  secondAttack:
+    attackIndex: 2
+    duration: .600000024
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
-  attackType: attackType
-  secondAttackDuration: .300000012
+  walkType: walkType
 --- !u!114 &11408152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3463,9 +3472,8 @@ MonoBehaviour:
   - 150m
   attackRadius: 30
   attackCenter: {fileID: 159870}
-  attackKey: 32
   attackDamage: 10
-  hasSecondAttack: 1
+  specialDamage: 0
 --- !u!114 &11477804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3629,16 +3637,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 120
   playerAnimations: {fileID: 11407504}
+  playerAttack: {fileID: 11477106}
   keyBindings:
     forward: 119
     back: 115
     left: 97
     right: 100
-    attack: 113
+    attack: 323
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 2037680}
   sound: {fileID: 11458770}
+  hasSecondAttack: 1
 --- !u!114 &11493820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4575,20 +4585,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: primaryAttack.duration
-      value: .300000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialAttack.duration
-      value: 1
+      value: .899999976
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: takeDamage.duration
-      value: .600000024
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: db5802fa43bba6041a4a087931957c2f, type: 2}
+      objectReference: {fileID: 9100000, guid: 32d9a38690f999d41aa4eb33591bb75c, type: 2}
     - target: {fileID: 0}
       propertyPath: hasSecondary
       value: 1
@@ -4621,6 +4631,38 @@ Prefab:
       propertyPath: hasSecondAttack
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsPrimary.attackIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsPrimary.duration
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsSecondary.attackIndex
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: secondAttack.attackIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsSecondary.duration
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: secondAttack.duration
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.attack
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 11477106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100432}
