@@ -15,6 +15,10 @@ public class KaijuAnimations : BaseAnimations
 	public string walk = "canWalk";
 	public string death = "canDie";
 	public string takeDamageName = "TakeDamage";
+	
+	[Header("Parameters for second primary attacks")]
+	public string attackType = "attackType";
+	public float secondAttackDuration = 0.5f;
 	// Use this for initialization
 	private void Start () 
 	{
@@ -68,6 +72,21 @@ public class KaijuAnimations : BaseAnimations
 	{
 		setAnimatorParameters(primaryAttack.animName, false);
 		timedAnimations(primaryAttack.animName, primaryAttack.duration);
+	}
+	
+	public void playAttack(int attackingType)
+	{
+		setAnimatorParameters(primaryAttack.animName, false);
+		netAnim.animator.SetInteger(attackType, attackingType);
+		switch(attackingType)
+		{
+		case 2:
+			timedAnimations(primaryAttack.animName, secondAttackDuration);
+			break;
+		default:
+			timedAnimations(primaryAttack.animName, primaryAttack.duration);
+			break;
+		}
 	}
 	
 	public void playWalk()

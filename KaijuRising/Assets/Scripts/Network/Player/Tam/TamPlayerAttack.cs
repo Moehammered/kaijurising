@@ -4,8 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class TamPlayerAttack : NetworkBehaviour 
-{
-	public KaijuAnimations playerAnimations;
+{	
+	public string[] tags;
 	public float attackRadius;
 	public GameObject attackCenter;
 	public KeyCode attackKey;
@@ -17,11 +17,21 @@ public class TamPlayerAttack : NetworkBehaviour
 	private void Cmd_detectObjects(Vector3 center, GameObject player)
 	{
 		Collider[] colliders = Physics.OverlapSphere(center, attackRadius);
-		for (int i = 0; i < colliders.Length; i++)
+		for(int i=0; i<colliders.Length; i++)
 		{
-			if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+			if(colliders != null)
 			{
-				colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
+				for(int z=0; z< tags.Length; z++)
+				{
+					if(colliders[i].gameObject.tag == tags[z])
+					{
+						dealDamageTowardsBuildings(colliders[i].gameObject);
+					}
+					if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+					{
+						colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
+					}
+				}
 			}
 		}
 	}
@@ -31,10 +41,9 @@ public class TamPlayerAttack : NetworkBehaviour
 		if (!isLocalPlayer)
 			return;
 		
-		if (Input.GetKeyDown(attackKey) && !playerAnimations.isAttacking())
+		if (Input.GetKeyDown(attackKey))
 		{
 			//playAnim.playAttack();
-			playerAnimations.playAttack();
 			Cmd_detectObjects(attackCenter.transform.position, gameObject);
 		}
 	}
@@ -43,5 +52,15 @@ public class TamPlayerAttack : NetworkBehaviour
 	{
 		playerScore = GetComponent<TamPlayerScore>();
 		//playAnim = GetComponent<PlayerAnimations>();
+	}
+	
+	private void dealDamageTowardsBuildings(GameObject collidedObject)
+	{
+		Entity building = collidedObject.GetComponent<Entity>();
+		if(building)
+		{
+			building.takeDamage(attackDamage);
+			building = null;
+		}
 	}
 }

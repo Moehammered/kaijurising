@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127368}
-  m_LocalRotation: {x: .29895249, y: .744883418, z: .223380402, w: .553061724}
+  m_LocalRotation: {x: .29895249, y: .744883418, z: .223380387, w: .553061724}
   m_LocalPosition: {x: .553210974, y: -2.1242857, z: -3.33058953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3427,7 +3427,7 @@ Animator:
   m_GameObject: {fileID: 148218}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7c7a3eea0ea555444b14d7c4b7d8c333, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5ba0cffa32553184995f6a2a1ac72630, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d38162df4d0bb24a8fe6110045941fe, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3530,6 +3530,8 @@ MonoBehaviour:
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
+  attackType: attackType
+  secondAttackDuration: .5
 --- !u!114 &11407838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4583,7 +4585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 11406960}
+  tags:
+  - 50m
+  - 100m
+  - 150m
   attackRadius: 30
   attackCenter: {fileID: 130966}
   attackKey: 32
@@ -5565,6 +5570,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: tags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: takeDamage.duration
       value: .600000024
       objectReference: {fileID: 0}
@@ -5575,6 +5584,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: primaryAttack.duration
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9d38162df4d0bb24a8fe6110045941fe, type: 2}
+    - target: {fileID: 0}
+      propertyPath: hasSecondary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[0]
+      value: 50m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[1]
+      value: 100m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[2]
+      value: 150m
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

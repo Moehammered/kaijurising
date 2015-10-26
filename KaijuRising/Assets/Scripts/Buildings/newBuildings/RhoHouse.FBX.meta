@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: cc93a78e3025249c59cfa1ea85669420
+timeCreated: 1445597299
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Cylinder001
+    100006: Dome roof
+    100008: Lvl2_Misc_Base
+    100010: Lvl2_Misc_Base001
+    100012: Lvl2_Misc_Base002
+    100014: Lvl2_Misc_Base003
+    100016: Pillar
+    100018: Pillar001
+    100020: Pillar002
+    100022: Pillar003
+    100024: Pillar004
+    100026: Pillar005
+    100028: Pillar006
+    100030: Pillar007
+    100032: //RootNode
+    100034: Wall_Level2_Block003
+    100036: Wall_Level2_Block004
+    100038: Wall_Level2_Block005
+    100040: Wall_Level2_Block006
+    100042: Wall_Level2_Block007
+    100044: Wall_Level2_Block008
+    100046: Wall_Level2_Block009
+    100048: Wall_Level2_Block010
+    100050: Wall_Level2_Block011
+    100052: Wall_Level2_Block2
+    400000: Box001
+    400002: Box002
+    400004: Cylinder001
+    400006: Dome roof
+    400008: Lvl2_Misc_Base
+    400010: Lvl2_Misc_Base001
+    400012: Lvl2_Misc_Base002
+    400014: Lvl2_Misc_Base003
+    400016: Pillar
+    400018: Pillar001
+    400020: Pillar002
+    400022: Pillar003
+    400024: Pillar004
+    400026: Pillar005
+    400028: Pillar006
+    400030: Pillar007
+    400032: //RootNode
+    400034: Wall_Level2_Block003
+    400036: Wall_Level2_Block004
+    400038: Wall_Level2_Block005
+    400040: Wall_Level2_Block006
+    400042: Wall_Level2_Block007
+    400044: Wall_Level2_Block008
+    400046: Wall_Level2_Block009
+    400048: Wall_Level2_Block010
+    400050: Wall_Level2_Block011
+    400052: Wall_Level2_Block2
+    2300000: Box001
+    2300002: Box002
+    2300004: Cylinder001
+    2300006: Dome roof
+    2300008: Lvl2_Misc_Base
+    2300010: Lvl2_Misc_Base001
+    2300012: Lvl2_Misc_Base002
+    2300014: Lvl2_Misc_Base003
+    2300016: Pillar
+    2300018: Pillar001
+    2300020: Pillar002
+    2300022: Pillar003
+    2300024: Pillar004
+    2300026: Pillar005
+    2300028: Pillar006
+    2300030: Pillar007
+    2300032: Wall_Level2_Block003
+    2300034: Wall_Level2_Block004
+    2300036: Wall_Level2_Block005
+    2300038: Wall_Level2_Block006
+    2300040: Wall_Level2_Block007
+    2300042: Wall_Level2_Block008
+    2300044: Wall_Level2_Block009
+    2300046: Wall_Level2_Block010
+    2300048: Wall_Level2_Block011
+    2300050: Wall_Level2_Block2
+    3300000: Box001
+    3300002: Box002
+    3300004: Cylinder001
+    3300006: Dome roof
+    3300008: Lvl2_Misc_Base
+    3300010: Lvl2_Misc_Base001
+    3300012: Lvl2_Misc_Base002
+    3300014: Lvl2_Misc_Base003
+    3300016: Pillar
+    3300018: Pillar001
+    3300020: Pillar002
+    3300022: Pillar003
+    3300024: Pillar004
+    3300026: Pillar005
+    3300028: Pillar006
+    3300030: Pillar007
+    3300032: Wall_Level2_Block003
+    3300034: Wall_Level2_Block004
+    3300036: Wall_Level2_Block005
+    3300038: Wall_Level2_Block006
+    3300040: Wall_Level2_Block007
+    3300042: Wall_Level2_Block008
+    3300044: Wall_Level2_Block009
+    3300046: Wall_Level2_Block010
+    3300048: Wall_Level2_Block011
+    3300050: Wall_Level2_Block2
+    4300000: Box001
+    4300002: Wall_Level2_Block009
+    4300004: Wall_Level2_Block011
+    4300006: Pillar002
+    4300008: Wall_Level2_Block007
+    4300010: Wall_Level2_Block003
+    4300012: Wall_Level2_Block004
+    4300014: Wall_Level2_Block010
+    4300016: Wall_Level2_Block005
+    4300018: Wall_Level2_Block006
+    4300020: Pillar001
+    4300022: Wall_Level2_Block2
+    4300024: Pillar003
+    4300026: Pillar
+    4300028: Wall_Level2_Block008
+    4300030: Box002
+    4300032: Lvl2_Misc_Base003
+    4300034: Lvl2_Misc_Base
+    4300036: Lvl2_Misc_Base001
+    4300038: Lvl2_Misc_Base002
+    4300040: Pillar006
+    4300042: Pillar007
+    4300044: Pillar004
+    4300046: Pillar005
+    4300048: Dome roof
+    4300050: Cylinder001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

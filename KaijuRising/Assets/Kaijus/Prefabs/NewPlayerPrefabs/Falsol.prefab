@@ -4193,6 +4193,8 @@ MonoBehaviour:
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
+  attackType: attackType
+  secondAttackDuration: .5
 --- !u!114 &11420746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5080,7 +5082,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimations: {fileID: 11419002}
+  tags:
+  - 50m
+  - 100m
+  - 150m
   attackRadius: 30
   attackCenter: {fileID: 198968}
   attackKey: 32
@@ -6412,6 +6417,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: tags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: primaryAttack.duration
       value: .600000024
       objectReference: {fileID: 0}
@@ -6422,6 +6431,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: takeDamage.duration
       value: 1.10000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[0]
+      value: 50m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[1]
+      value: 100m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tags.Array.data[2]
+      value: 150m
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
