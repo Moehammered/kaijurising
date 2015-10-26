@@ -77,38 +77,6 @@ public class PcControls : AbstractMover
 			mouseInput();
 		}
 		// Start and stop sounds are specific to key down and up.
-		if (Input.GetKeyDown (keyBindings.forward)) 
-		{
-			sound.CmdPlayOnServer();
-		}
-		else if(Input.GetKeyDown (keyBindings.back)) 
-		{
-			sound.CmdPlayOnServer();
-		} 
-		else if(Input.GetKeyDown (keyBindings.left)) 
-		{
-			sound.CmdPlayOnServer();
-		}
-		else if(Input.GetKeyDown (keyBindings.right)) 
-		{
-			sound.CmdPlayOnServer();
-		} 
-		if (Input.GetKeyUp (keyBindings.forward)) 
-		{
-			sound.CmdStopOnServer();
-		}
-		else if(Input.GetKeyUp (keyBindings.back)) 
-		{
-			sound.CmdStopOnServer();
-		}
-		else if(Input.GetKeyUp (keyBindings.left)) 
-		{
-			sound.CmdStopOnServer();
-		}
-		else if(Input.GetKeyUp (keyBindings.right)) 
-		{
-			sound.CmdStopOnServer();
-		}
 	}
 	
 	public void mouseInput()
