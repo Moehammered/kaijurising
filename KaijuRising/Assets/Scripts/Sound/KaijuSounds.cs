@@ -2,14 +2,13 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class KaijuSounds : NetworkBehaviour {
+public class KaijuSounds : MonoBehaviour {
 
 	public AudioSource source;
 
 	[ClientRpc]
 	private void RpcPlayOnClients() 
 	{
-		source.loop = true;
 		source.Play ();
 	} 
 
@@ -23,7 +22,7 @@ public class KaijuSounds : NetworkBehaviour {
 	private void RpcStopOnClients() 
 	{
 		StartCoroutine(volumeFader());
-		source.loop = false;
+		source.Stop ();
 	} 
 	
 	[Command]
