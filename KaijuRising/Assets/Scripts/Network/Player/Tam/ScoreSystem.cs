@@ -47,11 +47,7 @@ public class ScoreSystem : NetworkBehaviour
 			}
 		}
 
-		Rpc_updateClientValue(scoreSystem[playerIndex].playerScore, playerIndex);
-
-		//Added a print statement for end game condition ~ Sean
-		
-		if(scoreSystem[playerIndex].playerScore >= 200)
+		if(scoreSystem[playerIndex].playerScore >= 80)
 		{
 			print ("Player: " + (playerIndex + 1) + " has won the game");
 			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
@@ -59,6 +55,12 @@ public class ScoreSystem : NetworkBehaviour
 			StartCoroutine(restartWorld());
 			
 		}
+
+		Rpc_updateClientValue(scoreSystem[playerIndex].playerScore, playerIndex);
+
+		//Added a print statement for end game condition ~ Sean
+		
+
 	}
 
 	private IEnumerator restartWorld()
@@ -81,7 +83,7 @@ public class ScoreSystem : NetworkBehaviour
 	{
 		scoreSystem[playerIndex].playerScore = value;
 
-		if(scoreSystem[playerIndex].playerScore >= 200)
+		if(scoreSystem[playerIndex].playerScore >= 80)
 		{
 			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
 		}
