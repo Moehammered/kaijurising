@@ -112,9 +112,9 @@ public class DestroyBuilding : NetworkBehaviour
 	{
 		if (other.gameObject.tag == kaijuTag)
 		{
-			kaijuCollision = other;
-			Cmd_explodeObject ();
-			other.gameObject.GetComponent<TamPlayerScore>().increaseTheScore(10);
+			//kaijuCollision = other;
+			//Cmd_explodeObject ();
+			//other.gameObject.GetComponent<TamPlayerScore>().increaseTheScore(10);
 		}
 	}
 
