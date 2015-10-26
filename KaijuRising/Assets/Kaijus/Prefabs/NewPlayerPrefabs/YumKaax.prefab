@@ -4121,6 +4121,7 @@ MonoBehaviour:
     right: 100
     attack: 113
   mouseSpeed: 10
+  rotationSpeed: 50
   sound: {fileID: 11454840}
 --- !u!114 &11408800
 MonoBehaviour:
@@ -5180,6 +5181,7 @@ MonoBehaviour:
   attackCenter: {fileID: 169946}
   attackKey: 32
   attackDamage: 10
+  hasSecondAttack: 0
 --- !u!114 &11491552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6207,6 +6209,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: tags.Array.data[2]
       value: 150m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rotationSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mouseSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
