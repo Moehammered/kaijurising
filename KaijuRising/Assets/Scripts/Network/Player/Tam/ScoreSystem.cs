@@ -47,25 +47,47 @@ public class ScoreSystem : NetworkBehaviour
 			}
 		}
 
-		if(scoreSystem[playerIndex].playerScore >= 80)
-		{
-			print ("Player: " + (playerIndex + 1) + " has won the game");
-			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
-			
-			StartCoroutine(restartWorld());
-			
-		}
+		//Added a print statement for end game condition ~ Sean
+//		if(scoreSystem[playerIndex].playerScore >= 80)
+//		{
+//			print ("Player: " + (playerIndex + 1) + " has won the game");
+//			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
+//			StartCoroutine(restartWorld());
+//		}
 
 		Rpc_updateClientValue(scoreSystem[playerIndex].playerScore, playerIndex);
+	}
 
-		//Added a print statement for end game condition ~ Sean
-		
+	public void endGame()
+	{
+		// find the highest scoring player, add conditions for a tie.
+
+		StartCoroutine(restartWorld());
+
+		int winningIndex = 0;
+
+		for(int i = 1; i < scoreSystem.Length; i++)
+		{
+			if(scoreSystem[i].playerScore > scoreSystem[winningIndex].playerScore)
+			{
+				winningIndex = i;
+			}
+			else if(scoreSystem[i].playerScore == scoreSystem[winningIndex].playerScore)
+			{
+				print ("There was a tie!");
+				gameEndText.text = "There was a tie!";
+				return;
+			}
+		}
+
+		print ("Player: " + (winningIndex + 1) + " has won the game");
+		gameEndText.text = "Player: " + (winningIndex + 1) + " has won the game";
 
 	}
 
 	private IEnumerator restartWorld()
 	{
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(2f);
 		Rpc_disconnect();
 		yield return new WaitForSeconds(2f);
 		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().ServerChangeScene("OnlineScene");
@@ -74,8 +96,10 @@ public class ScoreSystem : NetworkBehaviour
 	[ClientRpc]
 	private void Rpc_disconnect()
 	{
+		//GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().client.connection.Disconnect();
 		Destroy(GameObject.Find ("Custom Network Manager"));
-		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().client.connection.Disconnect();
+		ClientScene.RemovePlayer(0);
+		ClientScene.readyConnection.Disconnect();
 	}
 	
 	[ClientRpc]
@@ -83,10 +107,10 @@ public class ScoreSystem : NetworkBehaviour
 	{
 		scoreSystem[playerIndex].playerScore = value;
 
-		if(scoreSystem[playerIndex].playerScore >= 80)
-		{
-			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
-		}
+//		if(scoreSystem[playerIndex].playerScore >= 80)
+//		{
+//			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
+//		}
 
 		for (int i = 0; i < scoreSystem.Length; i++)
 		{

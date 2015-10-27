@@ -43,6 +43,14 @@ public class CustomNetworkManager : NetworkManager {
 		addSpawnPositions ();
 	}
 
+	private void OnLevelWasLoaded()
+	{
+		if(Application.loadedLevel == 0)
+		{
+			print ("scene changed");
+		}
+	}
+
 	public override void OnStartServer ()
 	{
 		// The server registers the function 'customAddPlayer' and associates it with an ID.
@@ -50,6 +58,7 @@ public class CustomNetworkManager : NetworkManager {
 		// When the function is called, a class of type MessageBase is sent to the server in addition to other info
 		// Such as the connection ID and so on.
 		NetworkServer.RegisterHandler(9001, customAddPlayer);
+		NetworkServer.RegisterHandler(9002, forceSceneReload);
 	}
 
 	public override void OnClientConnect (NetworkConnection conn)
@@ -71,17 +80,44 @@ public class CustomNetworkManager : NetworkManager {
 				ClientScene.RegisterPrefab(spawnablePrefabs[i]);
 			}
 			
-			CustomAddPlayerMessage message = new CustomAddPlayerMessage();
-			message.chosenKaiju = PlayerPrefs.GetString(key);
-			ClientScene.readyConnection.Send(9001, message);
+			sendMessage(conn);
+
+			StartCoroutine (checkPlayerCount(conn));
 		}
 		else
 		{
-			conn.Disconnect();
+			//client.Shutdown();
 		}
 	}
 
 
+	private void sendMessage(NetworkConnection conn)
+	{
+		CustomAddPlayerMessage message = new CustomAddPlayerMessage();
+		message.chosenKaiju = PlayerPrefs.GetString(key);
+		ClientScene.readyConnection.Send(9001, message);
+
+	}
+	
+	private IEnumerator checkPlayerCount(NetworkConnection conn)
+	{
+		yield return new WaitForSeconds(2f);
+
+		print ("LocalPlayersCount: " + ClientScene.localPlayers.Count);
+		print("ReadyConnection count: " + ClientScene.readyConnection.playerControllers.Count);
+
+		if(ClientScene.localPlayers.Count > 0 && ClientScene.readyConnection.playerControllers.Count == 0)
+		{
+			Debug.LogError ("Unknown Error. Player won't spawn");
+			ReloadSceneMessage reloadMessage = new ReloadSceneMessage();
+			ClientScene.readyConnection.Send (9002, reloadMessage);
+		}
+	}
+	
+	private void forceSceneReload(NetworkMessage networkMessage)
+	{
+		this.ServerChangeScene("OnlineScene");
+	}
 
 	// Registered function that is called by the client on connection.
 	private void customAddPlayer(NetworkMessage networkMessage)
@@ -140,5 +176,4 @@ public class CustomNetworkManager : NetworkManager {
 		player = (GameObject)Instantiate (gmo, spawnPosition, Quaternion.identity);
 		NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
 	}
-
 }

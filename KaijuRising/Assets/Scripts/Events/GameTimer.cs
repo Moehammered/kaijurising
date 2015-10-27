@@ -10,7 +10,7 @@ public class GameTimer : NetworkBehaviour
 	
 	[SyncVar]
 	public float currentTime = 5;
-	private bool startTime;
+	private bool startCounting;
 	private bool playersConnected = false;
 	private GameObject networkManager;
 	
@@ -18,18 +18,22 @@ public class GameTimer : NetworkBehaviour
 	public string timeUpText = "Time Ended";
 	public Text timeLeftText;
 	
-	void Start()
+	private void Start()
 	{
 		//networkManager = GameObject.Find("Custom Network Manager");
-		startTime = true;
+
 		if (isServer == true)
 		{
+			timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0") ;
 			StartCoroutine(beginTime());
 		}
 	}
 	
-	void FixedUpdate () 
+	private void FixedUpdate () 
 	{
+		if(!isServer)
+			return;
+
 		/*	Custom manager doesnt exist in online scene as of yet
 
 		if(networkManager.GetComponent<CustomNetworkManager>().numPlayers >= 2 && playersConnected == false)
@@ -37,7 +41,7 @@ public class GameTimer : NetworkBehaviour
 			playersConnected = true;
 		}
 		*/
-		if(startTime == true)
+		if(startCounting == true)
 		{
 			incrementTime();
 			gameTimeOver();
@@ -47,22 +51,31 @@ public class GameTimer : NetworkBehaviour
 	private IEnumerator beginTime()
 	{
 		yield return new WaitForSeconds(timeBuffer);
-		startTime = true;
+		startCounting = true;
 	}
 	
 	private void incrementTime()
 	{	
 		currentTime -= Time.fixedDeltaTime;
-		timeLeftText.text = "" + timeDownText +currentTime.ToString ("F0") ;
+		timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0") ;
+		Rpc_updateTime();
 	}	
-	
+
+	[ClientRpc]
+	private void Rpc_updateTime()
+	{
+		timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0") ;
+	}
+
 	private void gameTimeOver()
 	{
 		if (currentTime <= 0)
 		{
-			startTime = false;
+			startCounting = false;
 			currentTime = 0;
 			timeLeftText.text = timeUpText;
+			GameObject.FindObjectOfType<ScoreSystem>().endGame();
+			Destroy (gameObject);
 			//End condition
 		}
 	}
