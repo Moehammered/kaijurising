@@ -8,16 +8,13 @@ public class TamPlayerAttack : NetworkBehaviour
 	public string[] tags;
 	public float attackRadius;
 	public GameObject attackCenter;
-	public KeyCode attackKey;
 	public float attackDamage;
-	public bool hasSecondAttack;
-	private KaijuAnimations playAnim;
+	public float specialDamage;
 	private TamPlayerScore playerScore;
+	private int attackCounter;
 
-	public KaijuSounds sounds;
-	
 	[Command]
-	private void Cmd_detectObjects(Vector3 center, GameObject player)
+	private void Cmd_detectObjects(Vector3 center, GameObject player, float damage)
 	{
 		Collider[] colliders = Physics.OverlapSphere(center, attackRadius);
 		for(int i=0; i<colliders.Length; i++)
@@ -30,35 +27,28 @@ public class TamPlayerAttack : NetworkBehaviour
 					{
 						dealDamageTowardsBuildings(colliders[i].gameObject);
 					}
-					if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
-					{
-						colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-attackDamage, GetComponent<TamPlayerScore>().getPlayerNumber());
-					}
+				}
+				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+				{
+					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
 				}
 			}
-		}
+		}	
 	}
-
-	public void kaijuAttack() 
-	{
-		if (hasSecondAttack)
-		{
-			int randomAttack = Random.Range(1, 3);
-			playAnim.playAttack(randomAttack);
-			sounds.CmdPlayOnServer();
-		}
-		else
-		{
-			playAnim.playAttack();
-			sounds.CmdPlayOnServer();
-		}
-		Cmd_detectObjects(attackCenter.transform.position, gameObject);
-	}
-
+		
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();
-		playAnim = GetComponent<KaijuAnimations>();
+	}
+	
+	public void normalAttack()
+	{
+		Cmd_detectObjects(attackCenter.transform.position, gameObject, attackDamage);
+	}
+	
+	public void specialAttack()
+	{
+		Cmd_detectObjects(attackCenter.transform.position, gameObject, specialDamage);
 	}
 	
 	private void dealDamageTowardsBuildings(GameObject collidedObject)

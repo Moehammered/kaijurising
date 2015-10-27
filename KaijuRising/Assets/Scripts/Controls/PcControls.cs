@@ -15,74 +15,114 @@ public struct KeyBindings
 public class PcControls : AbstractMover
 {
 	public KaijuAnimations playerAnimations;
-
-	// player attack reference 
-	public TamPlayerAttack tamtack;
-
+	public TamPlayerAttack playerAttack;
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
 	public float rotationSpeed;
-	
+
+	// need InstantiateSound reference to play sounds
+	public GameObject playerCam;
+	public bool hasSecondAttack;
 	private bool isTurning;
-	private void Update()
+	private int attackCount;
+
+	public KaijuSounds sounds;
+	
+	private void FixedUpdate()
 	{
 		if (isLocalPlayer) 
 		{
 			keyboardInput();
-			mouseInput();
 		}
+	}
+
+	private void LateUpdate()
+	{
+		if(!isLocalPlayer)
+			return;
+
+		mouseInput();
 	}
 
 	public void keyboardInput()
 	{
-		direction = Vector3.zero;
-
-		if (!playerAnimations.isAttacking() && !playerAnimations.isTakingDamage())
+		if (!playerAnimations.isTakingDamage())
 		{
-
-			if (Input.GetKey (keyBindings.forward)) 
+			direction = Vector3.zero;
+			if (!playerAnimations.isAttacking())
 			{
-				direction += transform.forward;	
+				attackCount = 0;
+				if (Input.GetKey (keyBindings.forward)) 
+				{
+					Vector3 lookDirection = (transform.position - playerCam.transform.GetChild (0).transform.position);
+					lookDirection.y = transform.forward.y;
+					transform.LookAt (transform.position + lookDirection.normalized);
+					direction += lookDirection.normalized;
+					playerAnimations.playWalk();
+					direction += transform.forward;	
+				}
+				else if (Input.GetKey (keyBindings.back)) 
+				{
+					playerAnimations.playBackwardsWalk();
+					direction += -transform.forward;
+				} 
+				 
+				if (Input.GetKey (keyBindings.right))
+				{
+					playerAnimations.playWalk();
+					transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime,0));
+					isTurning = true;
+					//direction += transform.right;
+				} 
+				else if (Input.GetKey (keyBindings.left)) 
+				{
+					playerAnimations.playWalk();
+					transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime,0));
+					isTurning = true;
+					//direction += -transform.right;
+				}
+				else
+				{
+					isTurning = false;
+				}
+				
+				if (direction != Vector3.zero)
+				{
+					move(direction,speed);
+				}
+				else if (isTurning == false)
+				{
+					playerAnimations.stopWalk();
+				}
+				mouseInput();
+				
+				if (Input.GetKeyDown(keyBindings.primaryAttack))
+				{
+					//attack increase attack count;
+					playerAttack.normalAttack();
+					playerAnimations.stopWalk();
+					sounds.CmdPlayOnServer();
+					playerAnimations.playPrimaryAttack();
+					attackCount++;
+				}
 			}
-			else if (Input.GetKey (keyBindings.back)) 
+			else if (attackCount < 2)
 			{
-				direction += -transform.forward;
-			} 
-			 
-			if (Input.GetKey (keyBindings.right))
-			{
-				playerAnimations.playWalk();
-				transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime,0));
-				isTurning = true;
-				//direction += transform.right;
-			} 
-			else if (Input.GetKey (keyBindings.left)) 
-			{
-				playerAnimations.playWalk();
-				transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime,0));
-				isTurning = true;
-				//direction += -transform.right;
+				if (Input.GetKeyDown(keyBindings.primaryAttack))
+				{
+					if (hasSecondAttack)
+					{
+						playerAnimations.playSecondAttack(true);
+					}
+					else
+					{
+						playerAnimations.playBackwardsPrimaryAttack();
+					}
+					sounds.CmdPlayOnServer();
+					playerAttack.normalAttack();
+					attackCount++;
+				}
 			}
-			else
-			{
-				isTurning = false;
-			}
-			
-			if (direction != Vector3.zero)
-			{
-				playerAnimations.playWalk();
-				move(direction,speed);
-			}
-			else if (isTurning == false)
-			{
-				playerAnimations.stopWalk();
-			}
-			if(Input.GetKey(keyBindings.primaryAttack)) 
-			{
-				// plays the kaiju animations attack;
-				tamtack.kaijuAttack();
-			}
-			mouseInput();
 		}
 		// Start and stop sounds are specific to key down and up.
 	}
@@ -92,11 +132,8 @@ public class PcControls : AbstractMover
 		float mouseX = Input.GetAxis("Mouse X");
 		
 		//mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
-		if (mouseX >= 0.5 || mouseX <= -0.5)
-		{
-			playerAnimations.playWalk();
-			transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
-		}
+		playerCam.transform.RotateAround(transform.position, Vector3.up, mouseX * mouseSpeed * Time.deltaTime);
+		//transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
 	}
 	
 

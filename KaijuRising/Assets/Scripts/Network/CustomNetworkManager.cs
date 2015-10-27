@@ -131,7 +131,7 @@ public class CustomNetworkManager : NetworkManager {
 	{
 		int randomIndex = Random.Range (0, spawnPool.Count);
 		spawnPosition = spawnPool[randomIndex];
-		spawnPool.RemoveAt (randomIndex);
+		//spawnPool.RemoveAt (randomIndex);
 	}
 	
 	private void makeKaijuPlayer (GameObject gmo, GameObject player, NetworkMessage networkMessage)

@@ -18,6 +18,7 @@ public class ScoreSystem : NetworkBehaviour
 	public Text gameEndText;
 	public Score[] scoreSystem = new Score[4];
 	// Use this for initialization
+
 	void Start () 
 	{
 		
@@ -46,16 +47,35 @@ public class ScoreSystem : NetworkBehaviour
 			}
 		}
 
-		//Added a print statement for end game condition ~ Sean
-
-		if(scoreSystem[playerIndex].playerScore >= 200)
+		if(scoreSystem[playerIndex].playerScore >= 80)
 		{
 			print ("Player: " + (playerIndex + 1) + " has won the game");
 			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
+			
+			StartCoroutine(restartWorld());
+			
 		}
 
-
 		Rpc_updateClientValue(scoreSystem[playerIndex].playerScore, playerIndex);
+
+		//Added a print statement for end game condition ~ Sean
+		
+
+	}
+
+	private IEnumerator restartWorld()
+	{
+		yield return new WaitForSeconds(5f);
+		Rpc_disconnect();
+		yield return new WaitForSeconds(2f);
+		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().ServerChangeScene("OnlineScene");
+	}
+
+	[ClientRpc]
+	private void Rpc_disconnect()
+	{
+		Destroy(GameObject.Find ("Custom Network Manager"));
+		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().client.connection.Disconnect();
 	}
 	
 	[ClientRpc]
@@ -63,7 +83,7 @@ public class ScoreSystem : NetworkBehaviour
 	{
 		scoreSystem[playerIndex].playerScore = value;
 
-		if(scoreSystem[playerIndex].playerScore >= 200)
+		if(scoreSystem[playerIndex].playerScore >= 80)
 		{
 			gameEndText.text = "Player: " + (playerIndex + 1) + " has won the game";
 		}
