@@ -1138,6 +1138,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &147666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 463268}
+  m_Layer: 8
+  m_Name: FireBreathCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &148622
 GameObject:
   m_ObjectHideFlags: 1
@@ -2831,6 +2846,7 @@ Transform:
   - {fileID: 440718}
   - {fileID: 456906}
   - {fileID: 405528}
+  - {fileID: 463268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &438016
@@ -3386,6 +3402,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 456906}
   m_RootOrder: 2
+--- !u!4 &463268
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435434}
+  m_RootOrder: 8
 --- !u!4 &463952
 Transform:
   m_ObjectHideFlags: 1
@@ -5049,6 +5077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KAIJU_TYPE: 1
   tags:
   - 50m
   - 100m
@@ -5056,7 +5085,13 @@ MonoBehaviour:
   attackRadius: 30
   attackCenter: {fileID: 198968}
   attackDamage: 10
-  specialDamage: 0
+  specialDamage: 5
+  tendrils: {fileID: 0}
+  tendrilRadius: 0
+  falsolProjectile: {fileID: 136818, guid: 7fb692f08fd29a440b1bf6f881510f80, type: 2}
+  breathCenter: {fileID: 463268}
+  duration: 4
+  fireRate: .300000012
 --- !u!114 &11488386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5175,7 +5210,7 @@ MonoBehaviour:
     back: 115
     left: 97
     right: 100
-    primaryAttack: 0
+    primaryAttack: 32
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 171952}
@@ -8776,6 +8811,10 @@ Prefab:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 171952}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.primaryAttack
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181086}

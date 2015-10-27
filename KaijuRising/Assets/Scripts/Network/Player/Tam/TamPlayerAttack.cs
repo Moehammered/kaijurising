@@ -3,8 +3,17 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+[System.Serializable]
+public enum ATTACK_KAIJU_TYPE
+{
+	YUM_KAAX,
+	FALSOL,
+	TRIKARENOS
+};
+
 public class TamPlayerAttack : NetworkBehaviour 
 {	
+	public ATTACK_KAIJU_TYPE KAIJU_TYPE;
 	public string[] tags;
 	public float attackRadius;
 	public GameObject attackCenter;
@@ -12,9 +21,16 @@ public class TamPlayerAttack : NetworkBehaviour
 	public float specialDamage;
 	private TamPlayerScore playerScore;
 	private int attackCounter;
-
+	[Header("YumKaax")]
+	public GameObject tendrils;
+	public float tendrilRadius;
+	[Header("Falsol")]
+	public GameObject falsolProjectile;
+	public Transform breathCenter;
+	public float duration;
+	public float fireRate;
 	[Command]
-	private void Cmd_detectObjects(Vector3 center, GameObject player, float damage)
+	private void Cmd_detectObjects(Vector3 center, float damage)
 	{
 		Collider[] colliders = Physics.OverlapSphere(center, attackRadius);
 		for(int i=0; i<colliders.Length; i++)
@@ -43,12 +59,22 @@ public class TamPlayerAttack : NetworkBehaviour
 	
 	public void normalAttack()
 	{
-		Cmd_detectObjects(attackCenter.transform.position, gameObject, attackDamage);
+		Cmd_detectObjects(attackCenter.transform.position, attackDamage);
 	}
 	
-	public void specialAttack()
+	public virtual void specialAttack()
 	{
-		Cmd_detectObjects(attackCenter.transform.position, gameObject, specialDamage);
+		switch(KAIJU_TYPE)
+		{
+			case ATTACK_KAIJU_TYPE.YUM_KAAX:
+				Cmd_detectPlayers(specialDamage, tendrilRadius);
+				break;
+			case ATTACK_KAIJU_TYPE.FALSOL:
+				Cmd_falsolSpecial();
+				break;
+			default:
+				break;
+		}
 	}
 	
 	public void timedNormalAttack(float duration)
@@ -74,6 +100,58 @@ public class TamPlayerAttack : NetworkBehaviour
 		{
 			building.takeDamage(attackDamage);
 			building = null;
+		}
+	}
+	
+	//YUMKAAX
+	[Command]
+	private void Cmd_detectPlayers(float damage, float specialRadius)
+	{
+		Collider[] colliders = Physics.OverlapSphere(transform.position, specialRadius);
+		for(int i=0; i<colliders.Length; i++)
+		{
+			if(colliders != null)
+			{
+				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+				{
+					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
+					GameObject tendril_GO = (GameObject)Instantiate(tendrils, colliders[i].gameObject.transform.position, Quaternion.identity);
+					NetworkServer.Spawn(tendril_GO);
+					break;
+				}
+			}
+		}	
+	}
+	
+	//FALSOL
+	[Command]
+	private void Cmd_falsolSpecial()
+	{
+		StartCoroutine(fireBreath(duration, fireRate));
+	}
+	
+	private IEnumerator fireBreath(float duration, float fireRate)
+	{
+		float timer = duration;
+		float currentFireRate = 0;
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			if (currentFireRate > 0)
+			{
+				currentFireRate -= Time.deltaTime;
+			}
+			else
+			{
+				GameObject fireBreath_GO = (GameObject)Instantiate(falsolProjectile, breathCenter.position, transform.rotation);
+				FireBreath fireBreathComp = fireBreath_GO.GetComponent<FireBreath>();
+				fireBreathComp.damage = specialDamage;
+				fireBreathComp.direction = transform.forward;
+				fireBreathComp.attackingPlayer = GetComponent<TamPlayerScore>().getPlayerNumber();
+				NetworkServer.Spawn(fireBreath_GO);
+				currentFireRate = fireRate;
+			}
+			yield return null;
 		}
 	}
 }

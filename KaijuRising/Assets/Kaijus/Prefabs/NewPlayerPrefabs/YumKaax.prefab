@@ -3461,7 +3461,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -616, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22483302}
@@ -4309,7 +4309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 120
   playerAnimations: {fileID: 11420946}
-  playerAttack: {fileID: 11488078, guid: 52fc4cd225ff544478856fa3fc055d3c, type: 2}
+  playerAttack: {fileID: 11488320}
   keyBindings:
     forward: 119
     back: 115
@@ -5346,6 +5346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KAIJU_TYPE: 0
   tags:
   - 50m
   - 100m
@@ -5353,7 +5354,9 @@ MonoBehaviour:
   attackRadius: 30
   attackCenter: {fileID: 169946}
   attackDamage: 10
-  specialDamage: 0
+  specialDamage: 10
+  tendrils: {fileID: 143240, guid: e45691553d71afd4197576209b957737, type: 2}
+  tendrilRadius: 200
 --- !u!114 &11488910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6448,6 +6451,42 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: keyBindings.primaryAttack
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 11488320}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackRadius
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackCenter
+      value: 
+      objectReference: {fileID: 169946}
+    - target: {fileID: 0}
+      propertyPath: attackDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: specialDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tendrils
+      value: 
+      objectReference: {fileID: 143240, guid: e45691553d71afd4197576209b957737, type: 2}
+    - target: {fileID: 0}
+      propertyPath: tendrilRadius
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
