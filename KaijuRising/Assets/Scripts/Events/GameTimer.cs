@@ -6,6 +6,7 @@ using System.Collections;
 
 public class GameTimer : NetworkBehaviour 
 {
+	public int connectedPlayers = 0;
 	public float timeBuffer;
 	
 	[SyncVar]
@@ -18,17 +19,28 @@ public class GameTimer : NetworkBehaviour
 	public string timeUpText = "Time Ended";
 	public Text timeLeftText;
 	
-	private void Start()
+	public void addPlayer()
 	{
-		//networkManager = GameObject.Find("Custom Network Manager");
+		connectedPlayers++;
 
-		if (isServer == true)
+		if(connectedPlayers == 2)
 		{
-			timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0") ;
+			timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0");
 			StartCoroutine(beginTime());
 		}
 	}
-	
+
+//	private void Start()
+//	{
+//		//networkManager = GameObject.Find("Custom Network Manager");
+//
+//		if (isServer == true)
+//		{
+//
+//			StartCoroutine(beginTime());
+//		}
+//	}
+
 	private void FixedUpdate () 
 	{
 		if(!isServer)

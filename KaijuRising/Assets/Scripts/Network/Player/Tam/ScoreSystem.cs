@@ -90,7 +90,7 @@ public class ScoreSystem : NetworkBehaviour
 		yield return new WaitForSeconds(2f);
 		Rpc_disconnect();
 		yield return new WaitForSeconds(2f);
-		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().ServerChangeScene("OnlineScene");
+		GameObject.Find ("Custom Network Manager").GetComponent<CustomNetworkManager>().restartGame();
 	}
 
 	[ClientRpc]

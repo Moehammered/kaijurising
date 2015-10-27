@@ -15,8 +15,9 @@ public class CustomNetworkManager : NetworkManager {
 	 * by allowing a developer to drag multiple prefabs in at a time.
 	 */ 
 
-	public List<Vector3> spawnPool = new List<Vector3> ();
+	private bool restartServer = false;
 
+	public List<Vector3> spawnPool = new List<Vector3> ();
 	public Vector3 spawnPosition;
 
 	public GameObject[] spawnablePrefabs;
@@ -31,10 +32,17 @@ public class CustomNetworkManager : NetworkManager {
 	public GameObject vorkoKaiju = null;
 	public GameObject kremonoKaiju = null;
 	public GameObject trikarenosKaiju = null;
+
 	// Accessed by the selectCanvas UI buttons. Sets the chosen kaiju into PlayerPrefs.
 	public void chooseKaiju(string kaijuName)
 	{
 		PlayerPrefs.SetString (key, kaijuName);
+	}
+
+	public void restartGame()
+	{
+		restartServer = true;
+		StopServer();
 	}
 
 	private void Awake()
@@ -48,6 +56,13 @@ public class CustomNetworkManager : NetworkManager {
 		if(Application.loadedLevel == 0)
 		{
 			print ("scene changed");
+
+			if(restartServer == true)
+			{
+				restartServer = false;
+				NetworkServer.Reset();
+				StartServer();
+			}
 		}
 	}
 
@@ -81,7 +96,6 @@ public class CustomNetworkManager : NetworkManager {
 			}
 			
 			sendMessage(conn);
-
 			StartCoroutine (checkPlayerCount(conn));
 		}
 		else
@@ -96,7 +110,6 @@ public class CustomNetworkManager : NetworkManager {
 		CustomAddPlayerMessage message = new CustomAddPlayerMessage();
 		message.chosenKaiju = PlayerPrefs.GetString(key);
 		ClientScene.readyConnection.Send(9001, message);
-
 	}
 	
 	private IEnumerator checkPlayerCount(NetworkConnection conn)
@@ -105,6 +118,9 @@ public class CustomNetworkManager : NetworkManager {
 
 		print ("LocalPlayersCount: " + ClientScene.localPlayers.Count);
 		print("ReadyConnection count: " + ClientScene.readyConnection.playerControllers.Count);
+
+		// There is a bug when after a game match finishes  and a client reconnects to the server, the client is not given a player
+		// In such a situation, we can force the server to reload the scene and try to provide all clients a player.
 
 		if(ClientScene.localPlayers.Count > 0 && ClientScene.readyConnection.playerControllers.Count == 0)
 		{
@@ -175,5 +191,6 @@ public class CustomNetworkManager : NetworkManager {
 		getRandomPosition ();
 		player = (GameObject)Instantiate (gmo, spawnPosition, Quaternion.identity);
 		NetworkServer.AddPlayerForConnection(networkMessage.conn, player, 0);
+		GameObject.FindObjectOfType<GameTimer>().addPlayer();
 	}
 }
