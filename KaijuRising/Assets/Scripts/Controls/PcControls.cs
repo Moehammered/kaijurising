@@ -125,6 +125,12 @@ public class PcControls : AbstractMover
 				}
 			}
 		}
+		
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			playerAnimations.playSpecial();
+			playerAttack.specialAttack();
+		}
 		// Start and stop sounds are specific to key down and up.
 	}
 	

@@ -5175,7 +5175,7 @@ MonoBehaviour:
     back: 115
     left: 97
     right: 100
-    primaryAttack: 0
+    primaryAttack: 32
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 171952}
@@ -8776,6 +8776,10 @@ Prefab:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 171952}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.primaryAttack
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181086}
