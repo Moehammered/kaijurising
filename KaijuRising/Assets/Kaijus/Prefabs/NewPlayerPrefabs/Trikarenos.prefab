@@ -3646,7 +3646,7 @@ MonoBehaviour:
     attack: 323
   mouseSpeed: 10
   rotationSpeed: 50
-  playerCam: {fileID: 2037680}
+  playerCam: {fileID: 168090}
   sound: {fileID: 11458770}
   hasSecondAttack: 1
 --- !u!114 &11493820
@@ -4663,6 +4663,10 @@ Prefab:
       propertyPath: playerAttack
       value: 
       objectReference: {fileID: 11477106}
+    - target: {fileID: 0}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 168090}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100432}
