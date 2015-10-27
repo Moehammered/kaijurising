@@ -24,8 +24,9 @@ public class CameraFollow : MonoBehaviour {
 		transform.SetParent (null, true);
 	}
 	
-	private void LateUpdate()
+	private void Update()
 	{
 		transform.position = target.position;
+		//transform.GetChild (0).LookAt (transform.position);
 	}
 }

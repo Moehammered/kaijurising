@@ -21,7 +21,7 @@ public class PcControls : AbstractMover
 	public float rotationSpeed;
 
 	// need InstantiateSound reference to play sounds
-	public Camera playerCam;
+	public GameObject playerCam;
 	public KaijuSounds sound;
 	public bool hasSecondAttack;
 	private bool isTurning;
@@ -32,8 +32,15 @@ public class PcControls : AbstractMover
 		if (isLocalPlayer) 
 		{
 			keyboardInput();
-			mouseInput();
 		}
+	}
+
+	private void LateUpdate()
+	{
+		if(!isLocalPlayer)
+			return;
+
+		mouseInput();
 	}
 
 	public void keyboardInput()
@@ -46,7 +53,7 @@ public class PcControls : AbstractMover
 				attackCount = 0;
 				if (Input.GetKey (keyBindings.forward)) 
 				{
-					Vector3 lookDirection = (transform.position - playerCam.transform.position);
+					Vector3 lookDirection = (transform.position - playerCam.transform.GetChild (0).transform.position);
 					lookDirection.y = transform.forward.y;
 					transform.LookAt (transform.position + lookDirection.normalized);
 					direction += lookDirection.normalized;
