@@ -108,15 +108,16 @@ public class PcControls : AbstractMover
 			{
 				if (Input.GetKeyDown(keyBindings.attack))
 				{
+					float timed = 0;
 					if (hasSecondAttack)
 					{
-						playerAnimations.playSecondAttack(true);
+						timed = playerAnimations.playSecondAttack(true);
 					}
 					else
 					{
-						playerAnimations.playBackwardsPrimaryAttack();
+						timed = playerAnimations.playBackwardsPrimaryAttack();
 					}
-					playerAttack.normalAttack();
+					playerAttack.timedNormalAttack(timed);
 					attackCount++;
 				}
 			}

@@ -53,6 +53,22 @@ public class TamPlayerAttack : NetworkBehaviour
 		Cmd_detectObjects(attackCenter.transform.position, gameObject, specialDamage);
 	}
 	
+	public void timedNormalAttack(float duration)
+	{
+		StartCoroutine(timedAttack(duration));
+	}
+	
+	private IEnumerator timedAttack(float duration)
+	{
+		float timer = duration;
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+		normalAttack();
+	}
+	
 	private void dealDamageTowardsBuildings(GameObject collidedObject)
 	{
 		Entity building = collidedObject.GetComponent<Entity>();

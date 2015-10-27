@@ -85,42 +85,45 @@ public class KaijuAnimations : BaseAnimations
 		attackTimedAnimations(primaryAttack.animName, primaryAttack.duration);
 	}
 	
-	public void playPrimaryAttack(bool isSecond)
+	public float playPrimaryAttack(bool isSecond)
 	{
 		if (isSecond)
 		{
-			playAttack(1);
+			return playAttack(1);
 		}
 		else
 		{
 			playPrimaryAttack();
 		}
+		return 0;
 	}
 	
-	public void playSecondAttack(bool isSecond)
+	public float playSecondAttack(bool isSecond)
 	{
 		if (isSecond)
 		{
-			playAttack(2);
+			return playAttack(2);
 		}
 		else
 		{
 			playSecondAttack();
 		}
+		return 0;
 	}
 	
-	public void playBackwardsPrimaryAttack()
+	public float playBackwardsPrimaryAttack()
 	{
-		playAttack(-1);
+		return playAttack(-1);
 	}
 	
-	public void playBackwardsSecondAttack()
+	public float playBackwardsSecondAttack()
 	{
-		playAttack(-2);
+		return playAttack(-2);
 	}
 	
-	private void playAttack(int attackingType)
+	private float playAttack(int attackingType)
 	{
+		float timer = attackTime();
 		StartCoroutine(changeAttackType(attackingType));
 		if (attackingType == backwardsPrimary.attackIndex)
 		{
@@ -138,6 +141,7 @@ public class KaijuAnimations : BaseAnimations
 		{
 			increaseAttackTimer(primaryAttack.duration);
 		}
+		return timer;
 	}
 	
 	private IEnumerator changeAttackType(int attackIndex)

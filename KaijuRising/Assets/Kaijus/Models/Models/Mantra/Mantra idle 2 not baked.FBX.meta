@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 04ad6811552837f44bc50b0fcb8b6ada
+timeCreated: 1445917697
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Abdomen end
+    100002: Base bone
+    100004: Head
+    100006: Head end
+    100008: IK Chain001
+    100010: IK Chain002
+    100012: IK Chain003
+    100014: IK Chain004
+    100016: Left arm
+    100018: Left arm 1
+    100020: Left bicep
+    100022: Left claw
+    100024: Left hip
+    100026: Left lcaw end
+    100028: Left leg
+    100030: Left leg 1
+    100032: Left leg end
+    100034: Left pincer
+    100036: Left pincer upper
+    100038: Left shoulder
+    100040: Left thigh
+    100042: Lower abdomen
+    100044: Lower thorax
+    100046: //RootNode
+    100048: Mantra_Low
+    100050: Neck
+    100052: Pincers
+    100054: Right arm
+    100056: Right arm 1
+    100058: Right bicep
+    100060: Right claw
+    100062: Right claw end
+    100064: Right hip
+    100066: Right leg
+    100068: Right leg 1
+    100070: Right leg end
+    100072: Right pincer
+    100074: Right pincer upper
+    100076: Right shoulder
+    100078: Right thigh
+    100080: Upper abdomen
+    100082: Upper thorax
+    400000: Abdomen end
+    400002: Base bone
+    400004: Head
+    400006: Head end
+    400008: IK Chain001
+    400010: IK Chain002
+    400012: IK Chain003
+    400014: IK Chain004
+    400016: Left arm
+    400018: Left arm 1
+    400020: Left bicep
+    400022: Left claw
+    400024: Left hip
+    400026: Left lcaw end
+    400028: Left leg
+    400030: Left leg 1
+    400032: Left leg end
+    400034: Left pincer
+    400036: Left pincer upper
+    400038: Left shoulder
+    400040: Left thigh
+    400042: Lower abdomen
+    400044: Lower thorax
+    400046: //RootNode
+    400048: Mantra_Low
+    400050: Neck
+    400052: Pincers
+    400054: Right arm
+    400056: Right arm 1
+    400058: Right bicep
+    400060: Right claw
+    400062: Right claw end
+    400064: Right hip
+    400066: Right leg
+    400068: Right leg 1
+    400070: Right leg end
+    400072: Right pincer
+    400074: Right pincer upper
+    400076: Right shoulder
+    400078: Right thigh
+    400080: Upper abdomen
+    400082: Upper thorax
+    4300000: Mantra_Low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Mantra_Low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

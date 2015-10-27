@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127368}
-  m_LocalRotation: {x: .29895252, y: .744883478, z: .223380357, w: .553061783}
+  m_LocalRotation: {x: .29895249, y: .744883418, z: .223380327, w: .553061724}
   m_LocalPosition: {x: .553210974, y: -2.1242857, z: -3.33058953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2756,7 +2756,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146220}
-  m_LocalRotation: {x: .37464577, y: .599832058, z: .374735862, w: .599512517}
+  m_LocalRotation: {x: .37464574, y: .599831998, z: .374735832, w: .599512458}
   m_LocalPosition: {x: .425881922, y: 6.56103384e-06, z: 12.0492706}
   m_LocalScale: {x: .817843199, y: .817843199, z: .817843199}
   m_Children: []
@@ -3520,23 +3520,23 @@ MonoBehaviour:
   netAnim: {fileID: 11434178}
   primaryAttack:
     animName: canAttack
-    duration: .800000012
+    duration: 1.39999998
   specialAttack:
     animName: canSpecial
-    duration: .899999976
+    duration: 1.5
   takeDamage:
     animName: canTakeDamage
-    duration: .600000024
+    duration: 1
   attackType: attackType
   backwardsPrimary:
     attackIndex: -1
-    duration: 1
+    duration: 1.39999998
   backwardsSecondary:
     attackIndex: -2
-    duration: 1
+    duration: 1.39999998
   secondAttack:
     attackIndex: 2
-    duration: 1
+    duration: 1.39999998
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
@@ -3899,7 +3899,7 @@ MonoBehaviour:
   rotationSpeed: 50
   playerCam: {fileID: 134252}
   sound: {fileID: 11406014}
-  hasSecondAttack: 0
+  hasSecondAttack: 1
 --- !u!114 &11432846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5588,15 +5588,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: takeDamage.duration
-      value: .600000024
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialAttack.duration
-      value: .899999976
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: primaryAttack.duration
-      value: .800000012
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Controller
@@ -5648,15 +5648,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsPrimary.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsSecondary.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: secondAttack.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsSecondary.attackIndex
