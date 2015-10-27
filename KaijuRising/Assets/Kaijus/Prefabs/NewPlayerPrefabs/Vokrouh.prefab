@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127368}
-  m_LocalRotation: {x: .29895252, y: .744883478, z: .223380357, w: .553061783}
+  m_LocalRotation: {x: .29895252, y: .744883478, z: .223380327, w: .553061783}
   m_LocalPosition: {x: .553210974, y: -2.1242857, z: -3.33058953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2756,7 +2756,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146220}
-  m_LocalRotation: {x: .37464577, y: .599832058, z: .374735862, w: .599512517}
+  m_LocalRotation: {x: .37464574, y: .599831998, z: .374735832, w: .599512458}
   m_LocalPosition: {x: .425881922, y: 6.56103384e-06, z: 12.0492706}
   m_LocalScale: {x: .817843199, y: .817843199, z: .817843199}
   m_Children: []
@@ -3520,23 +3520,23 @@ MonoBehaviour:
   netAnim: {fileID: 11434178}
   primaryAttack:
     animName: canAttack
-    duration: .800000012
+    duration: 1.39999998
   specialAttack:
     animName: canSpecial
-    duration: .899999976
+    duration: 1.5
   takeDamage:
     animName: canTakeDamage
-    duration: .600000024
+    duration: 1
   attackType: attackType
   backwardsPrimary:
     attackIndex: -1
-    duration: 1
+    duration: 1.39999998
   backwardsSecondary:
     attackIndex: -2
-    duration: 1
+    duration: 1.39999998
   secondAttack:
     attackIndex: 2
-    duration: 1
+    duration: 1.39999998
   walk: canWalk
   death: canDie
   takeDamageName: TakeDamage
@@ -3728,7 +3728,7 @@ MonoBehaviour:
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2751ff550ab51794b918a98f62fb4ae1, type: 3}
-    m_FontSize: 12
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3894,12 +3894,12 @@ MonoBehaviour:
     back: 115
     left: 97
     right: 100
-    attack: 323
+    primaryAttack: 0
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 134252}
-  sound: {fileID: 11406014}
-  hasSecondAttack: 0
+  hasSecondAttack: 1
+  sounds: {fileID: 0}
 --- !u!114 &11432846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4145,7 +4145,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2f821407cb3737247b68e41222e05824, type: 3}
-    m_FontSize: 20
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -4215,7 +4215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4334,8 +4334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .79411763, g: .79411763, b: .79411763, a: 1}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7423ec7553392e04e8065db3d99fba53, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4355,8 +4355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0fb964d869a2cb947a7efb42d764c478, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4421,7 +4421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4619,8 +4619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 90a02f959d8a2bd4d97884d03608ec85, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4674,7 +4674,7 @@ MonoBehaviour:
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2751ff550ab51794b918a98f62fb4ae1, type: 3}
-    m_FontSize: 12
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5051,7 +5051,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 148.80014, y: -16.3999996}
+  m_AnchoredPosition: {x: 148.80014, y: -18}
   m_SizeDelta: {x: 149.699997, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22418672
@@ -5154,8 +5154,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 153.399963, y: -42}
-  m_SizeDelta: {x: 89, y: 30}
+  m_AnchoredPosition: {x: 153.399963, y: -70}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22444572
 RectTransform:
@@ -5316,7 +5316,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 203.399994, y: -36.3504753}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22460278
 RectTransform:
@@ -5479,8 +5479,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 153.399963, y: -93.0999832}
-  m_SizeDelta: {x: 89, y: 30}
+  m_AnchoredPosition: {x: 153.399963, y: -110}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22483792
 RectTransform:
@@ -5494,10 +5494,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22442756}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22484980
 RectTransform:
@@ -5553,10 +5553,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22484980}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 203.000046, y: -95.1504822}
-  m_SizeDelta: {x: 124.000031, y: 70.6990051}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 200, y: -95}
+  m_SizeDelta: {x: 490, y: 275}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22494166
 RectTransform:
@@ -5588,15 +5588,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: takeDamage.duration
-      value: .600000024
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialAttack.duration
-      value: .899999976
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: primaryAttack.duration
-      value: .800000012
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Controller
@@ -5648,15 +5648,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsPrimary.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsSecondary.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: secondAttack.duration
-      value: 1
+      value: 1.39999998
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: backwardsSecondary.attackIndex

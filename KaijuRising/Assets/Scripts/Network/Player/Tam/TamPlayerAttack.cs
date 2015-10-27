@@ -12,7 +12,7 @@ public class TamPlayerAttack : NetworkBehaviour
 	public float specialDamage;
 	private TamPlayerScore playerScore;
 	private int attackCounter;
-	
+
 	[Command]
 	private void Cmd_detectObjects(Vector3 center, GameObject player, float damage)
 	{
@@ -35,9 +35,7 @@ public class TamPlayerAttack : NetworkBehaviour
 			}
 		}	
 	}
-	
-
-	
+		
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();
@@ -51,6 +49,22 @@ public class TamPlayerAttack : NetworkBehaviour
 	public void specialAttack()
 	{
 		Cmd_detectObjects(attackCenter.transform.position, gameObject, specialDamage);
+	}
+	
+	public void timedNormalAttack(float duration)
+	{
+		StartCoroutine(timedAttack(duration));
+	}
+	
+	private IEnumerator timedAttack(float duration)
+	{
+		float timer = duration;
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+		normalAttack();
 	}
 	
 	private void dealDamageTowardsBuildings(GameObject collidedObject)

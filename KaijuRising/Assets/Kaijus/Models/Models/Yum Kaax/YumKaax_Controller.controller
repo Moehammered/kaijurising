@@ -1317,13 +1317,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110733212}
-      second:
-      - {fileID: 110903556}
-      - {fileID: 110997044}
-      - {fileID: 110953652}
-      - {fileID: 110968722}
-      - {fileID: 110930466}
+      first: {fileID: 110778372}
+      second: []
     data:
       first: {fileID: 110735056}
       second:
@@ -1333,8 +1328,13 @@ AnimatorStateMachine:
       - {fileID: 110907718}
       - {fileID: 110991576}
     data:
-      first: {fileID: 110778372}
-      second: []
+      first: {fileID: 110733212}
+      second:
+      - {fileID: 110903556}
+      - {fileID: 110997044}
+      - {fileID: 110953652}
+      - {fileID: 110968722}
+      - {fileID: 110930466}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 48, y: 156, z: 0}
