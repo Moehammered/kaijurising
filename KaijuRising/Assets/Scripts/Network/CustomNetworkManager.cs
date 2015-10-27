@@ -123,8 +123,8 @@ public class CustomNetworkManager : NetworkManager {
 
 	public void addSpawnPositions() 
 	{
-		spawnPool.Add (new Vector3 (-941, 0, -925));
-		spawnPool.Add (new Vector3 (-727, 0, -1005));
+		spawnPool.Add (new Vector3 (-941, 10, -925));
+		spawnPool.Add (new Vector3 (-727, 10, -1005));
 	}
 
 	public void getRandomPosition() 

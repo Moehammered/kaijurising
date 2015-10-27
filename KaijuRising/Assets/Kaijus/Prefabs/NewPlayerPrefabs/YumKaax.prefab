@@ -3461,7 +3461,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -850.764832, y: 48.3805962, z: -773.682495}
+  m_LocalPosition: {x: 658.545593, y: 1410.00403, z: 554.764282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22483302}
@@ -4005,7 +4005,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4074,7 +4074,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4319,8 +4319,8 @@ MonoBehaviour:
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 161418}
-  sound: {fileID: 11443832}
   hasSecondAttack: 0
+  sounds: {fileID: 11443832}
 --- !u!114 &11408800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5354,7 +5354,6 @@ MonoBehaviour:
   attackCenter: {fileID: 169946}
   attackDamage: 10
   specialDamage: 0
-  sound: {fileID: 11443832}
 --- !u!114 &11488910
 MonoBehaviour:
   m_ObjectHideFlags: 1
