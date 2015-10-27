@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public enum ATTACK_KAIJU_TYPE
 {
 	YUM_KAAX,
-	FOLSOL,
+	FALSOL,
 	TRIKARENOS
 };
 
@@ -24,7 +24,11 @@ public class TamPlayerAttack : NetworkBehaviour
 	[Header("YumKaax")]
 	public GameObject tendrils;
 	public float tendrilRadius;
-	
+	[Header("Falsol")]
+	public GameObject falsolProjectile;
+	public Transform breathCenter;
+	public float duration;
+	public float fireRate;
 	[Command]
 	private void Cmd_detectObjects(Vector3 center, float damage)
 	{
@@ -64,6 +68,9 @@ public class TamPlayerAttack : NetworkBehaviour
 		{
 			case ATTACK_KAIJU_TYPE.YUM_KAAX:
 				Cmd_detectPlayers(specialDamage, tendrilRadius);
+				break;
+			case ATTACK_KAIJU_TYPE.FALSOL:
+				Cmd_falsolSpecial();
 				break;
 			default:
 				break;
@@ -114,5 +121,37 @@ public class TamPlayerAttack : NetworkBehaviour
 				}
 			}
 		}	
+	}
+	
+	//FALSOL
+	[Command]
+	private void Cmd_falsolSpecial()
+	{
+		StartCoroutine(fireBreath(duration, fireRate));
+	}
+	
+	private IEnumerator fireBreath(float duration, float fireRate)
+	{
+		float timer = duration;
+		float currentFireRate = 0;
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			if (currentFireRate > 0)
+			{
+				currentFireRate -= Time.deltaTime;
+			}
+			else
+			{
+				GameObject fireBreath_GO = (GameObject)Instantiate(falsolProjectile, breathCenter.position, transform.rotation);
+				FireBreath fireBreathComp = fireBreath_GO.GetComponent<FireBreath>();
+				fireBreathComp.damage = specialDamage;
+				fireBreathComp.direction = transform.forward;
+				fireBreathComp.attackingPlayer = GetComponent<TamPlayerScore>().getPlayerNumber();
+				NetworkServer.Spawn(fireBreath_GO);
+				currentFireRate = fireRate;
+			}
+			yield return null;
+		}
 	}
 }
