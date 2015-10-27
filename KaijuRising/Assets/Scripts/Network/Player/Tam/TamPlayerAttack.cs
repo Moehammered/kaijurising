@@ -13,6 +13,8 @@ public class TamPlayerAttack : NetworkBehaviour
 	public bool hasSecondAttack;
 	private KaijuAnimations playAnim;
 	private TamPlayerScore playerScore;
+
+	public KaijuSounds sounds;
 	
 	[Command]
 	private void Cmd_detectObjects(Vector3 center, GameObject player)
@@ -36,26 +38,23 @@ public class TamPlayerAttack : NetworkBehaviour
 			}
 		}
 	}
-	
-	void Update()
+
+	public void kaijuAttack() 
 	{
-		if (!isLocalPlayer)
-			return;
-		if (Input.GetKeyDown(attackKey) && !playAnim.isAttacking() && !playAnim.isTakingDamage())
+		if (hasSecondAttack)
 		{
-			if (hasSecondAttack)
-			{
-				int randomAttack = Random.Range(1, 3);
-				playAnim.playAttack(randomAttack);
-			}
-			else
-			{
-				playAnim.playAttack();
-			}
-			Cmd_detectObjects(attackCenter.transform.position, gameObject);
+			int randomAttack = Random.Range(1, 3);
+			playAnim.playAttack(randomAttack);
+			sounds.CmdPlayOnServer();
 		}
+		else
+		{
+			playAnim.playAttack();
+			sounds.CmdPlayOnServer();
+		}
+		Cmd_detectObjects(attackCenter.transform.position, gameObject);
 	}
-	
+
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();

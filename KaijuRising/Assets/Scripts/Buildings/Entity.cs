@@ -3,27 +3,12 @@ using System.Collections;
 
 public class Entity : DamageableEntity {
 
-    private void debugControls()
-    {
-        if(Input.GetKeyDown(KeyCode.Minus))
-        {
-            takeDamage(1);
-        }
-        else if(Input.GetKeyDown(KeyCode.Equals))
-        {
-            heal(1);
-        }
-    }
+	public KaijuSounds sounds;
 
     protected override void Start()
     {
         base.Start();
 
-    }
-
-    void Update()
-    {
-        debugControls();
     }
 
     protected void onTakeDamage()
@@ -50,6 +35,7 @@ public class Entity : DamageableEntity {
 
     public void takeDamage(float amount)
     {
+		//onModifyHealth += sounds.CmdPlayOnServer;	
 		amount = Mathf.Abs(amount) * -1; //Make it positive and then flip it
 		//We know we are damaged, so we should assign an 'onTakeDamage' function to 'onModifyHealth'
 		onModifyHealth += onTakeDamage;

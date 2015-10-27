@@ -9,19 +9,20 @@ public struct KeyBindings
 	public KeyCode back;
 	public KeyCode left;
 	public KeyCode right;
-	public KeyCode attack;
+	public KeyCode primaryAttack;
 }
 
 public class PcControls : AbstractMover
 {
 	public KaijuAnimations playerAnimations;
 
+	// player attack reference 
+	public TamPlayerAttack tamtack;
+
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
 	public float rotationSpeed;
-
-	// need InstantiateSound reference to play sounds
-	public KaijuSounds sound;
+	
 	private bool isTurning;
 	private void Update()
 	{
@@ -35,8 +36,10 @@ public class PcControls : AbstractMover
 	public void keyboardInput()
 	{
 		direction = Vector3.zero;
+
 		if (!playerAnimations.isAttacking() && !playerAnimations.isTakingDamage())
 		{
+
 			if (Input.GetKey (keyBindings.forward)) 
 			{
 				direction += transform.forward;	
@@ -73,6 +76,11 @@ public class PcControls : AbstractMover
 			else if (isTurning == false)
 			{
 				playerAnimations.stopWalk();
+			}
+			if(Input.GetKey(keyBindings.primaryAttack)) 
+			{
+				// plays the kaiju animations attack;
+				tamtack.kaijuAttack();
 			}
 			mouseInput();
 		}

@@ -459,6 +459,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 475730}
+  - 82: {fileID: 8206752}
+  - 114: {fileID: 11442030}
   m_Layer: 0
   m_Name: RArmIKCHN
   m_TagString: Untagged
@@ -3459,7 +3461,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 240.817352, y: -10.8597717, z: -91.5631866}
+  m_LocalPosition: {x: 711.559692, y: 21.2224522, z: -306.140015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22483302}
@@ -3988,6 +3990,75 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117180}
   m_Enabled: 1
+--- !u!82 &8206752
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124886}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd267bb0033594c72a30761ff1569fdc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8251130
 AudioSource:
   m_ObjectHideFlags: 1
@@ -4173,6 +4244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds: {fileID: 11488910}
+  playerAnimations: {fileID: 11420946}
 --- !u!114 &11402688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4237,15 +4309,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 120
   playerAnimations: {fileID: 11420946}
+  tamtack: {fileID: 11488320}
   keyBindings:
     forward: 119
     back: 115
     left: 97
     right: 100
-    attack: 113
+    primaryAttack: 32
   mouseSpeed: 10
   rotationSpeed: 0
-  sound: {fileID: 0}
 --- !u!114 &11408800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4845,6 +4917,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &11442030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27309672638d0404e85b9fa20be967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8206752}
 --- !u!114 &11447316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4876,6 +4960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds: {fileID: 11406762}
+  playerAnimations: {fileID: 11420946}
 --- !u!114 &11452534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5305,6 +5390,7 @@ MonoBehaviour:
   attackKey: 32
   attackDamage: 10
   hasSecondAttack: 0
+  sounds: {fileID: 11442030}
 --- !u!114 &11488910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6344,6 +6430,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: tags.Array.data[2]
       value: 150m
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tamtack
+      value: 
+      objectReference: {fileID: 11488320}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.primaryAttack
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
