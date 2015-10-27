@@ -12,7 +12,7 @@ public class TamPlayerAttack : NetworkBehaviour
 	public float specialDamage;
 	private TamPlayerScore playerScore;
 	private int attackCounter;
-	
+
 	[Command]
 	private void Cmd_detectObjects(Vector3 center, GameObject player, float damage)
 	{
@@ -35,9 +35,7 @@ public class TamPlayerAttack : NetworkBehaviour
 			}
 		}	
 	}
-	
-
-	
+		
 	private void Start()
 	{
 		playerScore = GetComponent<TamPlayerScore>();

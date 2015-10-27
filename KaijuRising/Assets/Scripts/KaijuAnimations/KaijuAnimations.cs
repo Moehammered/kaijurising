@@ -203,7 +203,7 @@ public class KaijuAnimations : BaseAnimations
 	public void playSpecial()
 	{
 		timedAnimations(specialAttack.animName, specialAttack.duration);
-	}
+	}	
 	
 	public void playIdle()
 	{

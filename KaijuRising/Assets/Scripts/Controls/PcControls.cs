@@ -9,7 +9,7 @@ public struct KeyBindings
 	public KeyCode back;
 	public KeyCode left;
 	public KeyCode right;
-	public KeyCode attack;
+	public KeyCode primaryAttack;
 }
 
 public class PcControls : AbstractMover
@@ -22,10 +22,11 @@ public class PcControls : AbstractMover
 
 	// need InstantiateSound reference to play sounds
 	public GameObject playerCam;
-	public KaijuSounds sound;
 	public bool hasSecondAttack;
 	private bool isTurning;
 	private int attackCount;
+
+	public KaijuSounds sounds;
 	
 	private void FixedUpdate()
 	{
@@ -95,18 +96,19 @@ public class PcControls : AbstractMover
 				}
 				mouseInput();
 				
-				if (Input.GetKeyDown(keyBindings.attack))
+				if (Input.GetKeyDown(keyBindings.primaryAttack))
 				{
 					//attack increase attack count;
 					playerAttack.normalAttack();
 					playerAnimations.stopWalk();
+					sounds.CmdPlayOnServer();
 					playerAnimations.playPrimaryAttack();
 					attackCount++;
 				}
 			}
 			else if (attackCount < 2)
 			{
-				if (Input.GetKeyDown(keyBindings.attack))
+				if (Input.GetKeyDown(keyBindings.primaryAttack))
 				{
 					float timed = 0;
 					if (hasSecondAttack)
@@ -118,6 +120,7 @@ public class PcControls : AbstractMover
 						timed = playerAnimations.playBackwardsPrimaryAttack();
 					}
 					playerAttack.timedNormalAttack(timed);
+					sounds.CmdPlayOnServer();
 					attackCount++;
 				}
 			}
