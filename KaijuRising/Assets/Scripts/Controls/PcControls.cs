@@ -10,6 +10,7 @@ public struct KeyBindings
 	public KeyCode left;
 	public KeyCode right;
 	public KeyCode primaryAttack;
+	public KeyCode specialAttack;
 }
 
 public class PcControls : AbstractMover
@@ -46,7 +47,7 @@ public class PcControls : AbstractMover
 
 	public void keyboardInput()
 	{
-		if (!playerAnimations.isTakingDamage())
+		if (!playerAnimations.isTakingDamage() && !playerAnimations.isSpecial())
 		{
 			direction = Vector3.zero;
 			if (!playerAnimations.isAttacking())
@@ -126,7 +127,7 @@ public class PcControls : AbstractMover
 			}
 		}
 		
-		if (Input.GetKeyDown(KeyCode.L))
+		if (Input.GetKeyDown(keyBindings.specialAttack))
 		{
 			playerAnimations.playSpecial();
 			playerAttack.specialAttack();
