@@ -106,7 +106,6 @@ public class PcControls : AbstractMover
 					//attack increase attack count;
 					playerAttack.normalAttack();
 					playerAnimations.stopWalk();
-					//sounds.CmdPlayOnServer();
 					playerAnimations.playPrimaryAttack();
 					attackCount++;
 				}
@@ -125,7 +124,6 @@ public class PcControls : AbstractMover
 						timed = playerAnimations.playBackwardsPrimaryAttack();
 					}
 					playerAttack.timedNormalAttack(timed);
-					sounds.CmdPlayOnServer();
 					attackCount++;
 				}
 			}
@@ -138,7 +136,7 @@ public class PcControls : AbstractMover
 		}
 		// Start and stop sounds are specific to key down and up.
 	}
-	
+
 	public void mouseInput()
 	{
 		float mouseX = Input.GetAxis("Mouse X");

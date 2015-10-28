@@ -7,15 +7,16 @@ public class KaijuSounds : MonoBehaviour {
 	public AudioSource source;
 
 	[ClientRpc]
-	private void RpcPlayOnClients() 
+	private void RpcPlayOnClients(string clip) 
 	{
-		source.Play ();
+		AudioClip clipFile = Resources.Load("Sounds/Kaijus/SFX/" + clip) as AudioClip;
+		source.PlayOneShot (clipFile);
 	} 
 
 	[Command]
-	public void CmdPlayOnServer() 
+	public void CmdPlayOnServer(string clip) 
 	{
-		RpcPlayOnClients ();
+		RpcPlayOnClients (clip);
 	}
 
 	[ClientRpc]

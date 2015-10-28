@@ -10,7 +10,7 @@ public class FootSteps : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Ground" && !playerAnimations.isAttacking() && !playerAnimations.isTakingDamage()) 
 		{
-			sounds.CmdPlayOnServer();
+			sounds.CmdPlayOnServer("SoundWalk");
 		}
 	}
 }
