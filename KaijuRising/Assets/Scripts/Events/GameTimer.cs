@@ -23,8 +23,11 @@ public class GameTimer : NetworkBehaviour
 	public void addPlayer()
 	{
 		connectedPlayers++;
-
-		if(connectedPlayers == 2)
+		if(connectedPlayers < 2)
+		{
+			scoreValue = 0;
+		}
+		else if(connectedPlayers == 2)
 		{
 			scoreValue = 13;
 			timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0");
