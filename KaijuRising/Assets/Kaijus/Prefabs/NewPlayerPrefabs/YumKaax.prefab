@@ -4315,7 +4315,8 @@ MonoBehaviour:
     back: 115
     left: 97
     right: 100
-    primaryAttack: 32
+    primaryAttack: 323
+    specialAttack: 324
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 161418}
@@ -5354,9 +5355,16 @@ MonoBehaviour:
   attackRadius: 30
   attackCenter: {fileID: 169946}
   attackDamage: 10
-  specialDamage: 10
+  specialDamage: 20
   tendrils: {fileID: 143240, guid: e45691553d71afd4197576209b957737, type: 2}
   tendrilRadius: 200
+  tendrilDelay: 1.39999998
+  fireParticle: {fileID: 0}
+  falsolProjectile: {fileID: 0}
+  breathCenter: {fileID: 0}
+  duration: 0
+  delay: 0
+  fireRate: 0
 --- !u!114 &11488910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6450,7 +6458,7 @@ Prefab:
       objectReference: {fileID: 11488320}
     - target: {fileID: 0}
       propertyPath: keyBindings.primaryAttack
-      value: 32
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: playerAttack
@@ -6474,7 +6482,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialDamage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: tendrils
@@ -6487,6 +6495,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.specialAttack
+      value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tendrilDelay
+      value: 1.39999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

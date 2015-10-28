@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class FalsolSpecialAttack : MonoBehaviour 
+public class FalsolSpecialAttack : NetworkBehaviour
 {
-	//private float originalDuration;
-	//public float duration;
 	public bool spAttackActive;
 	public GameObject fireObject;
-	public PcControls pcControlsScript;
 	
 	// Use this for initialization
 	void Start () 
@@ -20,43 +18,20 @@ public class FalsolSpecialAttack : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-
-
-		if (spAttackActive == true) 
-		{
-
-			if (Input.GetKeyDown (KeyCode.Space)) 
-			{
-				finishSpAttack ();
-			}
-
-			//pcControlsScript.enabled = false;
-			/*duration -= Time.deltaTime;
-			if(duration < 0)
-			{
-				finishSpAttack();
-				spAttackActive = false;
-				duration = originalDuration;
-			}
-			*/
-		}
-		else if (Input.GetKeyDown (KeyCode.Space)) 
-		{
-			startSpAttack ();
-		}
-	}
-
-	private void startSpAttack ()
-	{
-		fireObject.SetActive(true);
-		spAttackActive = true;
+	
 	}
 	
-	private void finishSpAttack()
+	public void SpAttackSate(bool state)
 	{
-		spAttackActive = false;
-		fireObject.SetActive (false);
-		//pcControlsScript.enabled = true;
+		fireObject.SetActive(state);
+		spAttackActive = state;
+		Rpc_SpAttackState(state);
 	}
-
+	
+	[ClientRpc]
+	public void Rpc_SpAttackState(bool state)
+	{
+		fireObject.SetActive(state);
+		spAttackActive = state;
+	}
 }

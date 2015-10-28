@@ -220,8 +220,13 @@ public class KaijuAnimations : BaseAnimations
 	
 	public bool isAttacking()
 	{
-		bool isAttack = (netAnim.animator.GetBool(primaryAttack.animName) || netAnim.animator.GetBool(specialAttack.animName));
+		bool isAttack = netAnim.animator.GetBool(primaryAttack.animName);
 		return isAttack;
+	}
+	
+	public bool isSpecial()
+	{
+		return netAnim.animator.GetBool(specialAttack.animName);
 	}
 	
 	public bool isTakingDamage()

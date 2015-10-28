@@ -24,11 +24,15 @@ public class TamPlayerAttack : NetworkBehaviour
 	[Header("YumKaax")]
 	public GameObject tendrils;
 	public float tendrilRadius;
+	public float tendrilDelay;
 	[Header("Falsol")]
+	public FalsolSpecialAttack fireParticle;
 	public GameObject falsolProjectile;
 	public Transform breathCenter;
 	public float duration;
+	public float delay;
 	public float fireRate;
+	
 	[Command]
 	private void Cmd_detectObjects(Vector3 center, float damage)
 	{
@@ -73,6 +77,7 @@ public class TamPlayerAttack : NetworkBehaviour
 				Cmd_falsolSpecial();
 				break;
 			default:
+				Cmd_detectObjects(attackCenter.transform.position, specialDamage);
 				break;
 		}
 	}
@@ -114,44 +119,63 @@ public class TamPlayerAttack : NetworkBehaviour
 			{
 				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
 				{
-					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
-					GameObject tendril_GO = (GameObject)Instantiate(tendrils, colliders[i].gameObject.transform.position, Quaternion.identity);
-					NetworkServer.Spawn(tendril_GO);
+					StartCoroutine(delaySpawn(tendrilDelay, specialDamage, colliders[i].gameObject));
 					break;
 				}
 			}
 		}	
 	}
 	
+	private IEnumerator delaySpawn(float delay, float damage, GameObject enemy)
+	{
+		while(delay > 0)
+		{
+			delay -= Time.deltaTime;
+			yield return null;
+		}
+		enemy.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
+		GameObject tendril_GO = (GameObject)Instantiate(tendrils, enemy.transform.position, Quaternion.identity);
+		NetworkServer.Spawn(tendril_GO);
+	}
+	
 	//FALSOL
 	[Command]
 	private void Cmd_falsolSpecial()
 	{
-		StartCoroutine(fireBreath(duration, fireRate));
+		StartCoroutine(fireBreath(duration, fireRate, delay));
 	}
 	
-	private IEnumerator fireBreath(float duration, float fireRate)
+	private IEnumerator fireBreath(float duration, float fireRate, float delay)
 	{
 		float timer = duration;
 		float currentFireRate = 0;
 		while(timer > 0)
 		{
-			timer -= Time.deltaTime;
-			if (currentFireRate > 0)
+			if (delay > 0)
 			{
-				currentFireRate -= Time.deltaTime;
+				delay -= Time.deltaTime;
 			}
 			else
 			{
-				GameObject fireBreath_GO = (GameObject)Instantiate(falsolProjectile, breathCenter.position, transform.rotation);
-				FireBreath fireBreathComp = fireBreath_GO.GetComponent<FireBreath>();
-				fireBreathComp.damage = specialDamage;
-				fireBreathComp.direction = transform.forward;
-				fireBreathComp.attackingPlayer = GetComponent<TamPlayerScore>().getPlayerNumber();
-				NetworkServer.Spawn(fireBreath_GO);
-				currentFireRate = fireRate;
+				fireParticle.SpAttackSate(true);
+				timer -= Time.deltaTime;
+				if (currentFireRate > 0)
+				{
+					currentFireRate -= Time.deltaTime;
+				}
+				else
+				{
+					GameObject fireBreath_GO = (GameObject)Instantiate(falsolProjectile, breathCenter.position, transform.rotation);
+					FireBreath fireBreathComp = fireBreath_GO.GetComponent<FireBreath>();
+					fireBreathComp.damage = specialDamage;
+					fireBreathComp.direction = transform.forward;
+					fireBreathComp.attackingPlayer = GetComponent<TamPlayerScore>().getPlayerNumber();
+					NetworkServer.Spawn(fireBreath_GO);
+					currentFireRate = fireRate;
+				}
 			}
 			yield return null;
 		}
+		fireParticle.SpAttackSate(false);
 	}
 }
