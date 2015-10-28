@@ -51,35 +51,37 @@ public class PcControls : AbstractMover
 			direction = Vector3.zero;
 			if (!playerAnimations.isAttacking())
 			{
+
+				// add lookdirections, calculat at end.
 				attackCount = 0;
 				if (Input.GetKey (keyBindings.forward)) 
 				{
 					Vector3 lookDirection = (transform.position - playerCam.transform.GetChild (0).transform.position);
 					lookDirection.y = transform.forward.y;
-					transform.LookAt (transform.position + lookDirection.normalized);
 					direction += lookDirection.normalized;
 					playerAnimations.playWalk();
-					direction += transform.forward;	
 				}
-				else if (Input.GetKey (keyBindings.back)) 
+				if (Input.GetKey (keyBindings.back)) 
 				{
+					Vector3 lookDirection = -(transform.position - playerCam.transform.GetChild (0).transform.position);
+					lookDirection.y = transform.forward.y;
+					direction += lookDirection.normalized;
 					playerAnimations.playBackwardsWalk();
-					direction += -transform.forward;
 				} 
 				 
 				if (Input.GetKey (keyBindings.right))
 				{
+					Vector3 lookDirection = playerCam.transform.right;
+					lookDirection.y = transform.forward.y;
+					direction += lookDirection.normalized;
 					playerAnimations.playWalk();
-					transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime,0));
-					isTurning = true;
-					//direction += transform.right;
 				} 
-				else if (Input.GetKey (keyBindings.left)) 
+				if (Input.GetKey (keyBindings.left)) 
 				{
+					Vector3 lookDirection = -playerCam.transform.right;
+					lookDirection.y = transform.forward.y; 
+					direction += lookDirection.normalized;
 					playerAnimations.playWalk();
-					transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime,0));
-					isTurning = true;
-					//direction += -transform.right;
 				}
 				else
 				{
@@ -88,6 +90,8 @@ public class PcControls : AbstractMover
 				
 				if (direction != Vector3.zero)
 				{
+					Quaternion requiredRotation = Quaternion.LookRotation ((transform.position + direction) - transform.position);
+					transform.rotation = Quaternion.Slerp(transform.rotation, requiredRotation, Time.deltaTime * 2.5f); 
 					move(direction,speed);
 				}
 				else if (isTurning == false)
