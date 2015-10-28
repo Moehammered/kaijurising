@@ -76,13 +76,29 @@ public class ScoreSystem : NetworkBehaviour
 			{
 				print ("There was a tie!");
 				gameEndText.text = "There was a tie!";
+				Rpc_showWin(gameEndText.text);
 				return;
 			}
 		}
 
 		print ("Player: " + (winningIndex + 1) + " has won the game");
 		gameEndText.text = "Player: " + (winningIndex + 1) + " has won the game";
+		Rpc_showWin(gameEndText.text);
 
+	}
+
+	[ClientRpc]
+	private void Rpc_showWin(string winText)
+	{
+		gameEndText.text = winText;
+
+		TamPlayerScore[] scoreboards = GameObject.FindObjectsOfType<TamPlayerScore>();
+
+		foreach (TamPlayerScore scoreboard in scoreboards) 
+		{
+			scoreboard.displayCanvas(true);
+			Destroy (scoreboard);
+		}
 	}
 
 	private IEnumerator restartWorld()

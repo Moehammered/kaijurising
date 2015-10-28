@@ -95,7 +95,7 @@ public class TamPlayerScore : NetworkBehaviour
 		//	scoreSystem.updateScore(playerNumber, amount);
 	}
 	
-	private void displayCanvas(bool canvasStatus)
+	public void displayCanvas(bool canvasStatus)
 	{
 		scoreCanvas.gameObject.SetActive(canvasStatus);
 	}
