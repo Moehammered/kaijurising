@@ -242,6 +242,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 439108}
   - 65: {fileID: 6553192}
+  - 82: {fileID: 8238514}
+  - 114: {fileID: 11456760}
+  - 114: {fileID: 11436740}
   m_Layer: 0
   m_Name: RightFootToes001
   m_TagString: Untagged
@@ -374,6 +377,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 439192}
   - 65: {fileID: 6580954}
+  - 82: {fileID: 8275738}
+  - 114: {fileID: 11457150}
+  - 114: {fileID: 11480094}
   m_Layer: 0
   m_Name: LeftFootToes001
   m_TagString: Untagged
@@ -2024,7 +2030,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 108.995941, y: 35.3811531, z: -29.0584869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22442998}
@@ -2321,7 +2327,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 67.9577179, y: 88.6024017, z: 53.3413696}
+  m_Size: {x: 67.9577179, y: 100, z: 53.3413696}
   m_Center: {x: -.788017273, y: 3.91121674, z: -2.13018131}
 --- !u!65 &6553192
 BoxCollider:
@@ -2330,11 +2336,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121866}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1000, y: 100, z: 1000}
-  m_Center: {x: 400, y: 100, z: 0}
+  m_Center: {x: 400, y: 40, z: 0}
 --- !u!65 &6580954
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2342,11 +2348,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130642}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1000, y: 100, z: 1000}
-  m_Center: {x: 400, y: -100, z: 0}
+  m_Center: {x: 400, y: -40, z: 0}
 --- !u!81 &8159420
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2354,6 +2360,75 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182252}
   m_Enabled: 1
+--- !u!82 &8238514
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8272730
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2363,8 +2438,77 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 004eb29d91c7148ffb8e17d0638ae200, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8275738
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130642}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2529,6 +2673,7 @@ MonoBehaviour:
   death: canDie
   takeDamageName: TakeDamage
   walkType: walkType
+  isIdle: 1
 --- !u!114 &11408152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2855,22 +3000,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 38
-    i1: 172
-    i2: 166
-    i3: 40
-    i4: 213
-    i5: 21
-    i6: 60
-    i7: 132
-    i8: 75
-    i9: 228
-    i10: 241
-    i11: 190
-    i12: 170
-    i13: 181
-    i14: 216
-    i15: 224
+    i0: 171
+    i1: 126
+    i2: 91
+    i3: 184
+    i4: 37
+    i5: 43
+    i6: 212
+    i7: 52
+    i8: 234
+    i9: 238
+    i10: 244
+    i11: 246
+    i12: 24
+    i13: 57
+    i14: 112
+    i15: 209
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &11434898
@@ -2921,6 +3066,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11436740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27309672638d0404e85b9fa20be967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8238514}
 --- !u!114 &11436992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3209,6 +3366,32 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11456760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e48a5d920d824cc493ed0d4f0f4d655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 11436740}
+  playerAnimations: {fileID: 11407504}
+--- !u!114 &11457150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e48a5d920d824cc493ed0d4f0f4d655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 11480094}
+  playerAnimations: {fileID: 11407504}
 --- !u!114 &11457818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3440,7 +3623,7 @@ MonoBehaviour:
   attackRadius: 30
   attackCenter: {fileID: 159870}
   attackDamage: 10
-  specialDamage: 20
+  specialDamage: 30
   specialTimer: 10
   pulse: {fileID: 11461624}
   tendrils: {fileID: 0}
@@ -3466,6 +3649,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuVisible: 0
   gameMenu: {fileID: 152416}
+--- !u!114 &11480094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27309672638d0404e85b9fa20be967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8275738}
 --- !u!114 &11481702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4580,7 +4775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialDamage
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialTimer
@@ -4593,6 +4788,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: keyBindings.specialAttack
       value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackDelay
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

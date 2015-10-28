@@ -8,7 +8,7 @@ public class FootSteps : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col) 
 	{
-		if (col.gameObject.tag == "Ground" && !playerAnimations.isAttacking() && !playerAnimations.isTakingDamage()) 
+		if (col.gameObject.tag == "Ground" && !playerAnimations.isAttacking() && !playerAnimations.isTakingDamage() && !playerAnimations.isIdle) 
 		{
 			sounds.CmdPlayOnServer("SoundWalk");
 		}
