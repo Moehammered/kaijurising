@@ -5085,6 +5085,8 @@ MonoBehaviour:
   attackCenter: {fileID: 198968}
   attackDamage: 10
   specialDamage: 5
+  specialTimer: 10
+  pulse: {fileID: 11422406}
   tendrils: {fileID: 0}
   tendrilRadius: 0
   tendrilDelay: 0
@@ -5094,6 +5096,7 @@ MonoBehaviour:
   duration: 1
   delay: .800000012
   fireRate: .200000003
+  specialRadius: 0
 --- !u!114 &11488386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5218,7 +5221,8 @@ MonoBehaviour:
   rotationSpeed: 50
   playerCam: {fileID: 171952}
   hasSecondAttack: 0
-  sounds: {fileID: 0}
+  isFalsol: 1
+  sounds: {fileID: 11414642}
 --- !u!114 &11493398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8845,6 +8849,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 66.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 11414642}
+    - target: {fileID: 0}
+      propertyPath: isFalsol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: specialTimer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

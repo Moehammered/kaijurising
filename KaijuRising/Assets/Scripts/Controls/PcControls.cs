@@ -26,10 +26,10 @@ public class PcControls : AbstractMover
 	public bool hasSecondAttack;
 	private bool isTurning;
 	private int attackCount;
-
+	public bool isFalsol = false;
 	public KaijuSounds sounds;
 	
-	private void FixedUpdate()
+	private void Update()
 	{
 		if (isLocalPlayer) 
 		{
@@ -106,12 +106,12 @@ public class PcControls : AbstractMover
 					//attack increase attack count;
 					playerAttack.normalAttack();
 					playerAnimations.stopWalk();
-					sounds.CmdPlayOnServer();
+					//sounds.CmdPlayOnServer();
 					playerAnimations.playPrimaryAttack();
 					attackCount++;
 				}
 			}
-			else if (attackCount < 2)
+			else if (attackCount < 2 && !isFalsol)
 			{
 				if (Input.GetKeyDown(keyBindings.primaryAttack))
 				{
@@ -131,7 +131,7 @@ public class PcControls : AbstractMover
 			}
 		}
 		
-		if (Input.GetKeyDown(keyBindings.specialAttack))
+		if (Input.GetKeyDown(keyBindings.specialAttack) && playerAttack.checkCanSpecial() == true)
 		{
 			playerAnimations.playSpecial();
 			playerAttack.specialAttack();

@@ -8,6 +8,7 @@ public enum ATTACK_KAIJU_TYPE
 {
 	YUM_KAAX,
 	FALSOL,
+	VOKROUH,
 	TRIKARENOS
 };
 
@@ -21,6 +22,9 @@ public class TamPlayerAttack : NetworkBehaviour
 	public float specialDamage;
 	private TamPlayerScore playerScore;
 	private int attackCounter;
+	public float specialTimer;
+	private bool canSpecial = true;
+	public PulseButton pulse;
 	[Header("YumKaax")]
 	public GameObject tendrils;
 	public float tendrilRadius;
@@ -32,11 +36,13 @@ public class TamPlayerAttack : NetworkBehaviour
 	public float duration;
 	public float delay;
 	public float fireRate;
+	[Header("Vorkouh")]
+	public float specialRadius;
 	
 	[Command]
-	private void Cmd_detectObjects(Vector3 center, float damage)
+	private void Cmd_detectObjects(Vector3 center, float radius, float damage)
 	{
-		Collider[] colliders = Physics.OverlapSphere(center, attackRadius);
+		Collider[] colliders = Physics.OverlapSphere(center, radius);
 		for(int i=0; i<colliders.Length; i++)
 		{
 			if(colliders != null)
@@ -63,22 +69,32 @@ public class TamPlayerAttack : NetworkBehaviour
 	
 	public void normalAttack()
 	{
-		Cmd_detectObjects(attackCenter.transform.position, attackDamage);
+		Cmd_detectObjects(attackCenter.transform.position, attackRadius, attackDamage);
 	}
 	
-	public virtual void specialAttack()
+	public void specialAttack()
 	{
-		switch(KAIJU_TYPE)
+		if (canSpecial)
 		{
-			case ATTACK_KAIJU_TYPE.YUM_KAAX:
-				Cmd_detectPlayers(specialDamage, tendrilRadius);
-				break;
-			case ATTACK_KAIJU_TYPE.FALSOL:
-				Cmd_falsolSpecial();
-				break;
-			default:
-				Cmd_detectObjects(attackCenter.transform.position, specialDamage);
-				break;
+			switch(KAIJU_TYPE)
+			{
+				case ATTACK_KAIJU_TYPE.YUM_KAAX:
+					Cmd_detectPlayers(specialDamage, tendrilRadius);
+					break;
+				case ATTACK_KAIJU_TYPE.FALSOL:
+					Cmd_falsolSpecial();
+					break;
+				case ATTACK_KAIJU_TYPE.VOKROUH:
+					Cmd_detectMultiplePlayers(specialRadius, specialDamage);
+					break;
+				case ATTACK_KAIJU_TYPE.TRIKARENOS:
+					Cmd_detectObjects(attackCenter.transform.position, attackRadius + 10, specialDamage);
+					break;
+				default:
+					Cmd_detectObjects(attackCenter.transform.position, attackRadius, specialDamage);
+					break;
+			}
+			StartCoroutine(specialCoolDown());
 		}
 	}
 	
@@ -125,6 +141,24 @@ public class TamPlayerAttack : NetworkBehaviour
 			}
 		}	
 	}
+	
+	//vok
+	[Command]
+	private void Cmd_detectMultiplePlayers(float damage, float specialRadius)
+	{
+		Collider[] colliders = Physics.OverlapSphere(transform.position, specialRadius);
+		for(int i=0; i<colliders.Length; i++)
+		{
+			if(colliders != null)
+			{
+				if (colliders[i].gameObject != gameObject && colliders[i].gameObject.tag == "Player")
+				{
+					colliders[i].gameObject.GetComponent<TamPlayerHealth>().modifyHealth(-damage, GetComponent<TamPlayerScore>().getPlayerNumber());
+				}
+			}
+		}
+	}
+	
 	
 	private IEnumerator delaySpawn(float delay, float damage, GameObject enemy)
 	{
@@ -177,5 +211,24 @@ public class TamPlayerAttack : NetworkBehaviour
 			yield return null;
 		}
 		fireParticle.SpAttackSate(false);
+	}
+	
+	private IEnumerator specialCoolDown()
+	{
+		float timer = specialTimer;
+		pulse.specialReady = false;
+		canSpecial = false;
+		while(timer > 0)
+		{
+			timer -= Time.deltaTime;
+			yield return null;
+		}
+		canSpecial = true;
+		pulse.specialReady = true;
+	}
+	
+	public bool checkCanSpecial()
+	{
+		return canSpecial;
 	}
 }
