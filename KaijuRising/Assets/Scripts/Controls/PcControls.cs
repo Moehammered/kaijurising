@@ -28,6 +28,15 @@ public class PcControls : AbstractMover
 	private int attackCount;
 	public bool isFalsol = false;
 	public KaijuSounds sounds;
+	private float mouseSens = 20f;
+	
+	private void Start()
+	{
+		if (isLocalPlayer)
+		{
+			mouseSens = PlayerPrefs.GetFloat("MouseSensivity", 20f);
+		}
+	}
 	
 	private void Update()
 	{
@@ -142,7 +151,7 @@ public class PcControls : AbstractMover
 		float mouseX = Input.GetAxis("Mouse X");
 		
 		//mainCamera.transform.RotateAround(transform.position,new Vector3(0,1,0), mouseX);
-		playerCam.transform.RotateAround(transform.position, Vector3.up, mouseX * mouseSpeed * Time.deltaTime);
+		playerCam.transform.RotateAround(transform.position, Vector3.up, mouseX * mouseSens * Time.deltaTime);
 		//transform.Rotate(new Vector3(0, mouseX * mouseSpeed * Time.deltaTime, 0));
 	}
 	
