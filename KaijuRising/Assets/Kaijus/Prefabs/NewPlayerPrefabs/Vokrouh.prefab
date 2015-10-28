@@ -2764,7 +2764,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146220}
-  m_LocalRotation: {x: .37464577, y: .599832058, z: .374735862, w: .599512517}
+  m_LocalRotation: {x: .37464574, y: .599831998, z: .374735832, w: .599512458}
   m_LocalPosition: {x: .425881922, y: 6.56103384e-06, z: 12.0492706}
   m_LocalScale: {x: .817843199, y: .817843199, z: .817843199}
   m_Children: []
@@ -3936,6 +3936,7 @@ MonoBehaviour:
   health: 100
   healthUI: {fileID: 11431764}
   playerAnimations: {fileID: 11406960}
+  sounds: {fileID: 11406014}
 --- !u!114 &11421806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5935,6 +5936,10 @@ Prefab:
       propertyPath: attackDelay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 11406014}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148218}

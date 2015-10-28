@@ -3060,22 +3060,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 38
-    i1: 172
-    i2: 166
-    i3: 40
-    i4: 213
-    i5: 21
-    i6: 60
-    i7: 132
-    i8: 75
-    i9: 228
-    i10: 241
-    i11: 190
-    i12: 170
-    i13: 181
-    i14: 216
-    i15: 224
+    i0: 171
+    i1: 126
+    i2: 91
+    i3: 184
+    i4: 37
+    i5: 43
+    i6: 212
+    i7: 52
+    i8: 234
+    i9: 238
+    i10: 244
+    i11: 246
+    i12: 24
+    i13: 57
+    i14: 112
+    i15: 209
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &11434898
@@ -3921,6 +3921,7 @@ MonoBehaviour:
   health: 100
   healthUI: {fileID: 11434898}
   playerAnimations: {fileID: 11407504}
+  sounds: {fileID: 11458770}
 --- !u!114 &11498256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4928,6 +4929,10 @@ Prefab:
       propertyPath: attackDelay
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 11458770}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100432}
