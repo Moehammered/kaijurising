@@ -772,11 +772,11 @@ GameObject:
   - 95: {fileID: 9583464}
   - 114: {fileID: 11447316}
   - 114: {fileID: 11407602}
-  - 114: {fileID: 11429068}
   - 114: {fileID: 11415154}
   - 114: {fileID: 11488320}
   - 114: {fileID: 11498458}
   - 114: {fileID: 11420946}
+  - 114: {fileID: 11491430}
   m_Layer: 8
   m_Name: YumKaax
   m_TagString: Player
@@ -4323,6 +4323,7 @@ MonoBehaviour:
   hasSecondAttack: 0
   isFalsol: 0
   sounds: {fileID: 11443832}
+  attackDelay: 1
 --- !u!114 &11408800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4593,6 +4594,7 @@ MonoBehaviour:
   death: canDie
   takeDamageName: TakeDamage
   walkType: walkType
+  isIdle: 1
 --- !u!114 &11421404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4737,26 +4739,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11429068
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bdb1bf2f4f5140bba77f17a46308879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundObject: {fileID: 186446, guid: 245954b5eb10e46bf95b991a97a4f795, type: 2}
-  sounds:
-    attack: 
-    walk: SoundWalk
-    buildingDestroy: 
-  soundFolderPath: Sounds
-  soundFolderPrefabs: Prefabs
-  hasPlayed: 0
-  time: 1
 --- !u!114 &11429428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5407,6 +5389,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Resume
+--- !u!114 &11491430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27309672638d0404e85b9fa20be967b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
 --- !u!114 &11491552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6511,6 +6505,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: specialTimer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackDelay
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

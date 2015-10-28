@@ -10,6 +10,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	//private PlayerAnimations playAnim;
 	private TamPlayerScore playScore;
 	public KaijuAnimations playerAnimations;
+	public KaijuSounds sounds;
 	
 	private void Start()
 	{
@@ -21,6 +22,7 @@ public class TamPlayerHealth : NetworkBehaviour
 	{
 		//playAnim.playTakeDamage();
 
+		sounds.CmdPlayOnServer ("punch1");
 		health += healthModifier;
 		if (health <= 0)
 		{
