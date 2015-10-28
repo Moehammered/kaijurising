@@ -43,7 +43,7 @@ public class BuildingChange : NetworkBehaviour {
 		{
 		case "50m":
 			average = 40f;
-			lowest = 5f;
+			lowest = 20f;
 			return BUILDING_TYPE.small;
 		case "100m":
 			average = 60f;

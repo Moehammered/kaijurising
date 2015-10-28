@@ -8,7 +8,8 @@ public class GameTimer : NetworkBehaviour
 {
 	public int connectedPlayers = 0;
 	public float timeBuffer;
-	
+
+	public static int scoreValue = 0;
 	[SyncVar]
 	public float currentTime = 5;
 	private bool startCounting;
@@ -25,6 +26,7 @@ public class GameTimer : NetworkBehaviour
 
 		if(connectedPlayers == 2)
 		{
+			scoreValue = 13;
 			timeLeftText.text = "" + timeDownText + currentTime.ToString ("F0");
 			StartCoroutine(beginTime());
 		}

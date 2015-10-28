@@ -20,7 +20,6 @@ public class PcControls : AbstractMover
 	public KeyBindings keyBindings;
 	public float mouseSpeed;
 	public float rotationSpeed;
-
 	// need InstantiateSound reference to play sounds
 	public GameObject playerCam;
 	public bool hasSecondAttack;
@@ -29,13 +28,13 @@ public class PcControls : AbstractMover
 	public bool isFalsol = false;
 	public KaijuSounds sounds;
 	public float attackDelay; 
-	private float mouseSens = 20f;
+	private float mouseSens = 50f;
 	
 	private void Start()
 	{
 		if (isLocalPlayer)
 		{
-			mouseSens = PlayerPrefs.GetFloat("MouseSensivity", 20f);
+			mouseSens = PlayerPrefs.GetFloat("MouseSensivity", 50f);
 		}
 	}
 	
@@ -144,6 +143,7 @@ public class PcControls : AbstractMover
 		
 		if (Input.GetKeyDown(keyBindings.specialAttack) && playerAttack.checkCanSpecial() == true)
 		{
+			playerAnimations.stopWalk();
 			playerAnimations.playSpecial();
 			playerAttack.specialAttack();
 		}

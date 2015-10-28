@@ -8,7 +8,6 @@ public class TextureSwapper : BuildingChange {
 	public List<List<Renderer>> ObjectCatagories;
 	//public List<GameObject> objectNames;
 	public string[] nameArray;
-	public Material[] materialList;
 
 	public void runSystem(Material[] materialUsed)
 	{

@@ -121,6 +121,7 @@ public class TamPlayerAttack : NetworkBehaviour
 		if(building)
 		{
 			building.takeDamage(attackDamage);
+			GetComponent<TamPlayerScore>().increaseTheScore(GameTimer.scoreValue);
 			building = null;
 		}
 	}

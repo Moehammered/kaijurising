@@ -8,17 +8,21 @@ public enum BUILDING_STATE
 	STATE_TWO,
 	STATE_THREE
 };
+
 public class DestructionStates : TextureSwapper {
 	
 	[SyncVar]
 	public int changeState;
 	[SyncVar]
 	public bool toggle = false;
+	//[SyncVar]
 	private BUILDING_STATE currentState;
 	public Material[] textureStateOne,textureStateTwo,textureStateThree;
-	
+
+
 	private void Start()
 	{
+
 		if(isServer && !isLocalPlayer)
 		{
 			grabingBuildingInfo.onModifyHealth += server;
@@ -90,7 +94,7 @@ public class DestructionStates : TextureSwapper {
 	
 	private int setHealthState(float health)
 	{
-		if(health > highest)
+		if(health > average)
 		{
 			changeState = 0;
 		}

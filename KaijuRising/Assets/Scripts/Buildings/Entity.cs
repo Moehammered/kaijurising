@@ -38,6 +38,7 @@ public class Entity : DamageableEntity {
 		//onModifyHealth += sounds.CmdPlayOnServer;	
 		amount = Mathf.Abs(amount) * -1; //Make it positive and then flip it
 		//We know we are damaged, so we should assign an 'onTakeDamage' function to 'onModifyHealth'
+		//other.gameObject.GetComponent<TamPlayerScore>().increaseTheScore(10);
 		onModifyHealth += onTakeDamage;
 		modifyHealth(amount);
     }
