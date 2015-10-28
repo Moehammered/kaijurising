@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: 0db461039434746b3b5ddfae099b5845
+timeCreated: 1445855415
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Decorative_Arch
+    100004: Level 2 Block 2
+    100006: Level 2 Block 201
+    100008: Level 2 Block 202
+    100010: Level 2 Block 203
+    100012: Level 2 Block 204
+    100014: Level 2 Block 205
+    100016: Level 2 Block 206
+    100018: Level 2 Block 207
+    100020: Level 2 Block 208
+    100022: Level 2 Block 209
+    100024: Level 2 Block 210
+    100026: Level 2 Block 211
+    100028: Level 2 Block 212
+    100030: Level 2 Block 213
+    100032: Level 2 Block 214
+    100034: Long_Railing
+    100036: Long_Railing01
+    100038: Lvl2_Misc_Base
+    100040: Lvl2_Misc_Base01
+    100042: Lvl2_Misc_Base02
+    100044: Lvl2_Misc_Base03
+    100046: Lvl2_Misc_Base04
+    100048: Lvl2_Misc_Base05
+    100050: Pillar
+    100052: Pillar01
+    100054: Pillar02
+    100056: Pillar03
+    100058: Pillar04
+    100060: Pillar05
+    100062: Pillar06
+    100064: Pillar07
+    100066: Plane_roof
+    100068: Plane_roof01
+    100070: Triangle_roof
+    100072: Triangle_roof01
+    400000: //RootNode
+    400002: Decorative_Arch
+    400004: Level 2 Block 2
+    400006: Level 2 Block 201
+    400008: Level 2 Block 202
+    400010: Level 2 Block 203
+    400012: Level 2 Block 204
+    400014: Level 2 Block 205
+    400016: Level 2 Block 206
+    400018: Level 2 Block 207
+    400020: Level 2 Block 208
+    400022: Level 2 Block 209
+    400024: Level 2 Block 210
+    400026: Level 2 Block 211
+    400028: Level 2 Block 212
+    400030: Level 2 Block 213
+    400032: Level 2 Block 214
+    400034: Long_Railing
+    400036: Long_Railing01
+    400038: Lvl2_Misc_Base
+    400040: Lvl2_Misc_Base01
+    400042: Lvl2_Misc_Base02
+    400044: Lvl2_Misc_Base03
+    400046: Lvl2_Misc_Base04
+    400048: Lvl2_Misc_Base05
+    400050: Pillar
+    400052: Pillar01
+    400054: Pillar02
+    400056: Pillar03
+    400058: Pillar04
+    400060: Pillar05
+    400062: Pillar06
+    400064: Pillar07
+    400066: Plane_roof
+    400068: Plane_roof01
+    400070: Triangle_roof
+    400072: Triangle_roof01
+    2300000: Decorative_Arch
+    2300002: Level 2 Block 2
+    2300004: Level 2 Block 201
+    2300006: Level 2 Block 202
+    2300008: Level 2 Block 203
+    2300010: Level 2 Block 204
+    2300012: Level 2 Block 205
+    2300014: Level 2 Block 206
+    2300016: Level 2 Block 207
+    2300018: Level 2 Block 208
+    2300020: Level 2 Block 209
+    2300022: Level 2 Block 210
+    2300024: Level 2 Block 211
+    2300026: Level 2 Block 212
+    2300028: Level 2 Block 213
+    2300030: Level 2 Block 214
+    2300032: Long_Railing
+    2300034: Long_Railing01
+    2300036: Lvl2_Misc_Base
+    2300038: Lvl2_Misc_Base01
+    2300040: Lvl2_Misc_Base02
+    2300042: Lvl2_Misc_Base03
+    2300044: Lvl2_Misc_Base04
+    2300046: Lvl2_Misc_Base05
+    2300048: Pillar
+    2300050: Pillar01
+    2300052: Pillar02
+    2300054: Pillar03
+    2300056: Pillar04
+    2300058: Pillar05
+    2300060: Pillar06
+    2300062: Pillar07
+    2300064: Plane_roof
+    2300066: Plane_roof01
+    2300068: Triangle_roof
+    2300070: Triangle_roof01
+    3300000: Decorative_Arch
+    3300002: Level 2 Block 2
+    3300004: Level 2 Block 201
+    3300006: Level 2 Block 202
+    3300008: Level 2 Block 203
+    3300010: Level 2 Block 204
+    3300012: Level 2 Block 205
+    3300014: Level 2 Block 206
+    3300016: Level 2 Block 207
+    3300018: Level 2 Block 208
+    3300020: Level 2 Block 209
+    3300022: Level 2 Block 210
+    3300024: Level 2 Block 211
+    3300026: Level 2 Block 212
+    3300028: Level 2 Block 213
+    3300030: Level 2 Block 214
+    3300032: Long_Railing
+    3300034: Long_Railing01
+    3300036: Lvl2_Misc_Base
+    3300038: Lvl2_Misc_Base01
+    3300040: Lvl2_Misc_Base02
+    3300042: Lvl2_Misc_Base03
+    3300044: Lvl2_Misc_Base04
+    3300046: Lvl2_Misc_Base05
+    3300048: Pillar
+    3300050: Pillar01
+    3300052: Pillar02
+    3300054: Pillar03
+    3300056: Pillar04
+    3300058: Pillar05
+    3300060: Pillar06
+    3300062: Pillar07
+    3300064: Plane_roof
+    3300066: Plane_roof01
+    3300068: Triangle_roof
+    3300070: Triangle_roof01
+    4300000: Plane_roof01
+    4300002: Decorative_Arch
+    4300004: Lvl2_Misc_Base
+    4300006: Lvl2_Misc_Base01
+    4300008: Level 2 Block 206
+    4300010: Triangle_roof
+    4300012: Triangle_roof01
+    4300014: Long_Railing
+    4300016: Pillar02
+    4300018: Pillar04
+    4300020: Plane_roof
+    4300022: Level 2 Block 209
+    4300024: Level 2 Block 2
+    4300026: Level 2 Block 203
+    4300028: Level 2 Block 204
+    4300030: Level 2 Block 205
+    4300032: Level 2 Block 213
+    4300034: Level 2 Block 214
+    4300036: Level 2 Block 212
+    4300038: Level 2 Block 210
+    4300040: Pillar
+    4300042: Pillar03
+    4300044: Pillar01
+    4300046: Pillar06
+    4300048: Pillar07
+    4300050: Pillar05
+    4300052: Lvl2_Misc_Base02
+    4300054: Long_Railing01
+    4300056: Level 2 Block 211
+    4300058: Level 2 Block 207
+    4300060: Level 2 Block 208
+    4300062: Level 2 Block 202
+    4300064: Lvl2_Misc_Base03
+    4300066: Lvl2_Misc_Base04
+    4300068: Lvl2_Misc_Base05
+    4300070: Level 2 Block 201
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

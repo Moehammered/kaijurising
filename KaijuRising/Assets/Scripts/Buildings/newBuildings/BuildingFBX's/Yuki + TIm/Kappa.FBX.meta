@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: d5f5dc964cc8f4dcdbe204a7178ba5cc
+timeCreated: 1445855416
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Corner block
+    100002: Corner block01
+    100004: Corner block02
+    100006: Corner block03
+    100008: Decorative_Arch
+    100010: //RootNode
+    100012: Pillar
+    100014: Pillar01
+    100016: Pillar02
+    100018: Pillar03
+    100020: triangle_roof
+    100022: Wall_lvl_3
+    100024: Wall_lvl_301
+    100026: Wall_lvl_302
+    100028: Wall_lvl_303
+    100030: Wall_lvl_304
+    100032: Wall_lvl_305
+    400000: Corner block
+    400002: Corner block01
+    400004: Corner block02
+    400006: Corner block03
+    400008: Decorative_Arch
+    400010: //RootNode
+    400012: Pillar
+    400014: Pillar01
+    400016: Pillar02
+    400018: Pillar03
+    400020: triangle_roof
+    400022: Wall_lvl_3
+    400024: Wall_lvl_301
+    400026: Wall_lvl_302
+    400028: Wall_lvl_303
+    400030: Wall_lvl_304
+    400032: Wall_lvl_305
+    2300000: Corner block
+    2300002: Corner block01
+    2300004: Corner block02
+    2300006: Corner block03
+    2300008: Decorative_Arch
+    2300010: Pillar
+    2300012: Pillar01
+    2300014: Pillar02
+    2300016: Pillar03
+    2300018: triangle_roof
+    2300020: Wall_lvl_3
+    2300022: Wall_lvl_301
+    2300024: Wall_lvl_302
+    2300026: Wall_lvl_303
+    2300028: Wall_lvl_304
+    2300030: Wall_lvl_305
+    3300000: Corner block
+    3300002: Corner block01
+    3300004: Corner block02
+    3300006: Corner block03
+    3300008: Decorative_Arch
+    3300010: Pillar
+    3300012: Pillar01
+    3300014: Pillar02
+    3300016: Pillar03
+    3300018: triangle_roof
+    3300020: Wall_lvl_3
+    3300022: Wall_lvl_301
+    3300024: Wall_lvl_302
+    3300026: Wall_lvl_303
+    3300028: Wall_lvl_304
+    3300030: Wall_lvl_305
+    4300000: Wall_lvl_305
+    4300002: Wall_lvl_301
+    4300004: Wall_lvl_304
+    4300006: triangle_roof
+    4300008: Wall_lvl_303
+    4300010: Wall_lvl_302
+    4300012: Wall_lvl_3
+    4300014: Pillar
+    4300016: Pillar03
+    4300018: Pillar01
+    4300020: Pillar02
+    4300022: Corner block02
+    4300024: Corner block03
+    4300026: Corner block01
+    4300028: Decorative_Arch
+    4300030: Corner block
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

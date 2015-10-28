@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: e05c753d0600a42a29518020aecae065
+timeCreated: 1445855416
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Curved_Decorative_Platform
+    100004: Curved_Decorative_Platform001
+    100006: Curved_Decorative_Platform002
+    100008: Curved_Decorative_Platform003
+    100010: Cylinder001
+    100012: Dome roof
+    100014: Lvl1_Block004
+    100016: Lvl1_Block005
+    100018: Lvl1_Block006
+    100020: Lvl1_Block3
+    100022: Pillar
+    100024: Pillar001
+    100026: Pillar002
+    100028: Pillar003
+    100030: Pillar004
+    100032: Pillar005
+    100034: Pillar006
+    100036: Pillar007
+    100038: Plain_Wall_Block
+    100040: Plain_Wall_Block001
+    100042: Plain_Wall_Block002
+    100044: Plain_Wall_Block003
+    100046: Plain_Wall_Block004
+    100048: Plain_Wall_Block005
+    100050: Plain_Wall_Block006
+    100052: Plain_Wall_Block007
+    100054: Plain_Wall_Block008
+    100056: Plain_Wall_Block009
+    100058: Plain_Wall_Block010
+    100060: Plain_Wall_Block011
+    100062: Triangle roof
+    100064: Triangle roof001
+    100066: Triangle roof002
+    100068: Triangle roof003
+    100070: Wall_lvl_004
+    100072: Wall_lvl_005
+    100074: Wall_lvl_006
+    100076: Wall_lvl_007
+    100078: Wall_lvl_008
+    100080: Wall_lvl_009
+    100082: Wall_lvl_010
+    100084: Wall_lvl_011
+    100086: Wall_lvl_012
+    100088: Wall_lvl_013
+    100090: Wall_lvl_014
+    100092: Wall_lvl_3
+    400000: //RootNode
+    400002: Curved_Decorative_Platform
+    400004: Curved_Decorative_Platform001
+    400006: Curved_Decorative_Platform002
+    400008: Curved_Decorative_Platform003
+    400010: Cylinder001
+    400012: Dome roof
+    400014: Lvl1_Block004
+    400016: Lvl1_Block005
+    400018: Lvl1_Block006
+    400020: Lvl1_Block3
+    400022: Pillar
+    400024: Pillar001
+    400026: Pillar002
+    400028: Pillar003
+    400030: Pillar004
+    400032: Pillar005
+    400034: Pillar006
+    400036: Pillar007
+    400038: Plain_Wall_Block
+    400040: Plain_Wall_Block001
+    400042: Plain_Wall_Block002
+    400044: Plain_Wall_Block003
+    400046: Plain_Wall_Block004
+    400048: Plain_Wall_Block005
+    400050: Plain_Wall_Block006
+    400052: Plain_Wall_Block007
+    400054: Plain_Wall_Block008
+    400056: Plain_Wall_Block009
+    400058: Plain_Wall_Block010
+    400060: Plain_Wall_Block011
+    400062: Triangle roof
+    400064: Triangle roof001
+    400066: Triangle roof002
+    400068: Triangle roof003
+    400070: Wall_lvl_004
+    400072: Wall_lvl_005
+    400074: Wall_lvl_006
+    400076: Wall_lvl_007
+    400078: Wall_lvl_008
+    400080: Wall_lvl_009
+    400082: Wall_lvl_010
+    400084: Wall_lvl_011
+    400086: Wall_lvl_012
+    400088: Wall_lvl_013
+    400090: Wall_lvl_014
+    400092: Wall_lvl_3
+    2300000: Curved_Decorative_Platform
+    2300002: Curved_Decorative_Platform001
+    2300004: Curved_Decorative_Platform002
+    2300006: Curved_Decorative_Platform003
+    2300008: Cylinder001
+    2300010: Dome roof
+    2300012: Lvl1_Block004
+    2300014: Lvl1_Block005
+    2300016: Lvl1_Block006
+    2300018: Lvl1_Block3
+    2300020: Pillar
+    2300022: Pillar001
+    2300024: Pillar002
+    2300026: Pillar003
+    2300028: Pillar004
+    2300030: Pillar005
+    2300032: Pillar006
+    2300034: Pillar007
+    2300036: Plain_Wall_Block
+    2300038: Plain_Wall_Block001
+    2300040: Plain_Wall_Block002
+    2300042: Plain_Wall_Block003
+    2300044: Plain_Wall_Block004
+    2300046: Plain_Wall_Block005
+    2300048: Plain_Wall_Block006
+    2300050: Plain_Wall_Block007
+    2300052: Plain_Wall_Block008
+    2300054: Plain_Wall_Block009
+    2300056: Plain_Wall_Block010
+    2300058: Plain_Wall_Block011
+    2300060: Triangle roof
+    2300062: Triangle roof001
+    2300064: Triangle roof002
+    2300066: Triangle roof003
+    2300068: Wall_lvl_004
+    2300070: Wall_lvl_005
+    2300072: Wall_lvl_006
+    2300074: Wall_lvl_007
+    2300076: Wall_lvl_008
+    2300078: Wall_lvl_009
+    2300080: Wall_lvl_010
+    2300082: Wall_lvl_011
+    2300084: Wall_lvl_012
+    2300086: Wall_lvl_013
+    2300088: Wall_lvl_014
+    2300090: Wall_lvl_3
+    3300000: Curved_Decorative_Platform
+    3300002: Curved_Decorative_Platform001
+    3300004: Curved_Decorative_Platform002
+    3300006: Curved_Decorative_Platform003
+    3300008: Cylinder001
+    3300010: Dome roof
+    3300012: Lvl1_Block004
+    3300014: Lvl1_Block005
+    3300016: Lvl1_Block006
+    3300018: Lvl1_Block3
+    3300020: Pillar
+    3300022: Pillar001
+    3300024: Pillar002
+    3300026: Pillar003
+    3300028: Pillar004
+    3300030: Pillar005
+    3300032: Pillar006
+    3300034: Pillar007
+    3300036: Plain_Wall_Block
+    3300038: Plain_Wall_Block001
+    3300040: Plain_Wall_Block002
+    3300042: Plain_Wall_Block003
+    3300044: Plain_Wall_Block004
+    3300046: Plain_Wall_Block005
+    3300048: Plain_Wall_Block006
+    3300050: Plain_Wall_Block007
+    3300052: Plain_Wall_Block008
+    3300054: Plain_Wall_Block009
+    3300056: Plain_Wall_Block010
+    3300058: Plain_Wall_Block011
+    3300060: Triangle roof
+    3300062: Triangle roof001
+    3300064: Triangle roof002
+    3300066: Triangle roof003
+    3300068: Wall_lvl_004
+    3300070: Wall_lvl_005
+    3300072: Wall_lvl_006
+    3300074: Wall_lvl_007
+    3300076: Wall_lvl_008
+    3300078: Wall_lvl_009
+    3300080: Wall_lvl_010
+    3300082: Wall_lvl_011
+    3300084: Wall_lvl_012
+    3300086: Wall_lvl_013
+    3300088: Wall_lvl_014
+    3300090: Wall_lvl_3
+    4300000: Wall_lvl_3
+    4300002: Curved_Decorative_Platform
+    4300004: Lvl1_Block3
+    4300006: Plain_Wall_Block
+    4300008: Plain_Wall_Block001
+    4300010: Pillar
+    4300012: Pillar001
+    4300014: Triangle roof
+    4300016: Wall_lvl_004
+    4300018: Plain_Wall_Block002
+    4300020: Wall_lvl_005
+    4300022: Curved_Decorative_Platform001
+    4300024: Wall_lvl_006
+    4300026: Triangle roof001
+    4300028: Wall_lvl_007
+    4300030: Plain_Wall_Block003
+    4300032: Plain_Wall_Block004
+    4300034: Pillar002
+    4300036: Plain_Wall_Block005
+    4300038: Pillar003
+    4300040: Lvl1_Block004
+    4300042: Wall_lvl_008
+    4300044: Wall_lvl_009
+    4300046: Wall_lvl_010
+    4300048: Curved_Decorative_Platform002
+    4300050: Triangle roof002
+    4300052: Wall_lvl_011
+    4300054: Plain_Wall_Block006
+    4300056: Plain_Wall_Block007
+    4300058: Pillar004
+    4300060: Plain_Wall_Block008
+    4300062: Pillar005
+    4300064: Lvl1_Block005
+    4300066: Wall_lvl_012
+    4300068: Wall_lvl_013
+    4300070: Pillar006
+    4300072: Triangle roof003
+    4300074: Pillar007
+    4300076: Curved_Decorative_Platform003
+    4300078: Lvl1_Block006
+    4300080: Plain_Wall_Block009
+    4300082: Plain_Wall_Block010
+    4300084: Plain_Wall_Block011
+    4300086: Wall_lvl_014
+    4300088: Dome roof
+    4300090: Cylinder001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

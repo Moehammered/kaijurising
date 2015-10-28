@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 812d82bcbf50e44ec968e7226f34e6f6
+timeCreated: 1445855415
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: block roof
+    100004: block_wall
+    100006: block_wall02
+    100008: Curved_Decorative_Platform
+    100010: Long_Railing_Getrid
+    100012: Lvl1_Block3
+    100014: Lvl2_Block1
+    100016: pillar
+    100018: pillar01
+    100020: pillar02
+    100022: pillar03
+    100024: pillar04
+    100026: pillar05
+    100028: pillar06
+    100030: pillar07
+    100032: pillar08
+    100034: triangle roof
+    100036: Wall_Level2_Block2
+    100038: Wall_Level2_Block201
+    100040: Wall_Level2_Block202
+    100042: Wall_Level2_Block203
+    100044: Wall_Level2_Block204
+    100046: Wall_Level2_Block205
+    100048: Wall_Level2_Block206
+    400000: //RootNode
+    400002: block roof
+    400004: block_wall
+    400006: block_wall02
+    400008: Curved_Decorative_Platform
+    400010: Long_Railing_Getrid
+    400012: Lvl1_Block3
+    400014: Lvl2_Block1
+    400016: pillar
+    400018: pillar01
+    400020: pillar02
+    400022: pillar03
+    400024: pillar04
+    400026: pillar05
+    400028: pillar06
+    400030: pillar07
+    400032: pillar08
+    400034: triangle roof
+    400036: Wall_Level2_Block2
+    400038: Wall_Level2_Block201
+    400040: Wall_Level2_Block202
+    400042: Wall_Level2_Block203
+    400044: Wall_Level2_Block204
+    400046: Wall_Level2_Block205
+    400048: Wall_Level2_Block206
+    2300000: block roof
+    2300002: block_wall
+    2300004: block_wall02
+    2300006: Curved_Decorative_Platform
+    2300008: Long_Railing_Getrid
+    2300010: Lvl1_Block3
+    2300012: Lvl2_Block1
+    2300014: pillar
+    2300016: pillar01
+    2300018: pillar02
+    2300020: pillar03
+    2300022: pillar04
+    2300024: pillar05
+    2300026: pillar06
+    2300028: pillar07
+    2300030: pillar08
+    2300032: triangle roof
+    2300034: Wall_Level2_Block2
+    2300036: Wall_Level2_Block201
+    2300038: Wall_Level2_Block202
+    2300040: Wall_Level2_Block203
+    2300042: Wall_Level2_Block204
+    2300044: Wall_Level2_Block205
+    2300046: Wall_Level2_Block206
+    3300000: block roof
+    3300002: block_wall
+    3300004: block_wall02
+    3300006: Curved_Decorative_Platform
+    3300008: Long_Railing_Getrid
+    3300010: Lvl1_Block3
+    3300012: Lvl2_Block1
+    3300014: pillar
+    3300016: pillar01
+    3300018: pillar02
+    3300020: pillar03
+    3300022: pillar04
+    3300024: pillar05
+    3300026: pillar06
+    3300028: pillar07
+    3300030: pillar08
+    3300032: triangle roof
+    3300034: Wall_Level2_Block2
+    3300036: Wall_Level2_Block201
+    3300038: Wall_Level2_Block202
+    3300040: Wall_Level2_Block203
+    3300042: Wall_Level2_Block204
+    3300044: Wall_Level2_Block205
+    3300046: Wall_Level2_Block206
+    4300000: block roof
+    4300002: Lvl2_Block1
+    4300004: pillar08
+    4300006: Lvl1_Block3
+    4300008: Wall_Level2_Block201
+    4300010: Long_Railing_Getrid
+    4300012: Curved_Decorative_Platform
+    4300014: block_wall
+    4300016: triangle roof
+    4300018: Wall_Level2_Block2
+    4300020: Wall_Level2_Block203
+    4300022: Wall_Level2_Block204
+    4300024: Wall_Level2_Block205
+    4300026: Wall_Level2_Block202
+    4300028: Wall_Level2_Block206
+    4300030: pillar07
+    4300032: pillar
+    4300034: pillar01
+    4300036: pillar02
+    4300038: pillar04
+    4300040: pillar03
+    4300042: pillar05
+    4300044: pillar06
+    4300046: block_wall02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

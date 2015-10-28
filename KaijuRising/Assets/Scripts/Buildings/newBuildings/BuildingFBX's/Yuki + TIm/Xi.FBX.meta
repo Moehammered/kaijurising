@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: b5acb3962302f44d6ae6fbe35a45a6ff
+timeCreated: 1445855415
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Dome roof
+    100002: Dome roof001
+    100004: Pillar
+    100006: Pillar001
+    100008: Pillar002
+    100010: Pillar003
+    100012: Pillar004
+    100014: Pillar005
+    100016: Pillar006
+    100018: Pillar007
+    100020: Plain_Wall_Block
+    100022: Plain_Wall_Block001
+    100024: Plain_Wall_Block002
+    100026: Plain_Wall_Block003
+    100028: Wall_lvl_004
+    100030: Wall_lvl_005
+    100032: Wall_lvl_006
+    100034: Wall_lvl_007
+    100036: Wall_lvl_008
+    100038: Wall_lvl_009
+    100040: Wall_lvl_010
+    100042: Wall_lvl_011
+    100044: Wall_lvl_012
+    100046: Wall_lvl_013
+    100048: Wall_lvl_014
+    100050: Wall_lvl_015
+    100052: Wall_lvl_016
+    100054: Wall_lvl_017
+    100056: Wall_lvl_018
+    100058: Wall_lvl_3
+    100060: //RootNode
+    400000: Dome roof
+    400002: Dome roof001
+    400004: Pillar
+    400006: Pillar001
+    400008: Pillar002
+    400010: Pillar003
+    400012: Pillar004
+    400014: Pillar005
+    400016: Pillar006
+    400018: Pillar007
+    400020: Plain_Wall_Block
+    400022: Plain_Wall_Block001
+    400024: Plain_Wall_Block002
+    400026: Plain_Wall_Block003
+    400028: Wall_lvl_004
+    400030: Wall_lvl_005
+    400032: Wall_lvl_006
+    400034: Wall_lvl_007
+    400036: Wall_lvl_008
+    400038: Wall_lvl_009
+    400040: Wall_lvl_010
+    400042: Wall_lvl_011
+    400044: Wall_lvl_012
+    400046: Wall_lvl_013
+    400048: Wall_lvl_014
+    400050: Wall_lvl_015
+    400052: Wall_lvl_016
+    400054: Wall_lvl_017
+    400056: Wall_lvl_018
+    400058: Wall_lvl_3
+    400060: //RootNode
+    2300000: Dome roof
+    2300002: Dome roof001
+    2300004: Pillar
+    2300006: Pillar001
+    2300008: Pillar002
+    2300010: Pillar003
+    2300012: Pillar004
+    2300014: Pillar005
+    2300016: Pillar006
+    2300018: Pillar007
+    2300020: Plain_Wall_Block
+    2300022: Plain_Wall_Block001
+    2300024: Plain_Wall_Block002
+    2300026: Plain_Wall_Block003
+    2300028: Wall_lvl_004
+    2300030: Wall_lvl_005
+    2300032: Wall_lvl_006
+    2300034: Wall_lvl_007
+    2300036: Wall_lvl_008
+    2300038: Wall_lvl_009
+    2300040: Wall_lvl_010
+    2300042: Wall_lvl_011
+    2300044: Wall_lvl_012
+    2300046: Wall_lvl_013
+    2300048: Wall_lvl_014
+    2300050: Wall_lvl_015
+    2300052: Wall_lvl_016
+    2300054: Wall_lvl_017
+    2300056: Wall_lvl_018
+    2300058: Wall_lvl_3
+    3300000: Dome roof
+    3300002: Dome roof001
+    3300004: Pillar
+    3300006: Pillar001
+    3300008: Pillar002
+    3300010: Pillar003
+    3300012: Pillar004
+    3300014: Pillar005
+    3300016: Pillar006
+    3300018: Pillar007
+    3300020: Plain_Wall_Block
+    3300022: Plain_Wall_Block001
+    3300024: Plain_Wall_Block002
+    3300026: Plain_Wall_Block003
+    3300028: Wall_lvl_004
+    3300030: Wall_lvl_005
+    3300032: Wall_lvl_006
+    3300034: Wall_lvl_007
+    3300036: Wall_lvl_008
+    3300038: Wall_lvl_009
+    3300040: Wall_lvl_010
+    3300042: Wall_lvl_011
+    3300044: Wall_lvl_012
+    3300046: Wall_lvl_013
+    3300048: Wall_lvl_014
+    3300050: Wall_lvl_015
+    3300052: Wall_lvl_016
+    3300054: Wall_lvl_017
+    3300056: Wall_lvl_018
+    3300058: Wall_lvl_3
+    4300000: Dome roof
+    4300002: Wall_lvl_3
+    4300004: Wall_lvl_004
+    4300006: Wall_lvl_005
+    4300008: Wall_lvl_006
+    4300010: Wall_lvl_007
+    4300012: Wall_lvl_008
+    4300014: Wall_lvl_009
+    4300016: Wall_lvl_010
+    4300018: Pillar
+    4300020: Pillar001
+    4300022: Pillar002
+    4300024: Pillar003
+    4300026: Wall_lvl_011
+    4300028: Wall_lvl_012
+    4300030: Wall_lvl_013
+    4300032: Wall_lvl_014
+    4300034: Pillar004
+    4300036: Pillar005
+    4300038: Pillar006
+    4300040: Pillar007
+    4300042: Wall_lvl_015
+    4300044: Wall_lvl_016
+    4300046: Wall_lvl_017
+    4300048: Wall_lvl_018
+    4300050: Plain_Wall_Block
+    4300052: Plain_Wall_Block001
+    4300054: Plain_Wall_Block002
+    4300056: Plain_Wall_Block003
+    4300058: Dome roof001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
