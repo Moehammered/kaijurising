@@ -28,6 +28,7 @@ public class PcControls : AbstractMover
 	private int attackCount;
 	public bool isFalsol = false;
 	public KaijuSounds sounds;
+	public float attackDelay; 
 	private float mouseSens = 20f;
 	
 	private void Start()
@@ -115,6 +116,7 @@ public class PcControls : AbstractMover
 					//attack increase attack count;
 					playerAttack.normalAttack();
 					playerAnimations.stopWalk();
+					sounds.CmdPlayOnServer ("swooshSound1");
 					playerAnimations.playPrimaryAttack();
 					attackCount++;
 				}
@@ -126,10 +128,12 @@ public class PcControls : AbstractMover
 					float timed = 0;
 					if (hasSecondAttack)
 					{
+						StartCoroutine(secondAttackDelay());
 						timed = playerAnimations.playSecondAttack(true);
 					}
 					else
 					{
+						StartCoroutine(secondAttackDelay());
 						timed = playerAnimations.playBackwardsPrimaryAttack();
 					}
 					playerAttack.timedNormalAttack(timed);
@@ -144,6 +148,17 @@ public class PcControls : AbstractMover
 			playerAttack.specialAttack();
 		}
 		// Start and stop sounds are specific to key down and up.
+	}
+
+	private IEnumerator secondAttackDelay() 
+	{
+		float time = attackDelay;
+		while(time > 0) 
+		{
+			time -= Time.deltaTime;
+			yield return null;
+		}
+		sounds.CmdPlayOnServer ("swooshSound2");
 	}
 
 	public void mouseInput()

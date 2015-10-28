@@ -4257,6 +4257,7 @@ MonoBehaviour:
   death: canDie
   takeDamageName: TakeDamage
   walkType: walkType
+  isIdle: 1
 --- !u!114 &11421122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5113,6 +5114,7 @@ MonoBehaviour:
   health: 100
   healthUI: {fileID: 11432798}
   playerAnimations: {fileID: 11419002}
+  sounds: {fileID: 11414642}
 --- !u!114 &11491466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5163,6 +5165,7 @@ MonoBehaviour:
   hasSecondAttack: 0
   isFalsol: 1
   sounds: {fileID: 11414642}
+  attackDelay: 0
 --- !u!114 &11493398
 MonoBehaviour:
   m_ObjectHideFlags: 1
