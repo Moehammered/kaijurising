@@ -3998,7 +3998,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 256
   m_Lightmapping: 4
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -4024,9 +4024,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1425967615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c07384c1e1bba4a9efeacf00eec8f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6df492a17293147a685cc871456554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightLayerName: Player
 --- !u!1001 &1438101901
 Prefab:
   m_ObjectHideFlags: 0
@@ -4126,6 +4127,10 @@ Prefab:
       propertyPath: menuServer
       value: 
       objectReference: {fileID: 898759969}
+    - target: {fileID: 197834, guid: bc4ca8c347ea03c49a162851e29b6b8a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc4ca8c347ea03c49a162851e29b6b8a, type: 2}
   m_IsPrefabParent: 0
@@ -5406,7 +5411,7 @@ Prefab:
     - target: {fileID: 13716882, guid: fab001a6241bef64ab744b4625e6d523, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1e30adda37ad0104687d575cabd112f9, type: 2}
+      objectReference: {fileID: 2100000, guid: 156900bd0907c7844ac0a677f82aabed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fab001a6241bef64ab744b4625e6d523, type: 2}
   m_IsPrefabParent: 0
