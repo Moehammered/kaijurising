@@ -28,6 +28,8 @@ public class KaijuAnimations : BaseAnimations
 	public string takeDamageName = "TakeDamage";
 	public string walkType = "walkType";
 
+	public bool isIdle = true;
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -157,18 +159,21 @@ public class KaijuAnimations : BaseAnimations
 	
 	public void playWalk()
 	{
+		isIdle = false;
 		netAnim.animator.SetInteger(walkType, 1);
 		setAnimatorParameters(walk, true);
 	}
 	
 	public void playBackwardsWalk()
 	{
+		isIdle = false;
 		netAnim.animator.SetInteger(walkType, -1);
 		setAnimatorParameters(walk, true);
 	}
 	
 	public void stopWalk()
 	{
+		isIdle = true;
 		setAnimatorParameters(walk, false);
 	}
 	
@@ -207,6 +212,7 @@ public class KaijuAnimations : BaseAnimations
 	
 	public void playIdle()
 	{
+		isIdle = true;
 		setAnimatorParameters(walk, false);
 		setAnimatorParameters(death, false);
 		setAnimatorParameters(primaryAttack.animName, false);

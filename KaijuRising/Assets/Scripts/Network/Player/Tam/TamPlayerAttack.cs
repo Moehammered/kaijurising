@@ -85,7 +85,8 @@ public class TamPlayerAttack : NetworkBehaviour
 					Cmd_falsolSpecial();
 					break;
 				case ATTACK_KAIJU_TYPE.VOKROUH:
-					Cmd_detectMultiplePlayers(specialRadius, specialDamage);
+					Cmd_detectObjects(attackCenter.transform.position, attackRadius + 10, specialDamage);
+					//Cmd_detectMultiplePlayers(specialRadius, specialDamage);
 					break;
 				case ATTACK_KAIJU_TYPE.TRIKARENOS:
 					Cmd_detectObjects(attackCenter.transform.position, attackRadius + 10, specialDamage);
