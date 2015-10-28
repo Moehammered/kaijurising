@@ -15029,7 +15029,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184222}
-  m_LocalRotation: {x: .273341089, y: .652138591, z: .652138591, w: -.273341089}
+  m_LocalRotation: {x: .27334106, y: .652138531, z: .652138531, w: -.27334106}
   m_LocalPosition: {x: -208.717331, y: 147.117783, z: -146.721649}
   m_LocalScale: {x: .599904895, y: .599904776, z: .599904776}
   m_Children: []
@@ -15872,7 +15872,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181018}
-  m_LocalRotation: {x: .273341089, y: .652138591, z: .652138591, w: -.273341089}
+  m_LocalRotation: {x: .27334106, y: .652138531, z: .652138531, w: -.27334106}
   m_LocalPosition: {x: -80.2633514, y: 146.958084, z: -146.721649}
   m_LocalScale: {x: .599904895, y: .599904776, z: .599904776}
   m_Children: []
@@ -16287,7 +16287,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162222}
-  m_LocalRotation: {x: .273341089, y: .652138591, z: .652138591, w: -.273341089}
+  m_LocalRotation: {x: .27334106, y: .652138531, z: .652138531, w: -.27334106}
   m_LocalPosition: {x: -150.232025, y: 152.934479, z: -220.468521}
   m_LocalScale: {x: .907521009, y: .90752095, z: .90752095}
   m_Children: []
@@ -42480,8 +42480,8 @@ MonoBehaviour:
   - Lvl1_Block2
   - Lvl1_Block3
   - wide long roof
-  toggle: 0
   changeState: 0
+  toggle: 0
   textureStateOne:
   - {fileID: 2100000, guid: 1a5aeb10722c1134cb18aee6fe79aae5, type: 2}
   - {fileID: 2100000, guid: 81b108245f12b7c409fccd7a1e07684f, type: 2}
@@ -42643,7 +42643,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -43726,7 +43726,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 148322}
