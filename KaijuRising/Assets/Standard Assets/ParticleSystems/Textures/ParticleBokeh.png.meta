@@ -46,19 +46,19 @@ TextureImporter:
   textureType: -1
   buildTargetSettings:
   - buildTarget: iPhone
-    maxTextureSize: 1024
+    maxTextureSize: 64
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 64
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: BlackBerry
-    maxTextureSize: 1024
+    maxTextureSize: 64
     textureFormat: -1
     compressionQuality: 50
   - buildTarget: WP8
-    maxTextureSize: 1024
+    maxTextureSize: 64
     textureFormat: -1
     compressionQuality: 50
   spriteSheet:
@@ -66,4 +66,3 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
-  assetBundleVariant: 
