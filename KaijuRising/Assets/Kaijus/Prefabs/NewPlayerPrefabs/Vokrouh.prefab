@@ -3894,12 +3894,14 @@ MonoBehaviour:
     back: 115
     left: 97
     right: 100
-    primaryAttack: 32
+    primaryAttack: 323
+    specialAttack: 324
   mouseSpeed: 10
   rotationSpeed: 50
   playerCam: {fileID: 134252}
   hasSecondAttack: 1
-  sounds: {fileID: 0}
+  isFalsol: 0
+  sounds: {fileID: 11406014}
 --- !u!114 &11432846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4598,6 +4600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e579eca08f6bfc04284f412e547ac732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KAIJU_TYPE: 2
   tags:
   - 50m
   - 100m
@@ -4605,7 +4608,19 @@ MonoBehaviour:
   attackRadius: 30
   attackCenter: {fileID: 130966}
   attackDamage: 10
-  specialDamage: 0
+  specialDamage: 20
+  specialTimer: 10
+  pulse: {fileID: 11478334}
+  tendrils: {fileID: 0}
+  tendrilRadius: 0
+  tendrilDelay: 0
+  fireParticle: {fileID: 0}
+  falsolProjectile: {fileID: 0}
+  breathCenter: {fileID: 0}
+  duration: 0
+  delay: 0
+  fireRate: 0
+  specialRadius: 300
 --- !u!114 &11491444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5672,7 +5687,27 @@ Prefab:
       objectReference: {fileID: 134252}
     - target: {fileID: 0}
       propertyPath: keyBindings.primaryAttack
-      value: 32
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: KAIJU_TYPE
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: specialDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: keyBindings.specialAttack
+      value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: specialTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: specialRadius
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
