@@ -73,9 +73,9 @@ public class NetworkHUD : NetworkBehaviour {
 
 	public void clientJoin()
 	{
-		loadingScreen = GameObject.Find("LoadingScreen");
-		print (loadingScreen.name);
-		loadingScreen.GetComponent<Image>().enabled = true;
+		//loadingScreen = GameObject.Find("LoadingScreen");
+		//print (loadingScreen.name);
+		//loadingScreen.GetComponent<Image>().enabled = true;
 		if (ipAddressInput.text != null)
 		{
 			manager.networkPort = int.Parse(portInput.text);
