@@ -56,7 +56,7 @@ public class PcControls : AbstractMover
 
 	public void keyboardInput()
 	{
-		if (!playerAnimations.isTakingDamage() && !playerAnimations.isSpecial())
+		if (!playerAnimations.isSpecial())
 		{
 			direction = Vector3.zero;
 			if (!playerAnimations.isAttacking())
