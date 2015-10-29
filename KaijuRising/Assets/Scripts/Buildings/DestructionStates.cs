@@ -8,21 +8,20 @@ public enum BUILDING_STATE
 	STATE_TWO,
 	STATE_THREE
 };
-
 public class DestructionStates : TextureSwapper {
 	
 	[SyncVar]
 	public int changeState;
+
 	[SyncVar]
 	public bool toggle = false;
-	//[SyncVar]
+
 	private BUILDING_STATE currentState;
 	public Material[] textureStateOne,textureStateTwo,textureStateThree;
 	private ParticleSystem myP;
 
 	private void Start()
 	{
-
 		if(isServer && !isLocalPlayer)
 		{
 			grabingBuildingInfo.onModifyHealth += server;
@@ -40,7 +39,7 @@ public class DestructionStates : TextureSwapper {
 			print ("werks");
 		}
 		*/
-		myP = gameObject.GetComponent<ParticleSystem>();
+		//myP = gameObject.GetComponent<ParticleSystem>();
 		
 	}
 	
@@ -114,6 +113,9 @@ public class DestructionStates : TextureSwapper {
 
 	private void playRubble()
 	{
-		myP.Play();
+		if(myP != null)
+		{
+			myP.Play();
+		}
 	}
 }
