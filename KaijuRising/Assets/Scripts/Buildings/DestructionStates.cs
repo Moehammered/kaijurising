@@ -18,7 +18,7 @@ public class DestructionStates : TextureSwapper {
 	//[SyncVar]
 	private BUILDING_STATE currentState;
 	public Material[] textureStateOne,textureStateTwo,textureStateThree;
-
+	private ParticleSystem myP;
 
 	private void Start()
 	{
@@ -40,6 +40,7 @@ public class DestructionStates : TextureSwapper {
 			print ("werks");
 		}
 		*/
+		myP = gameObject.GetComponent<ParticleSystem>();
 		
 	}
 	
@@ -81,12 +82,14 @@ public class DestructionStates : TextureSwapper {
 			currentState = BUILDING_STATE.STATE_ONE;
 			checkState(textureStateTwo);
 			//changeTexture(stateChanger);
+			playRubble();
 			break;
 			
 		case 2:	//This represents the State_Two
 			currentState = BUILDING_STATE.STATE_TWO;
 			checkState(textureStateThree);
 			//changeTexture(stateChanger);
+			playRubble();
 			break;
 		}
 		return currentState;
@@ -107,5 +110,10 @@ public class DestructionStates : TextureSwapper {
 			changeState = 2;
 		}
 		return changeState;
+	}
+
+	private void playRubble()
+	{
+		myP.Play();
 	}
 }
