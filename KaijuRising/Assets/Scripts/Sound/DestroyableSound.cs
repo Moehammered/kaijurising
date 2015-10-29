@@ -28,5 +28,6 @@ public class DestroyableSound : NetworkBehaviour {
 	private void CmdEndEvent() 
 	{
 		Destroy (gameObject, 0);
+		NetworkServer.Destroy (gameObject);
 	}
 }

@@ -115,7 +115,7 @@ public class PcControls : AbstractMover
 					//attack increase attack count;
 					playerAttack.normalAttack();
 					playerAnimations.stopWalk();
-					sounds.CmdPlayOnServer ("swooshSound1");
+					sounds.RpcPlayOnClients ("swooshSound1");
 					playerAnimations.playPrimaryAttack();
 					attackCount++;
 				}
@@ -158,7 +158,7 @@ public class PcControls : AbstractMover
 			time -= Time.deltaTime;
 			yield return null;
 		}
-		sounds.CmdPlayOnServer ("swooshSound2");
+		sounds.RpcPlayOnClients ("swooshSound2");
 	}
 
 	public void mouseInput()

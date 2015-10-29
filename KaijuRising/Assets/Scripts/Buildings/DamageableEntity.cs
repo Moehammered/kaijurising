@@ -7,6 +7,11 @@ public class DamageableEntity : NetworkBehaviour {
     public bool isDead;
 	private string checkingTag;
 
+	public KaijuSounds sounds;
+	public GameObject destSound;
+	private int value = 1;
+
+
 	public ModifyHealthDelegate onModifyHealth;
 	//public ModifyHealthDelegate onModifyDeath;
 
@@ -16,6 +21,8 @@ public class DamageableEntity : NetworkBehaviour {
 
     protected virtual void Start()
     {
+		sounds = gameObject.GetComponent<KaijuSounds>();
+		destSound = Resources.Load ("Sounds/Kaijus/SFX/DestroyableSound") as GameObject;
 		if(isServer)
 		{
 			nameChecker(gameObject.tag);
@@ -30,11 +37,26 @@ public class DamageableEntity : NetworkBehaviour {
 		}
     }
 
+	public void chooseSound() 
+	{
+		if(value % 2 == 0) 
+		{
+			sounds.CmdPlayOnServer("groundslam1");
+			value += 1;
+		}
+		else if(value % 2 > 0) 
+		{
+			sounds.CmdPlayOnServer("groundslam2");
+			value += 1;
+		}
+	}
+
 	public void modifyHealth(float amount)
     {
         health += amount;
         if(onModifyHealth != null)
         {
+			chooseSound();
             onModifyHealth();
         }
         else
@@ -44,6 +66,9 @@ public class DamageableEntity : NetworkBehaviour {
         //we need a callback function to run when an entity takes damage
         if(health <= 0)
         {
+			GameObject instance = Instantiate (destSound, transform.position, transform.rotation) as GameObject;
+			NetworkServer.Spawn (instance);
+
 			if(onModifyDeath != null)
 			{
 				onModifyDeath();
