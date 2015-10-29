@@ -3430,7 +3430,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -235.282394, y: 203.109085, z: 1133.10046}
+  m_LocalPosition: {x: 1031.38428, y: 33.8050079, z: -950.299988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22483302}
@@ -4566,7 +4566,7 @@ MonoBehaviour:
   netAnim: {fileID: 11447316}
   primaryAttack:
     animName: canAttack
-    duration: .800000012
+    duration: 1.39999998
   specialAttack:
     animName: canSpecial
     duration: 1.70000005
@@ -4576,7 +4576,7 @@ MonoBehaviour:
   attackType: attackType
   backwardsPrimary:
     attackIndex: -1
-    duration: 1
+    duration: 1.39999998
   backwardsSecondary:
     attackIndex: -2
     duration: 1
@@ -5318,7 +5318,7 @@ MonoBehaviour:
   - 150m
   attackRadius: 30
   attackCenter: {fileID: 169946}
-  attackDamage: 10
+  attackDamage: 17
   specialDamage: 20
   specialTimer: 10
   pulse: {fileID: 11424750}
@@ -6384,7 +6384,7 @@ Prefab:
       objectReference: {fileID: 169946}
     - target: {fileID: 0}
       propertyPath: attackDamage
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: specialDamage
@@ -6422,6 +6422,14 @@ Prefab:
       propertyPath: sounds
       value: 
       objectReference: {fileID: 11491430}
+    - target: {fileID: 0}
+      propertyPath: primaryAttack.duration
+      value: 1.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: backwardsPrimary.duration
+      value: 1.39999998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135910}

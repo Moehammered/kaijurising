@@ -1441,8 +1441,9 @@ MonoBehaviour:
   matchName: default
   matchSize: 4
   spawnPool:
-  - {x: -941, y: 0, z: -925}
-  - {x: 727, y: 0, z: -1005}
+  - {x: 320, y: 0, z: -1030}
+  - {x: -1000, y: 0, z: -850}
+  - {x: -1000, y: 0, z: 720}
   spawnPosition: {x: 0, y: 0, z: 0}
   spawnablePrefabs: []
   rexKaiju: {fileID: 113574, guid: c6c2e1bd77a0ba14b9fd82525ae7b201, type: 2}
