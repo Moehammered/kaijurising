@@ -2,13 +2,10 @@
 using System.Collections;
 
 public class Entity : DamageableEntity {
-
-	public KaijuSounds sounds;
-
+	
     protected override void Start()
     {
         base.Start();
-
     }
 
     protected void onTakeDamage()

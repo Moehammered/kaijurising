@@ -11,7 +11,9 @@ public class TamPlayerHealth : NetworkBehaviour
 	private TamPlayerScore playScore;
 	public KaijuAnimations playerAnimations;
 	public KaijuSounds sounds;
-	
+
+	private int clipIndex;
+
 	private void Start()
 	{
 		//playAnim = GetComponent<PlayerAnimations>();
@@ -35,12 +37,36 @@ public class TamPlayerHealth : NetworkBehaviour
 		}
 		Rpc_updateClientHealth(health);
 	}
-	
+
+	private void chooseSound() 
+	{
+		if (clipIndex == 0) 
+		{
+			sounds.CmdPlayOnServer ("punch1");
+			clipIndex += 1;
+		}
+		else if(clipIndex == 1) 
+		{
+			sounds.CmdPlayOnServer ("punch2");
+			clipIndex += 1;
+		}
+		else if(clipIndex == 2) 
+		{
+			sounds.CmdPlayOnServer ("punch3");
+			clipIndex += 1;
+		}
+		else if(clipIndex == 3) 
+		{
+			sounds.CmdPlayOnServer ("punch4");
+			clipIndex -= 3;
+		}
+	}
+
 	[ClientRpc]
 	private void Rpc_updateClientHealth(float value)
 	{
 		//run function
-		sounds.CmdPlayOnServer ("punch1");
+		chooseSound ();
 		playerAnimations.playTakeDamage();
 		health = value; 
 		//tell clients tell server to run to change values

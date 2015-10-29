@@ -61,7 +61,7 @@ public class addStuffToBuildings : MonoBehaviour {
 		findAllBuildings = GameObject.FindObjectsOfType<DestroyBuilding>() as DestroyBuilding[];
 		for(int z=0; z<findAllBuildings.Length; z++)
 		{
-			findAllBuildings[z].gameObject.AddComponent<InstanciateSound>();
+			findAllBuildings[z].gameObject.AddComponent<AudioSource>();
 		}
 /**
 		checkForFakeBuildings = GameObject.FindGameObjectsWithTag(buildingTag);

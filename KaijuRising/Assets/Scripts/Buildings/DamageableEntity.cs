@@ -7,6 +7,8 @@ public class DamageableEntity : NetworkBehaviour {
     public bool isDead;
 	private string checkingTag;
 
+	public KaijuSounds sounds;
+
 	public ModifyHealthDelegate onModifyHealth;
 	//public ModifyHealthDelegate onModifyDeath;
 
