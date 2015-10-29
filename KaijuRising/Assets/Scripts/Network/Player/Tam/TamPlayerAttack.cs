@@ -114,7 +114,7 @@ public class TamPlayerAttack : NetworkBehaviour
 		}
 		normalAttack();
 	}
-	
+
 	private void dealDamageTowardsBuildings(GameObject collidedObject)
 	{
 		Entity building = collidedObject.GetComponent<Entity>();

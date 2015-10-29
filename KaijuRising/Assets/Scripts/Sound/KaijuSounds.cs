@@ -11,6 +11,12 @@ public class KaijuSounds : MonoBehaviour {
 		source = gameObject.GetComponent<AudioSource> ();
 	}
 
+	public void playSound(string clip) 
+	{
+		AudioClip clipFile = Resources.Load("Sounds/Kaijus/SFX/" + clip) as AudioClip;
+		source.PlayOneShot (clipFile);
+	}
+
 	[ClientRpc]
 	public void RpcPlayOnClients(string clip) 
 	{

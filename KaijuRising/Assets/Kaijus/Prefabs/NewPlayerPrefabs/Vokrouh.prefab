@@ -1386,6 +1386,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432012}
+  - 65: {fileID: 6504948}
+  - 114: {fileID: 11452458}
   m_Layer: 0
   m_Name: ikh_TopClawRight
   m_TagString: Untagged
@@ -1464,6 +1466,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402312}
+  - 65: {fileID: 6530876}
+  - 114: {fileID: 11453752}
   m_Layer: 0
   m_Name: ikh_TopClawLeft
   m_TagString: Untagged
@@ -3212,7 +3216,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -143.625229, y: 36.5999985, z: 173.08316}
+  m_LocalPosition: {x: -233.094833, y: 242.565643, z: 1215.45947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22471702}
@@ -3297,6 +3301,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
+--- !u!65 &6504948
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10, z: 10}
+  m_Center: {x: -10, y: 0, z: 0}
+--- !u!65 &6530876
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10, z: 10}
+  m_Center: {x: 10, y: 0, z: 0}
 --- !u!65 &6572470
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4385,6 +4413,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuVisible: 0
   gameMenu: {fileID: 104182}
+--- !u!114 &11452458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376ccefd2ee4340fd9d2a61f0e4738de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 11406014}
+  anim: {fileID: 11406960}
 --- !u!114 &11452930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4411,6 +4452,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &11453752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376ccefd2ee4340fd9d2a61f0e4738de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: {fileID: 11406014}
+  anim: {fileID: 11406960}
 --- !u!114 &11454736
 MonoBehaviour:
   m_ObjectHideFlags: 1
