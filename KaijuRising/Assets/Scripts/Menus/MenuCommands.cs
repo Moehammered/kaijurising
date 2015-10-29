@@ -9,7 +9,7 @@ public class MenuCommands : MonoBehaviour {
 	public GameObject menuKaijuSelect;
 	public GameObject menuMatch;
 	public GameObject menuServer;
-	
+	public GameObject tutorialMenu;
 	
 	void Awake()
 	{
@@ -30,6 +30,7 @@ public class MenuCommands : MonoBehaviour {
 		menuKaijuSelect.SetActive(false);
 		menuOptions.SetActive(false);
 		menuServer.SetActive(false);
+		tutorialMenu.SetActive(false);
 	}
 	
 	public void showMain()
@@ -66,7 +67,7 @@ public class MenuCommands : MonoBehaviour {
 	{
 		hideAllMenus();
 	}
-	
+
 	public void quit()
 	{
 		Application.Quit();
