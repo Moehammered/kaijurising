@@ -39,7 +39,7 @@ public class DestructionStates : TextureSwapper {
 			print ("werks");
 		}
 		*/
-		//myP = gameObject.GetComponent<ParticleSystem>();
+		myP = gameObject.GetComponent<ParticleSystem>();
 		
 	}
 	
